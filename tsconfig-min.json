@@ -1,0 +1,67 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "cache/typescript",
+    "paths": {
+      "@": [
+        "src"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@skylib",
+      "node_modules/@types"
+    ],
+    "types": [
+      "jest"
+    ]
+  },
+  "exclude": [
+    "cache",
+    "dist",
+    "docs",
+    "es",
+    "lcov-report",
+    "node_modules"
+  ],
+  "extends": "./tsconfig/min",
+  "include": [
+    "*.js",
+    "*.ts",
+    ".eslintrc.js",
+    ".eslintrc.overrides.js",
+    ".eslintrc.rule-overrides.js",
+    ".eslintrc.synonyms.js",
+    ".eslintrc.temp.js",
+    ".postcssrc.js",
+    ".prettierrc.js",
+    ".stylelintrc.js",
+    ".stylelintrc-html.js",
+    "api/**/*.js",
+    "api/**/*.ts",
+    "api/**/*.vue",
+    "bin/**/*.js",
+    "bin/**/*.ts",
+    "bin/**/*.vue",
+    "commitlint/**/*.js",
+    "commitlint/**/*.ts",
+    "commitlint/**/*.vue",
+    "eslint/**/*.js",
+    "eslint/**/*.ts",
+    "eslint/**/*.vue",
+    "jest/**/*.js",
+    "jest/**/*.ts",
+    "jest/**/*.vue",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "stylelint/**/*.js",
+    "stylelint/**/*.ts",
+    "stylelint/**/*.vue",
+    "tests/**/*.js",
+    "tests/**/*.ts",
+    "tests/**/*.vue"
+  ]
+}

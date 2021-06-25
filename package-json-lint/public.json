@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "valid-values-license": [
+      "error",
+      [
+        "ISC"
+      ]
+    ],
+    "valid-values-private": [
+      "error",
+      [
+        false
+      ]
+    ],
+    "valid-values-publishConfig": [
+      "error",
+      [
+        {
+          "access": "public"
+        }
+      ]
+    ]
+  }
+}

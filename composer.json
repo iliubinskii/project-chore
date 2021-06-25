@@ -1,0 +1,26 @@
+{
+  "archive": {
+    "exclude": [
+      "!/composer.json",
+      "!/composer.lock",
+      "!/{api,bin,src}/**/*.{php,neon}",
+      "*",
+      ".*"
+    ]
+  },
+  "authors": [
+    {
+      "email": "admin.phpdev@gmail.com",
+      "name": "Ilia Liubinskii"
+    }
+  ],
+  "description": "Config for commitlint, eslint, jest, npm-package-json-lint, php-cs-fixer, phpstan, stylelint, typedoc, and typescript",
+  "homepage": "https://github.com/ilyub/config",
+  "license": "ISC",
+  "name": "skylib/config",
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.8",
+    "phpstan/phpstan": "^1.7"
+  },
+  "type": "library"
+}

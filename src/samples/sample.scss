@@ -1,0 +1,8 @@
+$numeric-input__padding: 10px;
+
+.numeric-input {
+  &__prefix {
+    display: block;
+    color: red;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "extends": [
+    "./package-json-lint/recommended.json",
+    "./package-json-lint/public.json"
+  ]
+}

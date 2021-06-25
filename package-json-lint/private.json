@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "valid-values-license": [
+      "error",
+      [
+        "You may not use this package"
+      ]
+    ],
+    "valid-values-private": [
+      "error",
+      [
+        true
+      ]
+    ],
+    "valid-values-publishConfig": [
+      "error",
+      [
+        {
+          "access": "restricted"
+        }
+      ]
+    ]
+  }
+}

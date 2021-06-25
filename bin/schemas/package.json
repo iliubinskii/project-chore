@@ -1,0 +1,188 @@
+{
+  "properties": {
+    "scripts": {
+      "properties": {
+        "add-tags": {
+          "enum": [
+            "php bin/add-tags.php",
+            "php node_modules/@skylib/config/bin/add-tags.php"
+          ]
+        },
+        "browserslist": {
+          "const": "browserslist"
+        },
+        "build": {
+          "const": "cf ./dist && tsc --project tsconfig-build.json"
+        },
+        "build-doc": {
+          "enum": [
+            "cf ./docs && node ./build-doc.js && cpy assets/docs/static/* docs",
+            "typedoc src && cpy assets/docs/static/* docs"
+          ]
+        },
+        "build-es": {
+          "const": "cf ./es && tsc --project tsconfig-build-es.json"
+        },
+        "clear-cache": {
+          "const": "cf cache node_modules/.cache"
+        },
+        "commitlint": {
+          "const": "commitlint --edit"
+        },
+        "commitlint-all": {
+          "const": "commitlint --config commitlint-all.config.js --from="
+        },
+        "compile": {
+          "enum": [
+            "quasar build",
+            "vsce package"
+          ]
+        },
+        "composer:bump": {
+          "const": "composer bump"
+        },
+        "composer:dump-autoload": {
+          "const": "composer dump-autoload"
+        },
+        "composer:outdated": {
+          "const": "composer outdated"
+        },
+        "composer:reinstall": {
+          "const": "composer reinstall *"
+        },
+        "composer:update": {
+          "const": "composer update"
+        },
+        "config-lint": {
+          "enum": [
+            "node bin/config-lint.js",
+            "node node_modules/@skylib/config/bin/config-lint.js"
+          ]
+        },
+        "delete-tags": {
+          "enum": [
+            "php bin/delete-tags.php",
+            "php node_modules/@skylib/config/bin/delete-tags.php"
+          ]
+        },
+        "full-check": {
+          "enum": [
+            "php bin/full-check.php",
+            "php node_modules/@skylib/config/bin/full-check.php"
+          ]
+        },
+        "git:unix": {
+          "const": "git config --replace-all core.ignorecase false"
+        },
+        "git:windows": {
+          "const": "git config --replace-all core.ignorecase true"
+        },
+        "husky:commit-msg": {
+          "const": "npm run commitlint"
+        },
+        "husky:post-commit": {
+          "enum": [
+            "php bin/post-commit.php",
+            "php node_modules/@skylib/config/bin/post-commit.php"
+          ]
+        },
+        "husky:pre-commit": {
+          "enum": [
+            "php bin/pre-commit.php",
+            "php node_modules/@skylib/config/bin/pre-commit.php"
+          ]
+        },
+        "husky:unset-hooks": {
+          "const": "git config --unset core.hooksPath"
+        },
+        "inspect": {
+          "const": "quasar inspect | strip-ansi 1>webpack.info"
+        },
+        "lint": {
+          "const": "eslint --fix --max-warnings 0 --no-error-on-unmatched-pattern **/*.{js,ts,vue}"
+        },
+        "lint-no-fix": {
+          "const": "eslint --max-warnings 0 --no-error-on-unmatched-pattern **/*.{js,ts,vue}"
+        },
+        "lint-no-fix-profile": {
+          "const": "set TIMING=1 && eslint --max-warnings 0 --no-error-on-unmatched-pattern **/*.{js,ts,vue}"
+        },
+        "npm:install": {
+          "const": "npm install --no-audit --strict-peer-deps"
+        },
+        "npm:install-clean": {
+          "const": "npm install-clean --no-audit --strict-peer-deps"
+        },
+        "npm:publish": {
+          "const": "publish-if-not-exists"
+        },
+        "npm:regenerate-lock-file": {
+          "const": "npm install --no-audit --package-lock-only --strict-peer-deps"
+        },
+        "npm:update": {
+          "const": "npm update --no-audit --strict-peer-deps"
+        },
+        "package-json-lint": {
+          "const": "npmPkgJsonLint ./package.json"
+        },
+        "php-cs-fixer": {
+          "const": "php vendor/bin/php-cs-fixer fix --verbose"
+        },
+        "phpstan": {
+          "const": "php vendor/bin/phpstan analyse -c phpstan.neon"
+        },
+        "phpstan-quiet": {
+          "const": "php vendor/bin/phpstan analyse -c phpstan.neon --quiet"
+        },
+        "prepare": {
+          "const": "husky install"
+        },
+        "serve": {
+          "const": "quasar dev"
+        },
+        "sonar": {
+          "const": "sonar-scanner"
+        },
+        "stylelint": {
+          "const": "stylelint --fix --max-warnings 0 src/**/*.{css,scss}"
+        },
+        "stylelint-html": {
+          "const": "stylelint --config .stylelintrc-html.js --fix --max-warnings 0 src/**/*.{html,php,vue}"
+        },
+        "stylelint-html-no-fix": {
+          "const": "stylelint --config .stylelintrc-html.js --max-warnings 0 src/**/*.{html,php,vue}"
+        },
+        "stylelint-no-fix": {
+          "const": "stylelint --max-warnings 0 src/**/*.{css,scss}"
+        },
+        "test": {
+          "const": "cf ./lcov-report && jest"
+        },
+        "test-fast": {
+          "const": "cf ./lcov-report && jest --config=jest.config.fast.js"
+        },
+        "tsc": {
+          "const": "tsc --noEmit"
+        },
+        "update-package-check": {
+          "const": "ncu --dep dev,peer,prod"
+        },
+        "update-package-force": {
+          "const": "ncu --dep dev,peer,prod --upgrade"
+        },
+        "upgrade": {
+          "const": "npm run update-package-force && npm run npm:install"
+        },
+        "vscode:prepublish": {
+          "const": "cf ./out && tsc --project tsconfig-compile.json"
+        },
+        "vue-tsc": {
+          "const": "vue-tsc --noEmit"
+        },
+        "watch": {
+          "const": "tsc -watch"
+        }
+      }
+    }
+  }
+}
