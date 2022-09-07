@@ -254,11 +254,8 @@ module.exports = {
     "misc/no-internal-modules": [
       "warn",
       {
-        disallow: ["./*/**", "@*/*/**", "[^@]*/**"],
         allow: [
           "./src/test-utils",
-          "misc/*/dist/test-utils",
-          "real-config/api",
           "@typescript-eslint/utils/dist/ts-eslint",
           "@vue/test-utils/dist/interfaces/wrapperLike",
           "@vue/test-utils/dist/types",
@@ -266,6 +263,10 @@ module.exports = {
           "flag-icon-css/flags/*/*.svg",
           "jest-extended/all",
           "quasar/wrappers",
+          "real-config/api",
+          "real-facades/dist/test-utils",
+          "real-fns/dist/test-utils",
+          "real-framework/dist/test-utils",
           "ts-toolbelt/**",
           "typeface-roboto-multilang/*.css"
         ]
