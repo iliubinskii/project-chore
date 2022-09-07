@@ -11,8 +11,8 @@
       ]
     },
     "typeRoots": [
-      "node_modules/@skylib",
-      "node_modules/@types"
+      "node_modules/@types",
+      "node_modules/types-fix"
     ],
     "types": [
       "jest"

@@ -29,8 +29,8 @@
         "typeRoots": {
           "items": {
             "enum": [
-              "node_modules/@skylib",
-              "node_modules/@types"
+              "node_modules/@types",
+              "node_modules/types-fix"
             ]
           }
         }
