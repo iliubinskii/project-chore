@@ -1,6 +1,6 @@
 {
   "name": "real-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "Config for commitlint, eslint, jest, npm-package-json-lint, php-cs-fixer, phpstan, stylelint, typedoc, and typescript",
   "keywords": [
