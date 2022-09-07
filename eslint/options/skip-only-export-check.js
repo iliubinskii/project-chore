@@ -1,6 +1,3 @@
 module.exports = {
-  rules: {
-    "@skylib/only-export-name": "off",
-    "@skylib/prefer-only-export": "off"
-  }
+  rules: { "misc/only-export-name": "off", "misc/prefer-only-export": "off" }
 };

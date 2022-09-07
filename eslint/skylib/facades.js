@@ -1,1 +1,1 @@
-module.exports = { extends: ["plugin:@skylib/skylib-facades"] };
+module.exports = { extends: ["plugin:misc/real-facades"] };

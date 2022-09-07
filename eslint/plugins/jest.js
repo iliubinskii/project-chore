@@ -9,9 +9,9 @@ module.exports = {
     "jest/prefer-expect-assertions": [
       "warn",
       {
-        // eslint-disable-next-line @skylib/max-identifier-blocks -- Ok
+        // eslint-disable-next-line misc/max-identifier-blocks -- Ok
         onlyFunctionsWithExpectInCallback: true,
-        // eslint-disable-next-line @skylib/max-identifier-blocks -- Ok
+        // eslint-disable-next-line misc/max-identifier-blocks -- Ok
         onlyFunctionsWithExpectInLoop: true
       }
     ],

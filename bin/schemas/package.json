@@ -5,7 +5,7 @@
         "add-tags": {
           "enum": [
             "php bin/add-tags.php",
-            "php node_modules/@skylib/config/bin/add-tags.php"
+            "php node_modules/real-config/bin/add-tags.php"
           ]
         },
         "browserslist": {
@@ -56,19 +56,19 @@
         "config-lint": {
           "enum": [
             "node bin/config-lint.js",
-            "node node_modules/@skylib/config/bin/config-lint.js"
+            "node node_modules/real-config/bin/config-lint.js"
           ]
         },
         "delete-tags": {
           "enum": [
             "php bin/delete-tags.php",
-            "php node_modules/@skylib/config/bin/delete-tags.php"
+            "php node_modules/real-config/bin/delete-tags.php"
           ]
         },
         "full-check": {
           "enum": [
             "php bin/full-check.php",
-            "php node_modules/@skylib/config/bin/full-check.php"
+            "php node_modules/real-config/bin/full-check.php"
           ]
         },
         "git:unix": {
@@ -83,13 +83,13 @@
         "husky:post-commit": {
           "enum": [
             "php bin/post-commit.php",
-            "php node_modules/@skylib/config/bin/post-commit.php"
+            "php node_modules/real-config/bin/post-commit.php"
           ]
         },
         "husky:pre-commit": {
           "enum": [
             "php bin/pre-commit.php",
-            "php node_modules/@skylib/config/bin/pre-commit.php"
+            "php node_modules/real-config/bin/pre-commit.php"
           ]
         },
         "husky:unset-hooks": {

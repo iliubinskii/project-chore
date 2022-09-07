@@ -1,4 +1,4 @@
-// eslint-disable-next-line @skylib/no-sibling-import -- Ok
+// eslint-disable-next-line misc/no-sibling-import -- Ok
 import { deprecated } from "./deprecated";
 import fs from "node:fs";
 import path from "node:path";

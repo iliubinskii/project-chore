@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    "plugin:@skylib/eslint-plugin/jest",
+    "plugin:misc/jest",
     "../plugins/jest",
     "../plugins/jest-extended",
     "../options/allow-nodejs-modules",
@@ -11,13 +11,15 @@ module.exports = {
   ],
   env: { jest: true },
   rules: {
-    "@skylib/class-match-filename": "off",
-    "@skylib/consistent-enum-members": "off",
-    "@skylib/functions/guards/require-object-type-param": "off",
-    "@skylib/no-at-sign-import": "off",
-    "@skylib/no-at-sign-internal-import": ["warn", { allow: "@/test-utils" }],
-    "@skylib/require-jsdoc": "off",
-    "@skylib/sort-statements": [
+    "@typescript-eslint/no-extraneous-class": "off",
+    "max-classes-per-file": "off",
+    "misc/class-match-filename": "off",
+    "misc/consistent-enum-members": "off",
+    "misc/functions/guards/require-object-type-param": "off",
+    "misc/no-at-sign-import": "off",
+    "misc/no-at-sign-internal-import": ["warn", { allow: "@/test-utils" }],
+    "misc/require-jsdoc": "off",
+    "misc/sort-statements": [
       "warn",
       {
         programOrder: [
@@ -35,8 +37,6 @@ module.exports = {
         ]
       }
     ],
-    "@typescript-eslint/no-extraneous-class": "off",
-    "max-classes-per-file": "off",
     "unicorn/no-null": "off"
   }
 };

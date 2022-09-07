@@ -5,7 +5,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const slow = fs.existsSync("./jest.slow.js")
-  ? // eslint-disable-next-line @skylib/prefer-const-require -- Ok
+  ? // eslint-disable-next-line misc/prefer-const-require -- Ok
     require(fs.realpathSync("./jest.slow.js"))
   : [];
 

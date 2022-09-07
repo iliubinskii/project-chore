@@ -1,1 +1,1 @@
-module.exports = { extends: ["plugin:@skylib/skylib-quasar-extension"] };
+module.exports = { extends: ["plugin:misc/quasar-extension"] };

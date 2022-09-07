@@ -1,5 +1,5 @@
 /*
-eslint @skylib/sort-array: [
+eslint misc/sort-array: [
   "warn",
   {
     selector:

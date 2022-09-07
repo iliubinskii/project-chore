@@ -1,7 +1,7 @@
 module.exports = {
-  extends: "plugin:@skylib/eslint-plugin/eslintrc",
+  extends: "plugin:misc/eslintrc",
   rules: {
-    "@skylib/sort-keys": [
+    "misc/sort-keys": [
       "warn",
       {
         overrides: [
@@ -25,16 +25,16 @@ module.exports = {
             ]
           },
           {
-            _id: "skylib",
-            customOrder: ["_id", "filesToLint", "filesToSkip"],
+            _id: "misc",
+            customOrder: [
+              "_id",
+              "filesToLint",
+              "filesToSkip",
+              "disallow",
+              "allow"
+            ],
             selector:
-              "Property[key.value=/^@skylib\\u002F/u] > ArrayExpression > ObjectExpression"
-          },
-          {
-            _id: "skylib.disallow-import",
-            customOrder: ["disallow", "allow"],
-            selector:
-              "Property[key.value=/^@skylib\\u002Fdisallow-import\\u002F/u] > ArrayExpression > ObjectExpression"
+              "Property[key.value=/^misc\\u002F/u] > ArrayExpression > ObjectExpression"
           }
         ]
       }

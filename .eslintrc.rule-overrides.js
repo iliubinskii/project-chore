@@ -1,6 +1,6 @@
 module.exports = {
   rules: {
-    "@skylib/no-sibling-import": [
+    "misc/no-sibling-import": [
       "warn",
       {
         rules: [

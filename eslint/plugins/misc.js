@@ -5,10 +5,10 @@ const pkg = require(fs.realpathSync("./package.json"));
 const { selectors } = require("./api");
 
 module.exports = {
-  extends: "plugin:@skylib/eslint-plugin/misc",
-  plugins: ["@skylib/eslint-plugin"],
+  extends: "plugin:misc/core",
+  plugins: ["misc"],
   rules: {
-    "@skylib/consistent-empty-lines": [
+    "misc/consistent-empty-lines": [
       "warn",
       {
         rules: [
@@ -92,7 +92,7 @@ module.exports = {
         ]
       }
     ],
-    "@skylib/consistent-filename": [
+    "misc/consistent-filename": [
       "warn",
       {
         overrides: [
@@ -105,7 +105,7 @@ module.exports = {
         ]
       }
     ],
-    "@skylib/consistent-import": [
+    "misc/consistent-import": [
       "warn",
       {
         sources: [
@@ -121,38 +121,38 @@ module.exports = {
             wildcard: true
           },
           {
-            _id: "@skylib/facades/test-utils",
+            _id: "misc/facades/test-utils",
             altLocalNames: ["facadesTestUtils"],
-            source: "@skylib/facades/src/test-utils",
-            sourcePattern: "@skylib/facades/{dist,es}/test-utils",
+            source: "misc/facades/src/test-utils",
+            sourcePattern: "misc/facades/{dist,es}/test-utils",
             wildcard: true
           },
           {
-            _id: "@skylib/framework/test-utils",
+            _id: "misc/framework/test-utils",
             altLocalNames: ["frameworkTestUtils"],
-            source: "@skylib/framework/src/test-utils",
-            sourcePattern: "@skylib/framework/{dist,es}/test-utils",
+            source: "misc/framework/src/test-utils",
+            sourcePattern: "misc/framework/{dist,es}/test-utils",
             wildcard: true
           },
           {
-            _id: "@skylib/functions/test-utils",
+            _id: "misc/functions/test-utils",
             altLocalNames: ["functionsTestUtils"],
-            source: "@skylib/functions/src/test-utils",
-            sourcePattern: "@skylib/functions/{dist,es}/test-utils",
+            source: "misc/functions/src/test-utils",
+            sourcePattern: "misc/functions/{dist,es}/test-utils",
             wildcard: true
           },
           {
-            _id: "@skylib/lodash-commonjs-es",
+            _id: "misc/lodash-commonjs-es",
             autoImport: true,
             localName: "_",
-            source: "@skylib/lodash-commonjs-es",
+            source: "misc/lodash-commonjs-es",
             wildcard: true
           },
           {
-            _id: "@skylib/quasar-extension/test-utils",
+            _id: "misc/quasar-extension/test-utils",
             altLocalNames: ["quasarTestUtils"],
-            source: "@skylib/quasar-extension/src/test-utils",
-            sourcePattern: "@skylib/quasar-extension/{dist,es}/test-utils",
+            source: "misc/quasar-extension/src/test-utils",
+            sourcePattern: "misc/quasar-extension/{dist,es}/test-utils",
             wildcard: true
           },
           {
@@ -247,17 +247,18 @@ module.exports = {
         ]
       }
     ],
-    "@skylib/consistent-optional-props": [
+    "misc/consistent-optional-props": [
       "warn",
       { classes: "undefined", interfaces: "optional" }
     ],
-    "@skylib/no-internal-modules": [
+    "misc/no-internal-modules": [
       "warn",
       {
+        disallow: ["./*/**", "@*/*/**", "[^@]*/**"],
         allow: [
           "./src/test-utils",
-          "@skylib/*/dist/test-utils",
-          "@skylib/config/api",
+          "misc/*/dist/test-utils",
+          "real-config/api",
           "@typescript-eslint/utils/dist/ts-eslint",
           "@vue/test-utils/dist/interfaces/wrapperLike",
           "@vue/test-utils/dist/types",
@@ -267,13 +268,12 @@ module.exports = {
           "quasar/wrappers",
           "ts-toolbelt/**",
           "typeface-roboto-multilang/*.css"
-        ],
-        disallow: ["./*/**", "@*/*/**", "[^@]*/**"]
+        ]
       }
     ],
-    "@skylib/no-sibling-import": "warn",
-    "@skylib/object-format": ["warn", { maxLineLength: 80, maxObjectSize: 3 }],
-    "@skylib/require-jsdoc": [
+    "misc/no-sibling-import": "warn",
+    "misc/object-format": ["warn", { maxLineLength: 80, maxObjectSize: 3 }],
+    "misc/require-jsdoc": [
       "warn",
       {
         excludeSelectors: ["ClassDeclaration", "FunctionDeclaration"],
@@ -288,7 +288,7 @@ module.exports = {
         properties: ["function"]
       }
     ],
-    "@skylib/sort-class-members": [
+    "misc/sort-class-members": [
       "warn",
       {
         sortingOrder: [
@@ -324,9 +324,9 @@ module.exports = {
   overrides: [
     {
       files: "!*.js",
-      extends: "plugin:@skylib/eslint-plugin/typescript",
+      extends: "plugin:misc/typescript",
       rules: {
-        "@skylib/typescript/no-shadow": [
+        "misc/typescript/no-shadow": [
           "warn",
           {
             allow: [
@@ -339,7 +339,7 @@ module.exports = {
             ],
             builtinGlobals: true,
             hoist: "all",
-            // eslint-disable-next-line @skylib/max-identifier-blocks -- Ok
+            // eslint-disable-next-line misc/max-identifier-blocks -- Ok
             ignoreFunctionTypeParameterNameValueShadow: false,
             ignoreTypeValueShadow: true
           }
@@ -348,11 +348,11 @@ module.exports = {
     },
     {
       files: "*.vue",
-      extends: "plugin:@skylib/eslint-plugin/vue",
+      extends: "plugin:misc/vue",
       rules: {
-        "@skylib/consistent-filename": ["warn", { format: "PascalCase" }],
-        "@skylib/require-jsdoc": "off",
-        "@skylib/sort-keys": [
+        "misc/consistent-filename": ["warn", { format: "PascalCase" }],
+        "misc/require-jsdoc": "off",
+        "misc/sort-keys": [
           "warn",
           {
             overrides: [
@@ -375,7 +375,7 @@ module.exports = {
             ]
           }
         ],
-        "@skylib/sort-statements": [
+        "misc/sort-statements": [
           "warn",
           {
             programOrder: [
@@ -398,16 +398,16 @@ module.exports = {
     {
       files: "*.*.ts",
       rules: {
-        "@skylib/consistent-filename": "off",
-        "@skylib/only-export-name": "off",
-        "@skylib/prefer-only-export": "off"
+        "misc/consistent-filename": "off",
+        "misc/only-export-name": "off",
+        "misc/prefer-only-export": "off"
       }
     },
     {
       files: "index.ts",
       rules: {
-        "@skylib/only-export-name": "off",
-        "@skylib/prefer-only-export": "off"
+        "misc/only-export-name": "off",
+        "misc/prefer-only-export": "off"
       }
     }
   ]

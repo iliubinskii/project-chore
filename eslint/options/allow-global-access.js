@@ -1,6 +1,6 @@
 module.exports = {
   rules: {
-    "@skylib/no-internal-modules": "off",
-    "@skylib/no-relative-parent-import": "off"
+    "misc/no-internal-modules": "off",
+    "misc/no-relative-parent-import": "off"
   }
 };

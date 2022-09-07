@@ -46,8 +46,8 @@
       "enum": [
         "./tsconfig/min",
         "./tsconfig/strict",
-        "@skylib/config/tsconfig/min",
-        "@skylib/config/tsconfig/strict"
+        "real-config/tsconfig/min",
+        "real-config/tsconfig/strict"
       ]
     },
     "include": {

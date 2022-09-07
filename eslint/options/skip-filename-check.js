@@ -1,1 +1,1 @@
-module.exports = { rules: { "@skylib/consistent-filename": "off" } };
+module.exports = { rules: { "misc/consistent-filename": "off" } };

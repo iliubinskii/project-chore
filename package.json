@@ -1,6 +1,6 @@
 {
-  "name": "@skylib/config",
-  "version": "3.40.2",
+  "name": "real-config",
+  "version": "0.1.0",
   "private": false,
   "description": "Config for commitlint, eslint, jest, npm-package-json-lint, php-cs-fixer, phpstan, stylelint, typedoc, and typescript",
   "keywords": [
@@ -88,7 +88,6 @@
     "@commitlint/cli": ">=17",
     "@commitlint/config-conventional": ">=17",
     "@jest/test-sequencer": "^28",
-    "@skylib/eslint-plugin": "^0.1.53",
     "@types/eslint": ">=8",
     "@types/jest": "^28",
     "@types/node": ">=18",
@@ -112,6 +111,7 @@
     "eslint-plugin-jest-extended": ">=2",
     "eslint-plugin-jquery": ">=1",
     "eslint-plugin-jsdoc": ">=39",
+    "eslint-plugin-misc": "^0.1.2",
     "eslint-plugin-no-type-assertion": ">=1",
     "eslint-plugin-no-use-extend-native": ">=0",
     "eslint-plugin-node": ">=11",
