@@ -27,10 +27,10 @@
           "const": "cf cache node_modules/.cache"
         },
         "commitlint": {
-          "const": "commitlint --edit"
+          "const": "commitlint --from="
         },
-        "commitlint-all": {
-          "const": "commitlint --config commitlint-all.config.js --from="
+        "commitlint-next": {
+          "const": "commitlint --config commitlint-next.config.js --edit"
         },
         "compile": {
           "enum": [

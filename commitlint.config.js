@@ -1,1 +1,1 @@
-module.exports = { extends: ["./commitlint/next"] };
+module.exports = { extends: ["./commitlint/all"] };

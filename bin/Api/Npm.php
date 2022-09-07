@@ -44,7 +44,7 @@ class Npm
    */
   public function commitlint(bool $interactive = false): void
   {
-    static::run('commitlint-all', 'Linting with commitlint', $interactive);
+    static::run('commitlint', 'Linting with commitlint', $interactive);
   }
 
   /**

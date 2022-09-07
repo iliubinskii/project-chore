@@ -22,7 +22,7 @@ module.exports = {
     },
     { files: ".prettier.js", rules: { "misc/real-config/prettier": "warn" } },
     {
-      files: ["commitlint.scopes.js", "commitlint-all.scopes.js"],
+      files: ["commitlint.scopes.js", "commitlint-next.scopes.js"],
       rules: { "misc/real-config/sort-commitlint": "warn" }
     }
   ]
