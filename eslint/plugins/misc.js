@@ -121,38 +121,38 @@ module.exports = {
             wildcard: true
           },
           {
-            _id: "misc/facades/test-utils",
+            _id: "real-facades/test-utils",
             altLocalNames: ["facadesTestUtils"],
-            source: "misc/facades/src/test-utils",
-            sourcePattern: "misc/facades/{dist,es}/test-utils",
+            source: "real-facades/src/test-utils",
+            sourcePattern: "real-facades/{dist,es}/test-utils",
             wildcard: true
           },
           {
-            _id: "misc/framework/test-utils",
+            _id: "real-framework/test-utils",
             altLocalNames: ["frameworkTestUtils"],
-            source: "misc/framework/src/test-utils",
-            sourcePattern: "misc/framework/{dist,es}/test-utils",
+            source: "real-framework/src/test-utils",
+            sourcePattern: "real-framework/{dist,es}/test-utils",
             wildcard: true
           },
           {
-            _id: "misc/functions/test-utils",
+            _id: "real-fns/test-utils",
             altLocalNames: ["functionsTestUtils"],
-            source: "misc/functions/src/test-utils",
-            sourcePattern: "misc/functions/{dist,es}/test-utils",
+            source: "real-fns/src/test-utils",
+            sourcePattern: "real-fns/{dist,es}/test-utils",
             wildcard: true
           },
           {
-            _id: "misc/lodash-commonjs-es",
+            _id: "lodash-commonjs-es",
             autoImport: true,
             localName: "_",
-            source: "misc/lodash-commonjs-es",
+            source: "lodash-commonjs-es",
             wildcard: true
           },
           {
-            _id: "misc/quasar-extension/test-utils",
+            _id: "quasar-extension/test-utils",
             altLocalNames: ["quasarTestUtils"],
-            source: "misc/quasar-extension/src/test-utils",
-            sourcePattern: "misc/quasar-extension/{dist,es}/test-utils",
+            source: "quasar-extension/src/test-utils",
+            sourcePattern: "quasar-extension/{dist,es}/test-utils",
             wildcard: true
           },
           {

@@ -15,9 +15,9 @@ module.exports = {
     "max-classes-per-file": "off",
     "misc/class-match-filename": "off",
     "misc/consistent-enum-members": "off",
-    "misc/functions/guards/require-object-type-param": "off",
     "misc/no-at-sign-import": "off",
     "misc/no-at-sign-internal-import": ["warn", { allow: "@/test-utils" }],
+    "misc/real-fns/guards/require-object-type-param": "off",
     "misc/require-jsdoc": "off",
     "misc/sort-statements": [
       "warn",
