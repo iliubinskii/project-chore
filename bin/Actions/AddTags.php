@@ -3,7 +3,7 @@
 namespace Actions;
 
 use Api\Git;
-use Skylib\Config\BaseException;
+use Real\Config\BaseException;
 
 class AddTags
 {

@@ -2,7 +2,7 @@
 
 namespace Api;
 
-use Skylib\Config\BaseException;
+use Real\Config\BaseException;
 
 class Util
 {

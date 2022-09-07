@@ -2,9 +2,9 @@
 
 namespace Api;
 
-use Skylib\Config\Assert;
-use Skylib\Config\BaseException;
-use Skylib\Config\Unknown;
+use Real\Config\Assert;
+use Real\Config\BaseException;
+use Real\Config\Unknown;
 
 class Package
 {

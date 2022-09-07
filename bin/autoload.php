@@ -1,6 +1,6 @@
 <?php
 
-use Skylib\Config\BaseException;
+use Real\Config\BaseException;
 
 set_error_handler(function (int $errno, string $errstr): void
 {
@@ -11,7 +11,7 @@ spl_autoload_register(function (string $className): void
 {
   $className = str_replace('\\', '/', $className);
 
-  include_once str_starts_with($className, 'Skylib/Config/')
-    ? dirname(__DIR__).'/api/'.substr($className, 14).'.php'
+  include_once str_starts_with($className, 'Real/Config/')
+    ? dirname(__DIR__).'/api/'.substr($className, 12).'.php'
     : __DIR__.'/'.$className.'.php';
 });

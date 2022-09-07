@@ -2,8 +2,8 @@
 
 namespace Api;
 
-use Skylib\Config\Assert;
-use Skylib\Config\Unknown;
+use Real\Config\Assert;
+use Real\Config\Unknown;
 
 class PreCommitConfig
 {

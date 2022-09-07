@@ -13,13 +13,13 @@
     "typedoc",
     "typescript"
   ],
-  "homepage": "https://github.com/ilyub/config",
+  "homepage": "https://github.com/ilyub/real-config",
   "bugs": {
-    "url": "https://github.com/ilyub/config/issues"
+    "url": "https://github.com/ilyub/real-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ilyub/config.git"
+    "url": "git://github.com/ilyub/real-config.git"
   },
   "license": "ISC",
   "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/ilyub)",

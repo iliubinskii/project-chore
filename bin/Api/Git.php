@@ -2,8 +2,8 @@
 
 namespace Api;
 
-use Skylib\Config\Assert;
-use Skylib\Config\BaseException;
+use Real\Config\Assert;
+use Real\Config\BaseException;
 
 class Git
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Skylib\Config;
+namespace Real\Config;
 
 use Exception;
 
