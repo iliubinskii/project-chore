@@ -2,7 +2,10 @@ const fs = require("node:fs");
 
 const pkg = require(fs.realpathSync("./package.json"));
 
-const { selectors } = require("./api");
+const block =
+  ":matches(BlockStatement, ExportNamedDeclaration, Program, SwitchCase, TSModuleBlock)";
+
+const rootBlock = ":matches(ExportNamedDeclaration, Program, TSModuleBlock)";
 
 module.exports = {
   extends: "plugin:misc/core",
@@ -27,7 +30,7 @@ module.exports = {
             emptyLine: "never",
             selector: "ArrayExpression > .elements"
           },
-          { _id: "enum", emptyLine: "never", selector: "TSEnumMember" },
+          { _id: "enum-members", emptyLine: "never", selector: "TSEnumMember" },
           {
             _id: "members",
             emptyLine: "never",
@@ -40,35 +43,35 @@ module.exports = {
             selector: ":matches(ObjectExpression, ObjectPattern) > .properties"
           },
           {
-            _id: "statement",
+            _id: "statements",
             emptyLine: "always",
-            selector: `:matches(${selectors.block}) > :matches(${selectors.statement})`
+            selector: `${block} > :matches(:statement, TSDeclareFunction, TSExportAssignment)`
           },
           {
-            _id: "statement.export",
+            _id: "statements.export",
             emptyLine: "never",
-            selector: `:matches(${selectors.block}) > :matches(ExportAllDeclaration, ExportNamedDeclaration[source])`
+            selector: `${block} > :matches(ExportAllDeclaration, ExportNamedDeclaration[source])`
           },
           {
-            _id: "statement.expression-statement",
+            _id: "statements.expression-statement",
             emptyLine: "never",
-            selector: `:matches(${selectors.block}) > ExpressionStatement`
+            selector: `${block} > ExpressionStatement`
           },
           {
-            _id: "statement.import",
+            _id: "statements.import",
             emptyLine: "never",
-            selector: `:matches(${selectors.block}) > ImportDeclaration`
+            selector: `${block} > ImportDeclaration`
           },
           {
-            _id: "statement.test",
+            _id: "statements.test",
             emptyLine: "always",
             next: [
-              `:matches(${selectors.block}) > ExpressionStatement[expression.callee.name=test]`,
-              `:matches(${selectors.block}) > ExpressionStatement[expression.callee.object.name=test][expression.callee.property.name=/^(?:only|skip)$/u]`,
-              `:matches(${selectors.block}) > ExpressionStatement[expression.callee.callee.object.name=test][expression.callee.callee.property.name=each]`,
-              `:matches(${selectors.block}) > ExpressionStatement[expression.callee.callee.object.object.name=test][expression.callee.callee.object.property.name=/^(?:only|skip)$/u][expression.callee.callee.property.name=each]`
+              `${block} > ExpressionStatement[expression.callee.name=test]`,
+              `${block} > ExpressionStatement[expression.callee.object.name=test][expression.callee.property.name=/^(?:only|skip)$/u]`,
+              `${block} > ExpressionStatement[expression.callee.callee.object.name=test][expression.callee.callee.property.name=each]`,
+              `${block} > ExpressionStatement[expression.callee.callee.object.object.name=test][expression.callee.callee.object.property.name=/^(?:only|skip)$/u][expression.callee.callee.property.name=each]`
             ],
-            prev: `:matches(${selectors.block}) > :matches(${selectors.statement})`
+            prev: `${block} > :matches(:statement, TSDeclareFunction, TSExportAssignment)`
           }
         ]
       }
@@ -161,7 +164,7 @@ module.exports = {
           },
           {
             _id: "quasar-extension/test-utils",
-            altLocalNames: ["quasarTestUtils"],
+            altLocalNames: ["quasarExtensionTestUtils"],
             source: "quasar-extension/src/test-utils",
             sourcePattern: "quasar-extension/{dist,es}/test-utils",
             wildcard: true
@@ -175,7 +178,7 @@ module.exports = {
           },
           {
             _id: "real-fns/test-utils",
-            altLocalNames: ["functionsTestUtils"],
+            altLocalNames: ["fnsTestUtils"],
             source: "real-fns/src/test-utils",
             sourcePattern: "real-fns/{dist,es}/test-utils",
             wildcard: true
@@ -253,18 +256,17 @@ module.exports = {
         ]
       }
     ],
-    "misc/no-sibling-import": "warn",
     "misc/object-format": ["warn", { maxLineLength: 80, maxObjectSize: 3 }],
     "misc/require-jsdoc": [
       "warn",
       {
         excludeSelectors: ["ClassDeclaration", "FunctionDeclaration"],
         includeSelectors: [
-          `:matches(${selectors.documentedBlock}) >  FunctionDeclaration`,
-          `:matches(${selectors.documentedBlock}) >  VariableDeclaration > .declarations > .id > .typeAnnotation > TSFunctionType`,
-          `:matches(${selectors.documentedBlock}) >  VariableDeclaration > .declarations[id.typeAnnotation=undefined] > ObjectExpression > .properties > :matches(${selectors.functionExpression})`,
-          `:matches(${selectors.documentedBlock}) >  VariableDeclaration > .declarations[id.typeAnnotation=undefined] > TSAsExpression > ObjectExpression > .properties > :matches(${selectors.functionExpression})`,
-          `PropertyDefinition > :matches(${selectors.functionExpression})`
+          `${rootBlock} >  FunctionDeclaration`,
+          `${rootBlock} >  VariableDeclaration > .declarations > .id > .typeAnnotation > TSFunctionType`,
+          `${rootBlock} >  VariableDeclaration > .declarations[id.typeAnnotation=undefined] > ObjectExpression > .properties > :matches(ArrowFunctionExpression, FunctionExpression)`,
+          `${rootBlock} >  VariableDeclaration > .declarations[id.typeAnnotation=undefined] > TSAsExpression > ObjectExpression > .properties > :matches(ArrowFunctionExpression, FunctionExpression)`,
+          "PropertyDefinition > :matches(ArrowFunctionExpression, FunctionExpression)"
         ],
         interfaces: ["callSignatures", "constructSignatures"],
         properties: ["function"]
@@ -362,6 +364,7 @@ module.exports = {
           {
             programOrder: [
               "ImportDeclaration",
+              "DeclareGlobal",
               "ExportAllDeclaration",
               "ExportDeclaration",
               "ExportUnknown",

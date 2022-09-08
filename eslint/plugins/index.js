@@ -18,7 +18,7 @@ module.exports = {
     "./regexp",
     "./security",
     "./misc",
-    "./misc.config",
+    "./misc.real-config",
     "./sonarjs",
     "./sort-destructure-keys",
     "./sort-imports-requires",

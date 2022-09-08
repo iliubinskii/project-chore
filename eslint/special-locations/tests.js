@@ -19,24 +19,6 @@ module.exports = {
     "misc/no-at-sign-internal-import": ["warn", { allow: "@/test-utils" }],
     "misc/real-fns/guards/require-object-type-param": "off",
     "misc/require-jsdoc": "off",
-    "misc/sort-statements": [
-      "warn",
-      {
-        programOrder: [
-          "ImportDeclaration",
-          "ExportAllDeclaration",
-          "ExportDeclaration",
-          "ExportDefaultDeclaration",
-          "ExportUnknown",
-          "ExportTypeDeclaration",
-          "ExportFunctionDeclaration",
-          "TypeDeclaration",
-          "FunctionDeclaration",
-          "Unknown",
-          "JestTest"
-        ]
-      }
-    ],
     "unicorn/no-null": "off"
   }
 };
