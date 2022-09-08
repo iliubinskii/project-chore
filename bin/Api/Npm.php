@@ -48,6 +48,14 @@ class Npm
   }
 
   /**
+   * Runs "commitlint-next" script.
+   */
+  public function commitlintNext(bool $interactive = false): void
+  {
+    static::run('commitlint-next', 'Linting with commitlint (next)', $interactive);
+  }
+
+  /**
    * Runs "config-lint" script.
    */
   public function configLint(bool $interactive = false): void

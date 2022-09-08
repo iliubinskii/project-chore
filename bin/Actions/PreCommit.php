@@ -40,6 +40,7 @@ class PreCommit
       Git::noPartialCommit();
       $npm->noVulnerabilities($preCommitConfig->audit);
       $npm->commitlint();
+      $npm->commitlintNext();
       $npm->configLint();
       $npm->packageJsonLint();
       $npm->tsc();
