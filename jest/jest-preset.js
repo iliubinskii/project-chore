@@ -7,9 +7,6 @@ module.exports = {
   coverageDirectory: ".",
   coverageReporters: ["lcov", "lcovonly"],
   errorOnDeprecated: true,
-  globals: {
-    "ts-jest": { isolatedModules: true, tsconfig: "./tsconfig-min.json" }
-  },
   haste: { throwOnModuleCollision: true },
   maxWorkers: 1,
   moduleFileExtensions: ["js", "ts", "vue"],
@@ -36,7 +33,10 @@ module.exports = {
   transform: {
     [/\.(?:css|gif|jpg|less|png|sass|scss|styl|svg|ttf|woff|woff2)$/u.source]:
       "jest-transform-stub",
-    [/\.(?:html|js|ts)$/u.source]: "ts-jest",
+    [/\.(?:html|js|ts)$/u.source]: [
+      "ts-jest",
+      { isolatedModules: true, tsconfig: "./tsconfig-min.json" }
+    ],
     [/\.vue$/u.source]: "@vue/vue3-jest"
   },
   transformIgnorePatterns: [
