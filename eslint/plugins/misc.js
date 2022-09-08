@@ -13,70 +13,51 @@ module.exports = {
       {
         rules: [
           {
-            _id: "Enum",
-            emptyLine: "never",
-            next: "TSEnumMember",
-            prev: "TSEnumMember"
-          },
-          {
             _id: "arguments",
             emptyLine: "never",
-            next: "CallExpression > .arguments",
-            prev: "CallExpression > .arguments"
+            selector: "CallExpression > .arguments"
           },
           {
             _id: "body",
             emptyLine: "never",
-            next: "TSInterfaceBody > .body",
-            prev: "TSInterfaceBody > .body"
+            selector: "TSInterfaceBody > .body"
           },
           {
             _id: "elements",
             emptyLine: "never",
-            next: "ArrayExpression > .elements",
-            prev: "ArrayExpression > .elements"
+            selector: "ArrayExpression > .elements"
           },
+          { _id: "enum", emptyLine: "never", selector: "TSEnumMember" },
           {
             _id: "members",
             emptyLine: "never",
-            next: "TSTypeLiteral > .members",
-            prev: "TSTypeLiteral > .members"
+            selector: "TSTypeLiteral > .members"
           },
-          {
-            _id: "params",
-            emptyLine: "never",
-            next: ".params",
-            prev: ".params"
-          },
+          { _id: "params", emptyLine: "never", selector: ".params" },
           {
             _id: "properties",
             emptyLine: "never",
-            next: "ObjectExpression > .properties",
-            prev: "ObjectExpression > .properties"
+            selector: ":matches(ObjectExpression, ObjectPattern) > .properties"
           },
           {
             _id: "statement",
             emptyLine: "always",
-            next: `:matches(${selectors.block}) > :matches(${selectors.statement})`,
-            prev: `:matches(${selectors.block}) > :matches(${selectors.statement})`
+            selector: `:matches(${selectors.block}) > :matches(${selectors.statement})`
           },
           {
-            _id: "statement.ExportNamedDeclaration",
+            _id: "statement.export",
             emptyLine: "never",
-            next: `:matches(${selectors.block}) > ExportNamedDeclaration[source]`,
-            prev: `:matches(${selectors.block}) > ExportNamedDeclaration[source]`
+            selector: `:matches(${selectors.block}) > :matches(ExportAllDeclaration, ExportNamedDeclaration[source])`
           },
           {
-            _id: "statement.ExpressionStatement",
+            _id: "statement.expression-statement",
             emptyLine: "never",
-            next: `:matches(${selectors.block}) > ExpressionStatement`,
-            prev: `:matches(${selectors.block}) > ExpressionStatement`
+            selector: `:matches(${selectors.block}) > ExpressionStatement`
           },
           {
-            _id: "statement.ImportDeclaration",
+            _id: "statement.import",
             emptyLine: "never",
-            next: `:matches(${selectors.block}) > ImportDeclaration`,
-            prev: `:matches(${selectors.block}) > ImportDeclaration`
+            selector: `:matches(${selectors.block}) > ImportDeclaration`
           },
           {
             _id: "statement.test",
@@ -121,41 +102,6 @@ module.exports = {
             wildcard: true
           },
           {
-            _id: "real-facades/test-utils",
-            altLocalNames: ["facadesTestUtils"],
-            source: "real-facades/src/test-utils",
-            sourcePattern: "real-facades/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
-            _id: "real-framework/test-utils",
-            altLocalNames: ["frameworkTestUtils"],
-            source: "real-framework/src/test-utils",
-            sourcePattern: "real-framework/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
-            _id: "real-fns/test-utils",
-            altLocalNames: ["functionsTestUtils"],
-            source: "real-fns/src/test-utils",
-            sourcePattern: "real-fns/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
-            _id: "lodash-commonjs-es",
-            autoImport: true,
-            localName: "_",
-            source: "lodash-commonjs-es",
-            wildcard: true
-          },
-          {
-            _id: "quasar-extension/test-utils",
-            altLocalNames: ["quasarTestUtils"],
-            source: "quasar-extension/src/test-utils",
-            sourcePattern: "quasar-extension/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
             _id: "@vue/test-utils",
             altLocalNames: ["vueTestUtils"],
             autoImport: true,
@@ -194,6 +140,13 @@ module.exports = {
             source: "jquery"
           },
           {
+            _id: "lodash-commonjs-es",
+            autoImport: true,
+            localName: "_",
+            source: "lodash-commonjs-es",
+            wildcard: true
+          },
+          {
             _id: "minisearch",
             autoImport: true,
             localName: "MiniSearch",
@@ -205,6 +158,34 @@ module.exports = {
             autoImport: true,
             localName: "path",
             source: "node:path"
+          },
+          {
+            _id: "quasar-extension/test-utils",
+            altLocalNames: ["quasarTestUtils"],
+            source: "quasar-extension/src/test-utils",
+            sourcePattern: "quasar-extension/{dist,es}/test-utils",
+            wildcard: true
+          },
+          {
+            _id: "real-facades/test-utils",
+            altLocalNames: ["facadesTestUtils"],
+            source: "real-facades/src/test-utils",
+            sourcePattern: "real-facades/{dist,es}/test-utils",
+            wildcard: true
+          },
+          {
+            _id: "real-fns/test-utils",
+            altLocalNames: ["functionsTestUtils"],
+            source: "real-fns/src/test-utils",
+            sourcePattern: "real-fns/{dist,es}/test-utils",
+            wildcard: true
+          },
+          {
+            _id: "real-framework/test-utils",
+            altLocalNames: ["frameworkTestUtils"],
+            source: "real-framework/src/test-utils",
+            sourcePattern: "real-framework/{dist,es}/test-utils",
+            wildcard: true
           },
           {
             _id: "tsutils",
