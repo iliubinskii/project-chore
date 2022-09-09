@@ -5,8 +5,6 @@ const pkg = require(fs.realpathSync("./package.json"));
 const block =
   ":matches(BlockStatement, ExportNamedDeclaration, Program, SwitchCase, TSModuleBlock)";
 
-const rootBlock = ":matches(ExportNamedDeclaration, Program, TSModuleBlock)";
-
 module.exports = {
   extends: "plugin:misc/core",
   plugins: ["misc"],
@@ -231,10 +229,6 @@ module.exports = {
         ]
       }
     ],
-    "misc/consistent-optional-props": [
-      "warn",
-      { classes: "undefined", interfaces: "optional" }
-    ],
     "misc/no-internal-modules": [
       "warn",
       {
@@ -254,22 +248,6 @@ module.exports = {
           "ts-toolbelt/**",
           "typeface-roboto-multilang/*.css"
         ]
-      }
-    ],
-    "misc/object-format": ["warn", { maxLineLength: 80, maxObjectSize: 3 }],
-    "misc/require-jsdoc": [
-      "warn",
-      {
-        excludeSelectors: ["ClassDeclaration", "FunctionDeclaration"],
-        includeSelectors: [
-          `${rootBlock} >  FunctionDeclaration`,
-          `${rootBlock} >  VariableDeclaration > .declarations > .id > .typeAnnotation > TSFunctionType`,
-          `${rootBlock} >  VariableDeclaration > .declarations[id.typeAnnotation=undefined] > ObjectExpression > .properties > :matches(ArrowFunctionExpression, FunctionExpression)`,
-          `${rootBlock} >  VariableDeclaration > .declarations[id.typeAnnotation=undefined] > TSAsExpression > ObjectExpression > .properties > :matches(ArrowFunctionExpression, FunctionExpression)`,
-          "PropertyDefinition > :matches(ArrowFunctionExpression, FunctionExpression)"
-        ],
-        interfaces: ["callSignatures", "constructSignatures"],
-        properties: ["function"]
       }
     ],
     "misc/sort-class-members": [
