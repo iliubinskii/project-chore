@@ -29,6 +29,7 @@ class DeleteTags
       }
       catch (Throwable)
       {
+        // Ignore
       }
     }
   }
