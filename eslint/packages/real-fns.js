@@ -1,1 +1,1 @@
-module.exports = { extends: ["plugin:misc/real-fns"] };
+module.exports = { extends: "plugin:misc/real-fns" };

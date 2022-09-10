@@ -1,1 +1,1 @@
-module.exports = { extends: ["plugin:misc/real-framework"] };
+module.exports = { extends: "plugin:misc/real-framework" };

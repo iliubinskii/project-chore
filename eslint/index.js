@@ -7,7 +7,7 @@ module.exports = {
     "lcov-report/**",
     "node_modules/**"
   ],
-  extends: ["./plugins"],
+  extends: "./plugins",
   env: {
     browser: true,
     commonjs: true,

@@ -4,7 +4,7 @@ module.exports = {
     "array-callback-return": "off",
     "camelcase": "off",
     "capitalized-comments": "off",
-    "class-methods-use-this": ["warn", { enforceForClassFields: false }],
+    "class-methods-use-this": "off",
     "complexity": ["warn", 50],
     "curly": ["error", "multi"],
     "func-names": ["warn", "never"],

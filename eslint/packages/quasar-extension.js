@@ -1,1 +1,1 @@
-module.exports = { extends: ["plugin:misc/quasar-extension"] };
+module.exports = { extends: "plugin:misc/quasar-extension" };
