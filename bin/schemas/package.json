@@ -78,7 +78,7 @@
           "const": "git config --replace-all core.ignorecase true"
         },
         "husky:commit-msg": {
-          "const": "npm run commitlint"
+          "const": "npm run commitlint-next"
         },
         "husky:post-commit": {
           "enum": [

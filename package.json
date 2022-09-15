@@ -55,7 +55,7 @@
     "full-check": "php bin/full-check.php",
     "git:unix": "git config --replace-all core.ignorecase false",
     "git:windows": "git config --replace-all core.ignorecase true",
-    "husky:commit-msg": "npm run commitlint",
+    "husky:commit-msg": "npm run commitlint-next",
     "husky:post-commit": "php bin/post-commit.php",
     "husky:pre-commit": "php bin/pre-commit.php",
     "husky:unset-hooks": "git config --unset core.hooksPath",
