@@ -64,6 +64,27 @@ class Package
   }
 
   /**
+   * No deprecated.
+   */
+  public function noDeprecated(): void
+  {
+    if (preg_match('`^\d+\.0\.0$`isuxDX', $this->version) && file_exists('src'))
+    {
+      foreach (Sys::scanDirDeep('src') as $path)
+      {
+        if (is_file($path))
+        {
+          $contents = Assert::string(file_get_contents($path));
+          if (preg_match('`\*\s+@deprecated`isuxDX', $contents))
+          {
+            throw new BaseException('No deprecated');
+          }
+        }
+      }
+    }
+  }
+
+  /**
    * Asserts no file dependencies.
    */
   public function noFileDependencies(): void

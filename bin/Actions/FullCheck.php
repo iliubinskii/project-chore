@@ -13,8 +13,8 @@ class FullCheck
    */
   public static function do(): void
   {
-    $package = new Package();
     $preCommitConfig = new PreCommitConfig();
+    $package = new Package();
     $npm = new Npm($package);
 
     $npm->noVulnerabilities($preCommitConfig->audit, true);

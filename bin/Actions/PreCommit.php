@@ -14,30 +14,32 @@ class PreCommit
    */
   public static function do(): void
   {
-    $package = new Package();
     $preCommitConfig = new PreCommitConfig();
-
-    $package->noFileDependencies();
-
-    Git::noMasterBranch();
+    $package = new Package();
+    $npm = new Npm($package);
 
     if (Git::hasTag($package->version))
     {
-      // Tag already exists
+      Git::noMasterBranch();
+      $package->noFileDependencies();
     }
     else
     {
-      $npm = new Npm($package);
-
       Git::checkVersion($package->version);
+      Git::noMasterBranch();
+      $package->noDeprecated();
+      $package->noFileDependencies();
+
       Git::noPartialCommit();
-      $npm->noDeprecated();
+
       $npm->regenerateLockFile();
       $npm->build();
       $npm->buildEs();
       $npm->buildDoc();
       $npm->phpCsFixer();
+
       Git::noPartialCommit();
+
       $npm->noVulnerabilities($preCommitConfig->audit);
       $npm->commitlint();
       $npm->commitlintNext();
@@ -46,11 +48,13 @@ class PreCommit
       $npm->tsc();
       $npm->vueTsc();
       $npm->lint();
+      $npm->phpstan();
       $npm->stylelint();
       $npm->stylelintHtml();
-      $npm->phpstan();
       $npm->test();
+
       Git::noPartialCommit();
+
       $npm->publish();
     }
   }

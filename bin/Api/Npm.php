@@ -92,27 +92,6 @@ class Npm
   }
 
   /**
-   * No deprecated.
-   */
-  public function noDeprecated(): void
-  {
-    if (preg_match('`^\d+\.0\.0$`isuxDX', $this->package->version) && file_exists('src'))
-    {
-      foreach (Sys::scanDirDeep('src') as $path)
-      {
-        if (is_file($path))
-        {
-          $contents = Assert::string(file_get_contents($path));
-          if (preg_match('`\*\s+@deprecated`isuxDX', $contents))
-          {
-            throw new BaseException('No deprecated');
-          }
-        }
-      }
-    }
-  }
-
-  /**
    * No vulnerabilities.
    */
   public function noVulnerabilities(string $cmd, bool $interactive = false): void
