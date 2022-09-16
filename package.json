@@ -162,8 +162,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "overrides": {
-    "package-json": "8.1.0"
   }
 }
