@@ -2,6 +2,7 @@ module.exports = {
   ignorePatterns: [
     "!.*",
     ".quasar/**",
+    "cache/**",
     "dist/**",
     "es/**",
     "lcov-report/**",
