@@ -343,6 +343,7 @@ module.exports = {
             programOrder: [
               "ImportDeclaration",
               "DeclareGlobal",
+              "Declare",
               "ExportAllDeclaration",
               "ExportDeclaration",
               "ExportUnknown",
