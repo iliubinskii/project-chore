@@ -1,5 +1,3 @@
-// eslint-disable-next-line misc/no-sibling-import -- Ok
-import { deprecated } from "./deprecated";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -18,7 +16,5 @@ export const b = import(
 
 export const constructor = 1;
 
-// eslint-disable-next-line deprecation/deprecation -- Ok
-deprecated();
 fs.existsSync("");
 path.basename("");
