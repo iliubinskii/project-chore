@@ -3,7 +3,7 @@ const fs = require("node:fs");
 module.exports = {
   cacheDirectory: "./cache/jest",
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.{ts,tsx,vue}", "!**/*.d.ts"],
+  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx,vue}", "!**/*.d.ts"],
   coverageDirectory: ".",
   coverageReporters: ["lcov", "lcovonly"],
   errorOnDeprecated: true,
