@@ -135,7 +135,10 @@
           "const": "php vendor/bin/phpstan analyse -c phpstan.neon --quiet"
         },
         "prepare": {
-          "const": "husky install"
+          "enum": [
+            "node bin/prepare.js",
+            "node node_modules/real-config/bin/prepare.js"
+          ]
         },
         "serve": {
           "const": "quasar dev"
