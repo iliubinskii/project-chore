@@ -250,6 +250,24 @@ module.exports = {
         ]
       }
     ],
+    "misc/no-shadow": [
+      "warn",
+      {
+        allow: [
+          "Plugin",
+          "ReadonlyMap",
+          "ReadonlySet",
+          "constructor",
+          "event",
+          "name"
+        ],
+        builtinGlobals: true,
+        hoist: "all",
+        // eslint-disable-next-line misc/max-identifier-blocks -- Ok
+        ignoreFunctionTypeParameterNameValueShadow: false,
+        ignoreTypeValueShadow: true
+      }
+    ],
     "misc/sort-class-members": [
       "warn",
       {
@@ -284,30 +302,7 @@ module.exports = {
     ]
   },
   overrides: [
-    {
-      files: "!*.js",
-      extends: "plugin:misc/typescript",
-      rules: {
-        "misc/typescript/no-shadow": [
-          "warn",
-          {
-            allow: [
-              "Plugin",
-              "ReadonlyMap",
-              "ReadonlySet",
-              "constructor",
-              "event",
-              "name"
-            ],
-            builtinGlobals: true,
-            hoist: "all",
-            // eslint-disable-next-line misc/max-identifier-blocks -- Ok
-            ignoreFunctionTypeParameterNameValueShadow: false,
-            ignoreTypeValueShadow: true
-          }
-        ]
-      }
-    },
+    { files: "!*.js", extends: "plugin:misc/typescript" },
     {
       files: "*.vue",
       extends: "plugin:misc/vue",
