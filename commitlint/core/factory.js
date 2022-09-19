@@ -1,13 +1,3 @@
-/*
-eslint misc/sort-array: [
-  "warn",
-  {
-    selector:
-      "VariableDeclarator[id.name=/^(?:defaultScopes|types)$/u] > ArrayExpression"
-  }
-] -- Ok
-*/
-
 module.exports = sources => {
   const fs = require("node:fs");
 
@@ -27,60 +17,66 @@ module.exports = sources => {
     return result;
   })();
 
-  const types = [
-    "build",
-    "chore",
-    "docs",
-    "feat",
-    "fix",
-    "perf",
-    "refactor",
-    "revert",
-    "style",
-    "test"
-  ];
+  const types =
+    // @sorted
+    [
+      "build",
+      "chore",
+      "docs",
+      "feat",
+      "fix",
+      "perf",
+      "refactor",
+      "revert",
+      "style",
+      "test"
+    ];
 
-  const defaultScopes = [
-    "auto-eslint",
-    "auto-json",
-    "auto-linebreaks",
-    "auto-php-cs",
-    "auto-stylelint",
-    "babel",
-    "browserlist",
-    "commitlint",
-    "composer",
-    "deps-major-update",
-    "deps-update",
-    "env",
-    "eslint",
-    "fix",
-    "git",
-    "husky",
-    "jest",
-    "npm",
-    "package",
-    "package-json-lint",
-    "perf",
-    "php-cs",
-    "phpstan",
-    "pre-commit",
-    "readme",
-    "recommended-config-lint",
-    "recommended-eslint",
-    "recommended-package-json-lint",
-    "recommended-phpstan",
-    "recommended-sonar",
-    "recommended-stylelint",
-    "refactor",
-    "revert",
-    "sonar",
-    "style",
-    "stylelint",
-    "typedoc",
-    "typescript",
-    "vscode"
-  ];
+  const defaultScopes =
+    // @sorted
+    [
+      "auto-eslint",
+      "auto-json",
+      "auto-linebreaks",
+      "auto-php-cs",
+      "auto-stylelint",
+      "babel",
+      "browserlist",
+      "commitlint",
+      "composer",
+      "deps-major-update",
+      "deps-update",
+      "env",
+      "eslint",
+      "fix",
+      "git",
+      "github",
+      "husky",
+      "jest",
+      "npm",
+      "package",
+      "package-json-lint",
+      "perf",
+      "php-cs",
+      "phpstan",
+      "pre-commit",
+      "readme",
+      "recommended-config-lint",
+      "recommended-eslint",
+      "recommended-package-json-lint",
+      "recommended-phpstan",
+      "recommended-sonar",
+      "recommended-stylelint",
+      "refactor",
+      "revert",
+      "sonar",
+      "style",
+      "stylelint",
+      "typedoc",
+      "typescript",
+      "vscode",
+      "workflows"
+    ];
 
   const scopes = unique([
     ...defaultScopes,
