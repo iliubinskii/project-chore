@@ -1,6 +1,6 @@
 # Real Config
 
-[![Version](https://img.shields.io/npm/v/real-config)](https://www.npmjs.com/package/real-config)
+[![Version](https://img.shields.io/github/package-json/v/ilyub/real-config)](https://github.com/ilyub/real-config)
 [![Downloads](https://img.shields.io/npm/dm/real-config)](https://www.npmjs.com/package/real-config)
 [![Source rank](https://img.shields.io/librariesio/sourcerank/npm/real-config)](https://libraries.io/npm/real-config)
 [![Dependencies](https://img.shields.io/librariesio/release/npm/real-config)](https://libraries.io/npm/real-config)
