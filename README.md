@@ -1,11 +1,10 @@
 # Real Config
 
-[![Version](https://img.shields.io/github/package-json/v/ilyub/real-config)](https://github.com/ilyub/real-config)
+[![Stars](https://img.shields.io/github/stars/ilyub/real-config)](https://github.com/ilyub/real-config)
 [![Downloads](https://img.shields.io/npm/dm/real-config)](https://www.npmjs.com/package/real-config)
-[![Source rank](https://img.shields.io/librariesio/sourcerank/npm/real-config)](https://libraries.io/npm/real-config)
-[![Dependencies](https://img.shields.io/librariesio/release/npm/real-config)](https://libraries.io/npm/real-config)
+[![Coverage](https://img.shields.io/sonar/coverage/ilyub_real-config.svg?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/component_measures?id=ilyub_real-config&metric=coverage)
 [![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/real-config)](https://snyk.io/advisor/npm-package/real-config)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ilyub_real-config&metric=coverage)](https://sonarcloud.io/summary/new_code?id=ilyub_real-config)
+[![Dependencies](https://img.shields.io/librariesio/release/npm/real-config)](https://libraries.io/npm/real-config)
 
 A collection of configuration files for:
 - commitlint
@@ -19,6 +18,6 @@ A collection of configuration files for:
 - typescript
 
 Installation:
-```
+```sh
 npm install --save-dev real-config
 ```
