@@ -83,7 +83,7 @@
     "update-package-force": "ncu --dep dev,peer,prod --upgrade",
     "upgrade": "npm run update-package-force && npm run npm:install"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@commitlint/cli": ">=17",
     "@commitlint/config-conventional": ">=17",
     "@jest/test-sequencer": ">=29",
@@ -110,7 +110,7 @@
     "eslint-plugin-jest-extended": ">=2",
     "eslint-plugin-jquery": ">=1",
     "eslint-plugin-jsdoc": ">=39",
-    "eslint-plugin-misc": "^1.2.0",
+    "eslint-plugin-misc": "^1.2.2",
     "eslint-plugin-no-type-assertion": ">=1",
     "eslint-plugin-no-use-extend-native": ">=0",
     "eslint-plugin-node": ">=11",
