@@ -1,6 +1,4 @@
-.quasar
 .php-cs-fixer.cache
-.scannerwork
 cache
 lcov-report
 node_modules
