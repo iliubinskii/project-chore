@@ -41,10 +41,12 @@
     "php-cs-fixer.executablePathWindows": "${workspaceFolder}/vendor/bin/php-cs-fixer.bat",
     "php-cs-fixer.onsave": true,
     "search.exclude": {
+      "composer.lock": true,
       "dist": true,
       "docs": true,
       "es": true,
-      "lcov.info": true
+      "lcov.info": true,
+      "package-lock.json": true
     },
     "sort-json.settings.contextMenu": {
       "sortJSON": false,
