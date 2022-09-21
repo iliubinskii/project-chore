@@ -182,10 +182,10 @@ module.exports = {
             wildcard: true
           },
           {
-            _id: "real-framework/test-utils",
-            altLocalNames: ["frameworkTestUtils"],
-            source: "real-framework/src/test-utils",
-            sourcePattern: "real-framework/{dist,es}/test-utils",
+            _id: "real-service-providers/test-utils",
+            altLocalNames: ["providersTestUtils"],
+            source: "real-service-providers/src/test-utils",
+            sourcePattern: "real-service-providers/{dist,es}/test-utils",
             wildcard: true
           },
           {
@@ -244,7 +244,7 @@ module.exports = {
           "real-config/api",
           "real-facades/dist/test-utils",
           "real-fns/dist/test-utils",
-          "real-framework/dist/test-utils",
+          "real-service-providers/dist/test-utils",
           "ts-toolbelt/**",
           "typeface-roboto-multilang/*.css"
         ]
