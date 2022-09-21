@@ -38,8 +38,7 @@
       "required": [
         "baseUrl",
         "outDir",
-        "paths",
-        "typeRoots"
+        "paths"
       ]
     },
     "extends": {
