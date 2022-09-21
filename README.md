@@ -2,11 +2,18 @@
 
 [![Stars](https://img.shields.io/github/stars/ilyub/real-config)](https://github.com/ilyub/real-config)
 [![Downloads](https://img.shields.io/npm/dm/real-config)](https://www.npmjs.com/package/real-config)
-[![Coverage](https://img.shields.io/sonar/coverage/ilyub_real-config.svg?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/component_measures?id=ilyub_real-config&metric=coverage)
 [![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/real-config)](https://snyk.io/advisor/npm-package/real-config)
 [![Dependencies](https://img.shields.io/librariesio/release/npm/real-config)](https://libraries.io/npm/real-config)
 
-A collection of configuration files for:
+## Table of contents
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Related packages](#related-packages)
+
+## <a name="overview"></a>Overview
+
+Configuration files for:
 - commitlint
 - eslint
 - jest
@@ -17,7 +24,17 @@ A collection of configuration files for:
 - typedoc
 - typescript
 
-Installation:
+## <a name="installation"></a>Installation
+
 ```sh
 npm install --save-dev real-config
 ```
+
+## <a name="related-packages"></a>Related packages
+
+- [eslint-plugin-misc](https://www.npmjs.com/package/eslint-plugin-misc) &mdash; ESLint plugin.
+- [quasar-extension](https://www.npmjs.com/package/quasar-extension) &mdash; Quasar extension.
+- [real-fns](https://www.npmjs.com/package/real-fns) &mdash; A collection of utility functions.
+- [real-classes](https://www.npmjs.com/package/real-classes) &mdash; A collection of utility classes.
+- [real-facades](https://www.npmjs.com/package/real-facades) &mdash; Facades (each facade provides interface to pluggable implementation).
+- [real-service-providers](https://www.npmjs.com/package/real-service-providers) &mdash; Facade implementations.
