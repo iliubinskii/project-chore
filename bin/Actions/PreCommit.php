@@ -33,6 +33,7 @@ class PreCommit
       Git::noPartialCommit();
 
       $npm->regenerateLockFile();
+      $npm->buildChangeLog();
       $npm->build();
       $npm->buildEs();
       $npm->buildDoc();

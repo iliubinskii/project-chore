@@ -143,6 +143,7 @@
   "requiredScripts": [
     "add-tags",
     "browserslist",
+    "build-changelog",
     "clear-cache",
     "commitlint",
     "commitlint-next",

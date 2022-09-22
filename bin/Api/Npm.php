@@ -24,6 +24,14 @@ class Npm
   }
 
   /**
+   * Runs "build-changelog" script.
+   */
+  public function buildChangeLog(bool $interactive = false): void
+  {
+    static::run('build-changelog', 'Building change log', $interactive);
+  }
+
+  /**
    * Runs "build-doc" script.
    */
   public function buildDoc(bool $interactive = false): void

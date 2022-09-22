@@ -42,6 +42,7 @@
   "scripts": {
     "add-tags": "php bin/add-tags.php",
     "browserslist": "browserslist",
+    "build-changelog": "auto-changelog",
     "clear-cache": "cf cache node_modules/.cache",
     "commitlint": "commitlint --from=",
     "commitlint-next": "commitlint --config commitlint-next.config.js --edit",
@@ -97,6 +98,7 @@
     "@typescript-eslint/eslint-plugin": ">=5",
     "@typescript-eslint/parser": ">=5",
     "@vue/vue3-jest": ">=29",
+    "auto-changelog": ">=2",
     "clear-folder": ">=3",
     "cpy-cli": ">=4",
     "css-property-sort-order-smacss": ">=2",

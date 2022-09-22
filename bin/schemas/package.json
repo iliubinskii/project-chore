@@ -14,6 +14,9 @@
         "build": {
           "const": "cf ./dist && tsc --project tsconfig-build.json"
         },
+        "build-changelog": {
+          "const": "auto-changelog"
+        },
         "build-doc": {
           "enum": [
             "cf ./docs && node ./build-doc.js && cpy assets/docs/static/* docs",
