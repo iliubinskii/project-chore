@@ -38,6 +38,7 @@ module.exports = sources => {
       "auto-eslint",
       "auto-json",
       "auto-linebreaks",
+      "auto-markdownlint",
       "auto-php-cs",
       "auto-stylelint",
       "babel",
