@@ -130,6 +130,7 @@
     ".editorconfig",
     ".gitignore",
     ".npmpackagejsonlintrc.json",
+    "LICENSE.txt",
     "README.md",
     "commitlint.config.js",
     "commitlint.scopes.js",
