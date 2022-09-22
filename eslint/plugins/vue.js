@@ -95,6 +95,10 @@ module.exports = {
         "vue/no-v-model-argument": "off",
         "vue/object-shorthand": ["warn", "properties"],
         "vue/order-in-components": "off",
+        "vue/padding-line-between-tags": [
+          "warn",
+          [{ blankLine: "never", next: "*", prev: "*" }]
+        ],
         "vue/return-in-computed-property": "off",
         "vue/sort-keys": "off",
         "vue/v-on-function-call": ["warn", "never"]
