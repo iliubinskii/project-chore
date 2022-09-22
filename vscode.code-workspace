@@ -30,6 +30,9 @@
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "foldOnOpen.targets": [
+      "AllBlockComments"
+    ],
     "intelephense.files.exclude": [
       "**/{.DS_Store,.git,.hg,.history,.svn,CVS,bower_components}/**",
       "**/vendor/**/{Tests,tests,vendor}/**"
