@@ -14,6 +14,7 @@
 ## [](#overview)Overview
 
 Configuration files for:
+
 - commitlint
 - eslint
 - jest
