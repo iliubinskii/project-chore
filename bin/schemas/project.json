@@ -122,7 +122,6 @@
   ],
   "optionalScripts": [
     "compile",
-    "npm:publish",
     "vscode:prepublish",
     "watch"
   ],

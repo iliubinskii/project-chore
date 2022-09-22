@@ -143,7 +143,6 @@
     "postcss-html": ">=1",
     "postcss-scss": ">=4",
     "prettier": ">=2",
-    "publish-if-not-exists": ">=1",
     "strip-ansi-cli": ">=3",
     "stylelint": ">=14",
     "stylelint-config-standard-scss": ">=5",

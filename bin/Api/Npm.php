@@ -124,14 +124,6 @@ class Npm
   }
 
   /**
-   * Publishes package.
-   */
-  public function publish(bool $interactive = false): void
-  {
-    static::run('npm:publish', 'Publishing npm package', $interactive);
-  }
-
-  /**
    * Regenerates lock file.
    */
   public function regenerateLockFile(bool $interactive = false): void

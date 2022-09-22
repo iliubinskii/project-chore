@@ -113,9 +113,6 @@
         "npm:install-clean": {
           "const": "npm install-clean --no-audit --strict-peer-deps"
         },
-        "npm:publish": {
-          "const": "publish-if-not-exists"
-        },
         "npm:regenerate-lock-file": {
           "const": "npm install --no-audit --package-lock-only --strict-peer-deps"
         },

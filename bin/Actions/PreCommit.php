@@ -54,8 +54,6 @@ class PreCommit
       $npm->test();
 
       Git::noPartialCommit();
-
-      $npm->publish();
     }
   }
 }
