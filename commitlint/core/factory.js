@@ -43,6 +43,7 @@ module.exports = sources => {
       "auto-stylelint",
       "babel",
       "browserlist",
+      "changelog",
       "commitlint",
       "composer",
       "deps-major-update",
