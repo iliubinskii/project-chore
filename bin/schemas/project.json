@@ -131,6 +131,7 @@
     ".gitignore",
     ".markdownlint.json",
     ".npmpackagejsonlintrc.json",
+    "CHANGELOG.md",
     "LICENSE.txt",
     "README.md",
     "commitlint.config.js",
