@@ -126,6 +126,7 @@
     "watch"
   ],
   "requiredFiles": [
+    ".auto-changelog",
     ".browserslistrc",
     ".editorconfig",
     ".gitignore",
