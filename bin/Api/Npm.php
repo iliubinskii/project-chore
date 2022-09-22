@@ -100,6 +100,14 @@ class Npm
   }
 
   /**
+   * Runs "markdownlint" script.
+   */
+  public function markdownlint(bool $interactive = false): void
+  {
+    static::run('markdownlint', 'Linting with markdownlint', $interactive);
+  }
+
+  /**
    * No vulnerabilities.
    */
   public function noVulnerabilities(string $cmd, bool $interactive = false): void

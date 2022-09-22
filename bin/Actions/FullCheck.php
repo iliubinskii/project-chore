@@ -20,6 +20,7 @@ class FullCheck
     $npm->noVulnerabilities($preCommitConfig->audit, true);
     $npm->commitlint(true);
     $npm->configLint(true);
+    $npm->markdownlint(true);
     $npm->packageJsonLint(true);
     $npm->tsc(true);
     $npm->vueTsc(true);

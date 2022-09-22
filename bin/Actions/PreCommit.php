@@ -45,6 +45,7 @@ class PreCommit
       $npm->commitlint();
       $npm->commitlintNext();
       $npm->configLint();
+      $npm->markdownlint();
       $npm->packageJsonLint();
       $npm->tsc();
       $npm->vueTsc();
