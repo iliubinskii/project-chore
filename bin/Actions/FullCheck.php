@@ -19,7 +19,6 @@ class FullCheck
 
     $npm->noVulnerabilities($preCommitConfig->audit, true);
     $npm->commitlint(true);
-    $npm->commitlintNext(true);
     $npm->configLint(true);
     $npm->packageJsonLint(true);
     $npm->tsc(true);
