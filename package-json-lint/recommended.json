@@ -8,7 +8,7 @@
     "description-format": [
       "error",
       {
-        "forbidEndingPeriod": true,
+        "requireEndingPeriod": true,
         "requireCapitalFirstLetter": true
       }
     ],
