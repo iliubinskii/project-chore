@@ -105,6 +105,7 @@
     "clear-folder": ">=3",
     "cpy-cli": ">=4",
     "css-property-sort-order-smacss": ">=2",
+    "del-cli": ">=5",
     "eslint": ">=8",
     "eslint-config-prettier": ">=8",
     "eslint-import-resolver-typescript": ">=3",
