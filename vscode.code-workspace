@@ -14,6 +14,7 @@
     "[php]": {
       "editor.defaultFormatter": "junstyle.php-cs-fixer"
     },
+    "debug.javascript.codelens.npmScripts": "never",
     "editor.codeActionsOnSave": {
       "source.fixAll": true,
       "source.fixAll.eslint": true
