@@ -33,10 +33,6 @@
     "foldOnOpen.targets": [
       "AllBlockComments"
     ],
-    "intelephense.files.exclude": [
-      "**/{.DS_Store,.git,.hg,.history,.svn,CVS,bower_components}/**",
-      "**/vendor/**/{Tests,tests,vendor}/**"
-    ],
     "javascript.suggestionActions.enabled": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "php-cs-fixer.autoFixByBracket": true,
@@ -44,6 +40,7 @@
     "php-cs-fixer.executablePathWindows": "${workspaceFolder}/vendor/bin/php-cs-fixer.bat",
     "php-cs-fixer.onsave": true,
     "search.exclude": {
+      "CHANGELOG.md": true,
       "composer.lock": true,
       "dist": true,
       "docs": true,
