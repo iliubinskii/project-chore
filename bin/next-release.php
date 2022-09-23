@@ -2,4 +2,4 @@
 
 include_once __DIR__.'/autoload.php';
 
-Actions\Version::do();
+Actions\NextRelease::do();

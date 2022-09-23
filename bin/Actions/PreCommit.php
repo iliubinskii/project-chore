@@ -3,7 +3,7 @@
 namespace Actions;
 
 use Api\Git;
-use Api\Package;
+use Api\Npm;
 
 class PreCommit
 {
@@ -12,9 +12,9 @@ class PreCommit
    */
   public static function do(): void
   {
-    $package = new Package();
+    $npm = new Npm();
 
     Git::noMasterBranch();
-    $package->noFileDependencies();
+    $npm->noFileDependencies();
   }
 }

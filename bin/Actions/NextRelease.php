@@ -4,22 +4,22 @@ namespace Actions;
 
 use Api\Commit;
 use Api\Git;
-use Api\Sys;
+use Api\Npm;
 
-class Next
+class NextRelease
 {
   /**
    * Next version.
    */
   public static function do(): void
   {
-    Sys::execute('npm version '.static::version().' --no-git-tag-version');
+    $npm = new Npm();
+
+    $npm->release(static::version());
   }
 
   /**
    * Checks version.
-   *
-   * @return "major"|"minor"|"patch"
    */
   protected static function version(): string
   {

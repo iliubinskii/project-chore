@@ -105,15 +105,18 @@
           "const": "set TIMING=1 && eslint --max-warnings 0 --no-error-on-unmatched-pattern **/*.{js,ts,vue}"
         },
         "major-release": {
-          "const": "npm version major --no-git-tag-version"
+          "enum": [
+            "php bin/major-release.php",
+            "php node_modules/real-config/bin/major-release.php"
+          ]
         },
         "markdownlint": {
           "const": "markdownlint *.md --ignore=CHANGELOG.md"
         },
-        "next": {
+        "next-release": {
           "enum": [
-            "php bin/next.php",
-            "php node_modules/real-config/bin/next.php"
+            "php bin/next-release.php",
+            "php node_modules/real-config/bin/next-release.php"
           ]
         },
         "npm:install": {
@@ -181,12 +184,6 @@
         },
         "upgrade": {
           "const": "npm run update-package-force && npm run npm:install"
-        },
-        "version": {
-          "enum": [
-            "php bin/version.php",
-            "php node_modules/real-config/bin/version.php"
-          ]
         },
         "vscode:prepublish": {
           "const": "cf ./out && tsc --project tsconfig-compile.json"

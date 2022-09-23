@@ -4,15 +4,15 @@ namespace Actions;
 
 use Api\Npm;
 
-class FullCheck
+class MajorRelease
 {
   /**
-   * Full check.
+   * Major release.
    */
   public static function do(): void
   {
-    $npm = new Npm(true);
+    $npm = new Npm();
 
-    $npm->fullCheck('patch');
+    $npm->release('major');
   }
 }

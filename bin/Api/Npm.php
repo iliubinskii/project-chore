@@ -10,9 +10,8 @@ class Npm
   /**
    * Initializes class instance.
    */
-  public function __construct(Package $package, bool $interactive = false)
+  public function __construct(bool $interactive = false)
   {
-    $this->package = $package;
     $this->interactive = $interactive;
   }
 
@@ -87,11 +86,13 @@ class Npm
   /**
    * Full check.
    */
-  public function fullCheck(): void
+  public function fullCheck(string $version): void
   {
-    $versionConfig = new VersionConfig();
+    $config = new ReleaseConfig();
 
-    $this->noVulnerabilities($versionConfig->audit);
+    $this->noDeprecated($version);
+    $this->noFileDependencies();
+    $this->noVulnerabilities($config->audit);
     $this->commitlint();
     $this->configLint();
     $this->markdownlint();
@@ -109,7 +110,7 @@ class Npm
    */
   public function lint(): void
   {
-    static::run('lint-no-fix', 'Linting with eslint');
+    static::run('lint-no-fix', 'Linting with ESLint');
   }
 
   /**
@@ -118,6 +119,47 @@ class Npm
   public function markdownlint(): void
   {
     static::run('markdownlint', 'Linting with markdownlint');
+  }
+
+  /**
+   * No deprecated.
+   */
+  public function noDeprecated(string $version): void
+  {
+    if ($version === 'major' && file_exists('src'))
+    {
+      foreach (Sys::scanDirDeep('src') as $path)
+      {
+        if (is_file($path))
+        {
+          $contents = Assert::string(file_get_contents($path));
+
+          if (preg_match('`\*\s*@deprecated`isuxDX', $contents))
+          {
+            throw new BaseException('No deprecated');
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Asserts no file dependencies.
+   */
+  public function noFileDependencies(): void
+  {
+    $package = new Package();
+
+    foreach ([$package->dependencies, $package->devDependencies, $package->peerDependencies] as $deps)
+    {
+      foreach ($deps as $dep)
+      {
+        if (str_starts_with($dep, 'file:'))
+        {
+          throw new BaseException('No file dependencies');
+        }
+      }
+    }
   }
 
   /**
@@ -153,6 +195,37 @@ class Npm
   }
 
   /**
+   * Release.
+   */
+  public function release(string $version): void
+  {
+    $this->fullCheck($version);
+
+    $this->version($version);
+
+    $package = new Package();
+    $commit = $package->version;
+    $tag = 'v'.$commit;
+
+    Git::stageAll();
+    Git::commit($commit);
+
+    // Tag needed for "build-changelog" command
+    Git::addTag($tag);
+    $this->buildAll();
+    Git::deleteTag($tag);
+
+    Git::stageAll();
+    Git::ammendLastCommit();
+
+    Git::addTag($tag);
+
+    Git::push();
+    Git::pushTags();
+    Git::rebaseMasterToDevelop();
+  }
+
+  /**
    * Runs "stylelint" script.
    */
   public function stylelint(): void
@@ -173,9 +246,11 @@ class Npm
    */
   public function test(): void
   {
-    if ($this->package->hasScript('test'))
+    $package = new Package();
+
+    if ($package->hasScript('test'))
     {
-      static::run('test', 'Testing');
+      Sys::execute('npm test', 'Testing', $this->interactive);
 
       $coverage = Assert::string(file_get_contents('lcov-report/index.html'));
 
@@ -200,6 +275,14 @@ class Npm
   }
 
   /**
+   * Bumps version.
+   */
+  public function version(string $version): void
+  {
+    Sys::execute('npm version '.$version.' --no-git-tag-version');
+  }
+
+  /**
    * Runs "vue-tsc" script.
    */
   public function vueTsc(): void
@@ -213,16 +296,13 @@ class Npm
   protected $interactive;
 
   /**
-   * @var Package
-   */
-  protected $package;
-
-  /**
    * Runs script.
    */
   protected function run(string $name, string $message): void
   {
-    if ($this->package->hasScript($name))
+    $package = new Package();
+
+    if ($package->hasScript($name))
     {
       Sys::execute('npm run '.$name, $message, $this->interactive);
     }

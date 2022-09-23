@@ -5,7 +5,7 @@ namespace Api;
 use Real\Config\Assert;
 use Real\Config\Unknown;
 
-class VersionConfig
+class ReleaseConfig
 {
   /**
    * @var string
@@ -17,11 +17,11 @@ class VersionConfig
    */
   public function __construct()
   {
-    if (file_exists('.version.json'))
+    if (file_exists('.release.json'))
     {
-      $raw = Assert::string(file_get_contents('.version.json'));
+      $raw = Assert::string(file_get_contents('.release.json'));
 
-      $config = Unknown\Assert::array(Util::decodeJson($raw, '.version.json'));
+      $config = Unknown\Assert::array(Util::decodeJson($raw, '.release.json'));
     }
     else
     {
