@@ -12,28 +12,21 @@ class DeleteTags
    */
   public static function do(): void
   {
-    $tags = Git::getTags();
-
-    foreach (Git::getCommits('^initial\\scommit$', '%H') as $commit)
+    foreach (Git::getTags() as $tag)
     {
-      $tags = array_diff($tags, Git::getTags($commit));
-    }
-
-    foreach ($tags as $tag)
-    {
-      Git::deleteTag($tag);
-
-      try
+      if (preg_match('`^v\\d+\\.\\d+\\.\\d+$`isuxDX', $tag))
       {
-        Git::pushDeleteTag($tag);
-      }
-      catch (Throwable)
-      {
-        // Ignore
+        Git::deleteTag($tag);
+
+        try
+        {
+          Git::deleteRemoteTag($tag);
+        }
+        catch (Throwable)
+        {
+          // Ignore
+        }
       }
     }
   }
-
-  protected const RED = "\033[91m";
-  protected const RESET = "\033[0m";
 }

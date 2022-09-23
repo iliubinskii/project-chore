@@ -12,25 +12,22 @@ class Sys
    *
    * @return array<string>
    */
-  public static function execute(
-    string $command,
-    string $description = null,
-    bool $interactive = false
-  ): array {
+  public static function execute(string $command, string $description = null, bool $interactive = false): array
+  {
     if ($interactive)
     {
-      static::flushString($description.' ...');
+      static::flush($description.' ...');
 
       $result = exec($command.' >nul 2>nul', $output, $code);
 
       $status = $code || $result === false ? static::RED.'Failed'.static::RESET : 'OK';
 
-      static::flushString(static::UP1LINE.$description.' - '.$status);
+      static::flush(static::UP1LINE.$description.' - '.$status);
 
       return [];
     }
 
-    static::flushString($description);
+    static::flush($description);
 
     $result = exec($command, $output, $code);
 
@@ -45,7 +42,7 @@ class Sys
   /**
    * Flushes string.
    */
-  public static function flushString(string $str = null): void
+  public static function flush(string $str = null): void
   {
     if ($str !== null)
     {
@@ -58,16 +55,6 @@ class Sys
 
       flush();
     }
-  }
-
-  /**
-   * Concatenates paths.
-   *
-   * @param string $parts
-   */
-  public static function pathConcat(...$parts): string
-  {
-    return Assert::string(preg_replace('`[/\\\\]+`isuxDX', '/', implode('/', $parts)));
   }
 
   /**
@@ -106,7 +93,6 @@ class Sys
     return $result;
   }
 
-  protected const COL0 = "\x1B[0G";
   protected const GREEN = "\033[92m";
   protected const RED = "\033[91m";
   protected const RESET = "\033[0m";

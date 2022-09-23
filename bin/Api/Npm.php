@@ -10,157 +10,162 @@ class Npm
   /**
    * Initializes class instance.
    */
-  public function __construct(Package $package)
+  public function __construct(Package $package, bool $interactive = false)
   {
     $this->package = $package;
+    $this->interactive = $interactive;
   }
 
   /**
    * Runs "build" script.
    */
-  public function build(bool $interactive = false): void
+  public function build(): void
   {
-    static::run('build', 'Building', $interactive);
+    static::run('build', 'Building');
+  }
+
+  /**
+   * Builds all.
+   */
+  public function buildAll(): void
+  {
+    $this->buildChangeLog();
+    $this->build();
+    $this->buildEs();
+    $this->buildDoc();
+    $this->phpCsFixer();
   }
 
   /**
    * Runs "build-changelog" script.
    */
-  public function buildChangeLog(bool $interactive = false): void
+  public function buildChangeLog(): void
   {
-    static::run('build-changelog', 'Building change log', $interactive);
+    static::run('build-changelog', 'Building change log');
   }
 
   /**
    * Runs "build-doc" script.
    */
-  public function buildDoc(bool $interactive = false): void
+  public function buildDoc(): void
   {
-    static::run('build-doc', 'Building documentation', $interactive);
+    static::run('build-doc', 'Building documentation');
   }
 
   /**
    * Runs "build-es" script.
    */
-  public function buildEs(bool $interactive = false): void
+  public function buildEs(): void
   {
-    static::run('build-es', 'Building es version', $interactive);
+    static::run('build-es', 'Building es version');
   }
 
   /**
    * Runs "commitlint" script.
    */
-  public function commitlint(bool $interactive = false): void
+  public function commitlint(): void
   {
-    static::run('commitlint', 'Linting with commitlint', $interactive);
+    static::run('commitlint', 'Linting with commitlint');
   }
 
   /**
    * Runs "commitlint-next" script.
    */
-  public function commitlintNext(bool $interactive = false): void
+  public function commitlintNext(): void
   {
-    static::run('commitlint-next', 'Linting with commitlint (next)', $interactive);
+    static::run('commitlint-next', 'Linting with commitlint (next)');
   }
 
   /**
    * Runs "config-lint" script.
    */
-  public function configLint(bool $interactive = false): void
+  public function configLint(): void
   {
-    static::run('config-lint', 'Linting with config-lint', $interactive);
+    static::run('config-lint', 'Linting with config-lint');
   }
 
   /**
-   * Retrieves npm package versions.
-   *
-   * @return array<string>
+   * Full check.
    */
-  public function getVersions(bool $interactive = false): array
+  public function fullCheck(): void
   {
-    $name = $this->package->name;
+    $versionConfig = new VersionConfig();
 
-    $versions = Sys::execute(
-      'npm view '.$name.' versions --json',
-      'Retrieving npm versions',
-      $interactive
-    );
-    $versions = implode("\n", $versions);
-    $versions = Util::decodeJson($versions, 'versions');
-
-    return is_array($versions) ? $versions : [$versions];
+    $this->noVulnerabilities($versionConfig->audit);
+    $this->commitlint();
+    $this->configLint();
+    $this->markdownlint();
+    $this->packageJsonLint();
+    $this->tsc();
+    $this->vueTsc();
+    $this->lint();
+    $this->phpstan();
+    $this->stylelint();
+    $this->stylelintHtml();
   }
 
   /**
    * Runs "lint" script.
    */
-  public function lint(bool $interactive = false): void
+  public function lint(): void
   {
-    static::run('lint-no-fix', 'Linting with eslint', $interactive);
+    static::run('lint-no-fix', 'Linting with eslint');
   }
 
   /**
    * Runs "markdownlint" script.
    */
-  public function markdownlint(bool $interactive = false): void
+  public function markdownlint(): void
   {
-    static::run('markdownlint', 'Linting with markdownlint', $interactive);
+    static::run('markdownlint', 'Linting with markdownlint');
   }
 
   /**
    * No vulnerabilities.
    */
-  public function noVulnerabilities(string $cmd, bool $interactive = false): void
+  public function noVulnerabilities(string $cmd): void
   {
-    Sys::execute($cmd, 'Checking for vulnerablilties', $interactive);
+    Sys::execute($cmd, 'Checking for vulnerablilties');
   }
 
   /**
    * Runs "package-json-lint" script.
    */
-  public function packageJsonLint(bool $interactive = false): void
+  public function packageJsonLint(): void
   {
-    static::run('package-json-lint', 'Linting with package-json-lint', $interactive);
+    static::run('package-json-lint', 'Linting with package-json-lint');
   }
 
   /**
    * Runs php-cs-fixer.
    */
-  public function phpCsFixer(bool $interactive = false): void
+  public function phpCsFixer(): void
   {
-    static::run('php-cs-fixer', 'Formatting with php-cs-fixer', $interactive);
+    static::run('php-cs-fixer', 'Formatting with php-cs-fixer');
   }
 
   /**
    * Runs phpstan.
    */
-  public function phpstan(bool $interactive = false): void
+  public function phpstan(): void
   {
-    static::run('phpstan-quiet', 'Linting with phpstan', $interactive);
-  }
-
-  /**
-   * Regenerates lock file.
-   */
-  public function regenerateLockFile(bool $interactive = false): void
-  {
-    static::run('npm:regenerate-lock-file', 'Regenerating lock file', $interactive);
+    static::run('phpstan-quiet', 'Linting with phpstan');
   }
 
   /**
    * Runs "stylelint" script.
    */
-  public function stylelint(bool $interactive = false): void
+  public function stylelint(): void
   {
-    static::run('stylelint-no-fix', 'Linting with stylelint', $interactive);
+    static::run('stylelint-no-fix', 'Linting with stylelint');
   }
 
   /**
    * Runs "stylelint-html" script.
    */
-  public function stylelintHtml(bool $interactive = false): void
+  public function stylelintHtml(): void
   {
-    static::run('stylelint-html-no-fix', 'Linting with stylelint (html)', $interactive);
+    static::run('stylelint-html-no-fix', 'Linting with stylelint (html)');
   }
 
   /**
@@ -170,7 +175,7 @@ class Npm
   {
     if ($this->package->hasScript('test'))
     {
-      Sys::execute('npm run test', 'Testing');
+      static::run('test', 'Testing');
 
       $coverage = Assert::string(file_get_contents('lcov-report/index.html'));
 
@@ -189,18 +194,23 @@ class Npm
   /**
    * Runs "tsc" script.
    */
-  public function tsc(bool $interactive = false): void
+  public function tsc(): void
   {
-    static::run('tsc', 'Linting with tsc', $interactive);
+    static::run('tsc', 'Linting with tsc');
   }
 
   /**
    * Runs "vue-tsc" script.
    */
-  public function vueTsc(bool $interactive = false): void
+  public function vueTsc(): void
   {
-    static::run('vue-tsc', 'Linting with vue-tsc', $interactive);
+    static::run('vue-tsc', 'Linting with vue-tsc');
   }
+
+  /**
+   * @var bool
+   */
+  protected $interactive;
 
   /**
    * @var Package
@@ -210,14 +220,11 @@ class Npm
   /**
    * Runs script.
    */
-  protected function run(
-    string $name,
-    string $message,
-    bool $interactive = false
-  ): void {
+  protected function run(string $name, string $message): void
+  {
     if ($this->package->hasScript($name))
     {
-      Sys::execute('npm run '.$name, $message, $interactive);
+      Sys::execute('npm run '.$name, $message, $this->interactive);
     }
   }
 }

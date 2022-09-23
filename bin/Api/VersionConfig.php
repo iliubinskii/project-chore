@@ -5,7 +5,7 @@ namespace Api;
 use Real\Config\Assert;
 use Real\Config\Unknown;
 
-class PreCommitConfig
+class VersionConfig
 {
   /**
    * @var string
@@ -17,11 +17,11 @@ class PreCommitConfig
    */
   public function __construct()
   {
-    if (file_exists('.pre-commit.json'))
+    if (file_exists('.version.json'))
     {
-      $str = Assert::string(file_get_contents('.pre-commit.json'));
+      $raw = Assert::string(file_get_contents('.version.json'));
 
-      $config = Unknown\Assert::array(Util::decodeJson($str, '.pre-commit.json'));
+      $config = Unknown\Assert::array(Util::decodeJson($raw, '.version.json'));
     }
     else
     {

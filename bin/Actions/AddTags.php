@@ -2,8 +2,8 @@
 
 namespace Actions;
 
+use Api\Commit;
 use Api\Git;
-use Real\Config\BaseException;
 
 class AddTags
 {
@@ -12,28 +12,24 @@ class AddTags
    */
   public static function do(): void
   {
-    $commits = Git::getCommits('^next$', '%H');
+    $tags = Git::getTags();
 
-    foreach ($commits as $commit)
+    foreach (Git::getCommits() as $commit)
     {
-      $info = Git::getCommitInfo($commit);
-
-      if (preg_match('`^\\+\\s{2}"version":\\s"([^"]+)"`imsuxDX', $info, $matches) === 1)
+      if (Commit::versionCommit($commit))
       {
-        $version = $matches[1];
+        list('id' => $id, 'message' => $message) = $commit;
 
-        if (Git::hasTag($version))
+        $tag = 'v'.$message;
+
+        if (in_array($tag, $tags))
         {
           // Tag already exists
         }
         else
         {
-          Git::addTag($version, $commit);
+          Git::addTag($tag, $id);
         }
-      }
-      else
-      {
-        throw new BaseException('Unexpected commit '.$commit);
       }
     }
 

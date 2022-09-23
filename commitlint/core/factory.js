@@ -105,7 +105,7 @@ module.exports = sources => {
     if (/[A-Za-z][\d_]*[А-Яа-я]|[А-Яа-я][\d_]*[A-Za-z]/u.test(commit))
       throw new Error("No language mixing");
 
-    if (/^(?:initial commit|next|refactor|style)$/u.test(commit)) return true;
+    if (/^(?:initial commit|refactor|style)$/u.test(commit)) return true;
 
     if (/^(?:build|chore)\(deps-update\)$/u.test(commit)) return true;
 

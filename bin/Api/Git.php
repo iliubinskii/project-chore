@@ -20,26 +20,27 @@ class Git
   }
 
   /**
-   * Checks version.
+   * Ammends last commit.
    */
-  public static function checkVersion(string $version): void
+  public static function ammendLastCommit(): void
   {
-    if (preg_match('`^(\\d+)\\.(\\d+)\\.(\\d+)$`', $version, $matches))
-    {
-      list('level' => $level, 'commit' => $commit) = static::findPreviousVersionCommit();
+    Sys::execute('git commit --amend --no-edit');
+  }
 
-      $next = [(int) $matches[1], (int) $matches[2], (int) $matches[3]];
+  /**
+   * Commits staged changes.
+   */
+  public static function commit(string $message): void
+  {
+    Sys::execute('git commit --message '.$message);
+  }
 
-      foreach (static::getTags($commit) as $tag)
-      {
-        if (preg_match('`^(\\d+)\\.(\\d+)\\.(\\d+)$`', $tag, $matches))
-        {
-          $prev = [(int) $matches[1], (int) $matches[2], (int) $matches[3]];
-
-          static::checkNextVersion($next, $prev, $level);
-        }
-      }
-    }
+  /**
+   * Deletes tag from remote origin.
+   */
+  public static function deleteRemoteTag(string $tag): void
+  {
+    static::executeWithKey('git push --delete origin '.$tag, 'Deleting tag '.$tag);
   }
 
   /**
@@ -47,33 +48,25 @@ class Git
    */
   public static function deleteTag(string $tag): void
   {
-    Sys::execute('git tag -d '.$tag);
-  }
-
-  /**
-   * Retrieves commit info.
-   */
-  public static function getCommitInfo(string $commit): string
-  {
-    return implode("\n", Sys::execute('git show '.$commit));
+    Sys::execute('git tag --delete '.$tag);
   }
 
   /**
    * Retrieves commits.
    *
-   * @return array<string>
+   * @return array<array{id:string,message:string}>
    */
-  public static function getCommits(string $pattern, string $format): array
+  public static function getCommits(): array
   {
-    return Sys::execute('git --no-pager log --grep="'.$pattern.'" --pretty=format:'.$format);
-  }
+    return array_map(
+      function (string $commit): array
+      {
+        list($id, $message) = explode(':', $commit);
 
-  /**
-   * Retrieves last commit.
-   */
-  public static function getLastCommit(string $format): string
-  {
-    return Sys::execute('git --no-pager log -n1 --pretty=format:'.$format)[0];
+        return ['id' => $id, 'message' => $message];
+      },
+      Sys::execute('git --no-pager log --pretty=format:%H:%s')
+    );
   }
 
   /**
@@ -81,21 +74,9 @@ class Git
    *
    * @return array<string>
    */
-  public static function getTags(string $commit = null): array
+  public static function getTags(): array
   {
-    return Sys::execute(
-      $commit === null
-        ? 'git tag'
-        : 'git tag --points-at '.$commit
-    );
-  }
-
-  /**
-   * Checks if tag exists.
-   */
-  public static function hasTag(string $tag): bool
-  {
-    return in_array($tag, static::getTags());
+    return Sys::execute('git tag');
   }
 
   /**
@@ -110,22 +91,11 @@ class Git
   }
 
   /**
-   * No partial commit.
+   * Push current branch.
    */
-  public static function noPartialCommit(): void
+  public static function push(): void
   {
-    if (Sys::execute('git ls-files --exclude-standard -mo'))
-    {
-      throw new BaseException('No partial commit');
-    }
-  }
-
-  /**
-   * Deletes tag from remote origin.
-   */
-  public static function pushDeleteTag(string $tag): void
-  {
-    static::executeWithKey('git push --delete origin '.$tag, 'Deleting tag '.$tag);
+    static::executeWithKey('git push', 'Pushing develop');
   }
 
   /**
@@ -148,62 +118,11 @@ class Git
   }
 
   /**
-   * Checks version.
-   *
-   * @param array<int> $next
-   * @param array<int> $prev
-   * @param 0|1|2      $level
+   * Stages all changes.
    */
-  protected static function checkNextVersion(array $next, array $prev, int $level): void
+  public static function stageAll(): void
   {
-    list($got1, $got2, $got3) = $next;
-
-    list($expected1, $expected2, $expected3) = $prev;
-
-    if ($got1 !== 0 && $expected1 !== 0)
-    {
-      switch ($level) {
-        case 0:
-          ++$expected3;
-
-          break;
-
-        case 1:
-          ++$expected2;
-          $expected3 = 0;
-
-          break;
-
-        case 2:
-          ++$expected1;
-          $expected2 = 0;
-          $expected3 = 0;
-
-          break;
-
-        default:
-          throw new BaseException('Invalid level: '.$level);
-      }
-    }
-    elseif ($got1 === 0 && $expected1 === 0)
-    {
-      ++$expected3;
-    }
-    else
-    {
-      $expected1 = $got1;
-      $expected2 = $got2;
-      $expected3 = $got3;
-    }
-
-    if ($got1 === $expected1 && $got2 === $expected2 && $got3 === $expected3)
-    {
-      // Valid
-    }
-    else
-    {
-      throw new BaseException('Expecting version to be '.$expected1.'.'.$expected2.'.'.$expected3);
-    }
+    Sys::execute('git add --all');
   }
 
   /**
@@ -211,9 +130,9 @@ class Git
    */
   protected static function executeWithKey(string $command, string $description = null): void
   {
-    Sys::flushString($description);
+    Sys::flush($description);
 
-    $keyPath = Sys::pathConcat(static::getKeysPath(), 'id_rsa');
+    $keyPath = Path::concat(static::getKeysPath(), 'id_rsa');
 
     $process = Assert::resource(
       proc_open(
@@ -235,56 +154,22 @@ class Git
   }
 
   /**
-   * Checks version.
-   *
-   * @return array{commit:string,level:0|1|2}
-   */
-  protected static function findPreviousVersionCommit(): array
-  {
-    $level = 0;
-
-    foreach (static::getCommits('.*', '%H:%s') as $commit)
-    {
-      $commit = explode(':', $commit, 2);
-
-      if (preg_match('`^build\\(deps-major-update\\)|^feat|^revert`isuxDX', $commit[1]))
-      {
-        $level = max($level, 1);
-      }
-
-      if (preg_match('`^\\w+!:|^\\w+\\([^()]+\\)!:`isuxDX', $commit[1]))
-      {
-        $level = max($level, 2);
-      }
-
-      if ($commit[1] === 'next' || $commit[1] === 'initial commit')
-      {
-        return ['level' => $level, 'commit' => $commit[0]];
-      }
-    }
-
-    throw new BaseException('Could not find previous version commit');
-  }
-
-  /**
    * Searches for keys folder.
    */
   protected static function getKeysPath(): string
   {
-    $dirBackup = null;
-    $dir = realpath(__DIR__);
+    $dir = __DIR__;
 
-    while ($dir !== false && $dir !== $dirBackup)
+    while ($dir !== false)
     {
-      $candidate = Sys::pathConcat($dir, '.ssh');
+      $candidate = Path::concat($dir, '.ssh');
 
       if (is_dir($candidate))
       {
         return $candidate;
       }
 
-      $dirBackup = $dir;
-      $dir = realpath(dirname($dir));
+      $dir = Path::dirname($dir);
     }
 
     throw new BaseException('Missing keys folder');

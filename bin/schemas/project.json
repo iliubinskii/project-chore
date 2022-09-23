@@ -107,7 +107,7 @@
   "optionalFiles": [
     "build-doc.js",
     ".postcssrc.js",
-    ".pre-commit.json",
+    ".version.json",
     "babel.config.js",
     "composer.json",
     "tsconfig-compile.json"
@@ -156,10 +156,11 @@
     "git:unix",
     "git:windows",
     "husky:commit-msg",
-    "husky:post-commit",
     "husky:pre-commit",
     "husky:unset-hooks",
+    "major-release",
     "markdownlint",
+    "next",
     "npm:install",
     "npm:install-clean",
     "npm:regenerate-lock-file",
@@ -168,7 +169,8 @@
     "prepare",
     "update-package-check",
     "update-package-force",
-    "upgrade"
+    "upgrade",
+    "version"
   ],
   "schemas": {
     "package": "package",

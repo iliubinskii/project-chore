@@ -1,6 +1,5 @@
 {
   "backfillLimit": 0,
   "commitLimit": false,
-  "ignoreCommitPattern": "^(?!feat|fix|perf|revert)",
-  "package": true
+  "ignoreCommitPattern": "^(?!feat|fix|perf|revert)"
 }
