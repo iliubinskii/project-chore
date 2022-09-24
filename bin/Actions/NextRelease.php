@@ -15,6 +15,7 @@ class NextRelease
   {
     $npm = new Npm();
 
+    Git::noMasterBranch();
     $npm->release(static::version());
   }
 

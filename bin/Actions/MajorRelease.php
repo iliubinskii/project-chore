@@ -2,6 +2,7 @@
 
 namespace Actions;
 
+use Api\Git;
 use Api\Npm;
 
 class MajorRelease
@@ -13,6 +14,7 @@ class MajorRelease
   {
     $npm = new Npm();
 
+    Git::noMasterBranch();
     $npm->release('major');
   }
 }
