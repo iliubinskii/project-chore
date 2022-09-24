@@ -16,7 +16,7 @@ jobs:
       - name: Use node
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       - name: Use npm
         run: npm install
       - name: Publish to npm
