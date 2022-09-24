@@ -19,7 +19,7 @@ class DeleteTags
     {
       if (Commit::versionCommit($commit))
       {
-        list('id' => $id, 'message' => $message) = $commit;
+        list('message' => $message) = $commit;
 
         $tag = 'v'.$message;
 
