@@ -9,6 +9,7 @@
     "eslint",
     "jest",
     "php-cs-fixer",
+    "phpstan",
     "stylelint",
     "typedoc",
     "typescript"
