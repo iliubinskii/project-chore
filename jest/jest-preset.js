@@ -6,6 +6,14 @@ module.exports = {
   collectCoverageFrom: ["src/**/*.{js,ts,vue}", "!**/*.d.ts"],
   coverageDirectory: ".",
   coverageReporters: ["lcov", "lcovonly"],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100
+    }
+  },
   errorOnDeprecated: true,
   haste: { throwOnModuleCollision: true },
   maxWorkers: 1,

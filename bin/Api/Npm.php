@@ -257,24 +257,7 @@ class Npm
    */
   public function test(): void
   {
-    $package = new Package();
-
-    if ($package->hasScript('test'))
-    {
-      Sys::execute('npm test', 'Testing', $this->interactive);
-
-      $coverage = Assert::string(file_get_contents('lcov-report/index.html'));
-
-      preg_match_all('`(\\d+)/(\\d+)`isuxDX', $coverage, $matches, PREG_SET_ORDER);
-
-      foreach ($matches as $match)
-      {
-        if ($match[1] !== $match[2])
-        {
-          throw new BaseException('Incomplete coverage');
-        }
-      }
-    }
+    static::run('test', 'Testing');
   }
 
   /**
