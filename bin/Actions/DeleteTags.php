@@ -2,6 +2,7 @@
 
 namespace Actions;
 
+use Api\Commit;
 use Api\Git;
 use Throwable;
 
@@ -12,19 +13,28 @@ class DeleteTags
    */
   public static function do(): void
   {
-    foreach (Git::getTags() as $tag)
-    {
-      if (preg_match('`^v\\d+\\.\\d+\\.\\d+$`isuxDX', $tag))
-      {
-        Git::deleteTag($tag);
+    $tags = Git::getTags();
 
-        try
+    foreach (Git::getCommits() as $commit)
+    {
+      if (Commit::versionCommit($commit))
+      {
+        list('id' => $id, 'message' => $message) = $commit;
+
+        $tag = 'v'.$message;
+
+        if (in_array($tag, $tags))
         {
-          Git::deleteRemoteTag($tag);
-        }
-        catch (Throwable)
-        {
-          // Ignore
+          Git::deleteTag($tag);
+
+          try
+          {
+            Git::deleteRemoteTag($tag);
+          }
+          catch (Throwable)
+          {
+            // Ignore
+          }
         }
       }
     }
