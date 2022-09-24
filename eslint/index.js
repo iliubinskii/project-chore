@@ -6,7 +6,8 @@ module.exports = {
     "dist/**",
     "es/**",
     "lcov-report/**",
-    "node_modules/**"
+    "node_modules/**",
+    "out/**"
   ],
   extends: "./plugins",
   env: {
