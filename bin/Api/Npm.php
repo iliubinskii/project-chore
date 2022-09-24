@@ -20,7 +20,7 @@ class Npm
    */
   public function build(): void
   {
-    static::run('build', 'Building');
+    static::run('build', 'Building CommonJS version');
   }
 
   /**
@@ -106,11 +106,19 @@ class Npm
   }
 
   /**
+   * Installs npm dependencies.
+   */
+  public function install(): void
+  {
+    static::run('npm:install', 'Installing npm dependencies');
+  }
+
+  /**
    * Runs "lint" script.
    */
   public function lint(): void
   {
-    static::run('lint-no-fix', 'Linting with ESLint');
+    static::run('lint-no-fix', 'Linting with eslint');
   }
 
   /**
@@ -199,7 +207,10 @@ class Npm
    */
   public function release(string $version): void
   {
+    $this->install();
+
     $this->fullCheck($version);
+    $this->test();
 
     $this->version($version);
 
