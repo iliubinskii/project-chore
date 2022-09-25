@@ -20,7 +20,7 @@ class Npm
    */
   public function audit(string $cmd): void
   {
-    Sys::execute($cmd, 'Checking for vulnerablilties');
+    Sys::execute($cmd, 'Checking for vulnerablilties', $this->interactive);
   }
 
   /**
