@@ -16,6 +16,14 @@ class Npm
   }
 
   /**
+   * Runs "audit" script.
+   */
+  public function audit(string $cmd): void
+  {
+    Sys::execute($cmd, 'Checking for vulnerablilties');
+  }
+
+  /**
    * Runs "build" script.
    */
   public function build(): void
@@ -92,7 +100,8 @@ class Npm
 
     $this->noDeprecated($version);
     $this->noFileDependencies();
-    $this->noVulnerabilities($config->audit);
+    $this->audit($config->audit);
+    $this->updatePackageCheck();
     $this->commitlint();
     $this->configLint();
     $this->markdownlint();
@@ -168,14 +177,6 @@ class Npm
         }
       }
     }
-  }
-
-  /**
-   * No vulnerabilities.
-   */
-  public function noVulnerabilities(string $cmd): void
-  {
-    Sys::execute($cmd, 'Checking for vulnerablilties');
   }
 
   /**
@@ -268,6 +269,14 @@ class Npm
   public function tsc(): void
   {
     static::run('tsc', 'Linting with tsc');
+  }
+
+  /**
+   * Runs "update-package-check" script.
+   */
+  public function updatePackageCheck(): void
+  {
+    static::run('update-package-check', 'Checking for outdated dependencies');
   }
 
   /**
