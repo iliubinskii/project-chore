@@ -168,10 +168,13 @@
           "const": "stylelint --max-warnings 0 src/**/*.{css,scss}"
         },
         "test": {
-          "const": "cf ./lcov-report && jest"
+          "const": "cf ./lcov-report && jest && git restore lcov.info"
         },
         "test-fast": {
-          "const": "cf ./lcov-report && jest --config=jest.config.fast.js"
+          "const": "cf ./lcov-report && jest --config=jest.config.fast.js && git restore lcov.info"
+        },
+        "test-release": {
+          "const": "cf ./lcov-report && jest"
         },
         "tsc": {
           "const": "tsc --noEmit"

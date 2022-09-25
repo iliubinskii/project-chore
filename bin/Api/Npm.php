@@ -210,7 +210,7 @@ class Npm
     $this->install();
 
     $this->fullCheck($version);
-    $this->test();
+    $this->testRelease();
 
     $this->version($version);
 
@@ -253,11 +253,11 @@ class Npm
   }
 
   /**
-   * Runs "test" script.
+   * Runs "test-release" script.
    */
-  public function test(): void
+  public function testRelease(): void
   {
-    static::run('test', 'Testing');
+    static::run('test-release', 'Testing');
   }
 
   /**

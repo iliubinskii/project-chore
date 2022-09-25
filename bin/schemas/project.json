@@ -83,7 +83,8 @@
       ],
       "scripts": [
         "test",
-        "test-fast"
+        "test-fast",
+        "test-release"
       ]
     },
     {

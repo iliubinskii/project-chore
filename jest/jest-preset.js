@@ -5,7 +5,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ["src/**/*.{js,ts,vue}", "!**/*.d.ts"],
   coverageDirectory: ".",
-  coverageReporters: ["lcov", "lcovonly"],
+  coverageReporters: ["lcov"],
   coverageThreshold: {
     global: {
       branches: 100,
