@@ -113,6 +113,12 @@
         "markdownlint": {
           "const": "markdownlint *.md --ignore=CHANGELOG.md"
         },
+        "ncu": {
+          "const": "ncu --dep dev,peer,prod"
+        },
+        "ncu-upgrade": {
+          "const": "ncu --dep dev,peer,prod --upgrade"
+        },
         "next-release": {
           "enum": [
             "php bin/next-release.php",
@@ -179,14 +185,8 @@
         "tsc": {
           "const": "tsc --noEmit"
         },
-        "update-package-check": {
-          "const": "ncu --dep dev,peer,prod"
-        },
-        "update-package-force": {
-          "const": "ncu --dep dev,peer,prod --upgrade"
-        },
         "upgrade": {
-          "const": "npm run update-package-force && npm run npm:install"
+          "const": "npm run ncu-upgrade && npm run npm:install"
         },
         "vscode:prepublish": {
           "const": "cf ./out && tsc --project tsconfig-compile.json"

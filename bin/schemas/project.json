@@ -162,6 +162,8 @@
     "husky:unset-hooks",
     "major-release",
     "markdownlint",
+    "ncu",
+    "ncu-upgrade",
     "next-release",
     "npm:install",
     "npm:install-clean",
@@ -169,8 +171,6 @@
     "npm:update",
     "package-json-lint",
     "prepare",
-    "update-package-check",
-    "update-package-force",
     "upgrade"
   ],
   "schemas": {

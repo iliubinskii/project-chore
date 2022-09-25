@@ -101,7 +101,7 @@ class Npm
     $this->noDeprecated($version);
     $this->noFileDependencies();
     $this->audit($config->audit);
-    $this->updatePackageCheck();
+    $this->ncu();
     $this->commitlint();
     $this->configLint();
     $this->markdownlint();
@@ -136,6 +136,14 @@ class Npm
   public function markdownlint(): void
   {
     static::run('markdownlint', 'Linting with markdownlint');
+  }
+
+  /**
+   * Runs "ncu" script.
+   */
+  public function ncu(): void
+  {
+    static::run('ncu', 'Checking for outdated dependencies');
   }
 
   /**
@@ -269,14 +277,6 @@ class Npm
   public function tsc(): void
   {
     static::run('tsc', 'Linting with tsc');
-  }
-
-  /**
-   * Runs "update-package-check" script.
-   */
-  public function updatePackageCheck(): void
-  {
-    static::run('update-package-check', 'Checking for outdated dependencies');
   }
 
   /**
