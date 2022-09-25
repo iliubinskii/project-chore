@@ -207,6 +207,8 @@ class Npm
    */
   public function release(string $version): void
   {
+    Sys::flush('Release '.$version.' version');
+
     $this->install();
 
     $this->fullCheck($version);
