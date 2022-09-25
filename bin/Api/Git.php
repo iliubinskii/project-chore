@@ -61,9 +61,9 @@ class Git
     return array_map(
       function (string $commit): array
       {
-        list($id, $message) = explode(':', $commit);
+        list($id, $message) = explode(':', $commit, 2);
 
-        return ['id' => $id, 'message' => $message];
+        return ['id' => $id, 'message' => trim($message)];
       },
       Sys::execute('git --no-pager log --pretty=format:%H:%s')
     );
