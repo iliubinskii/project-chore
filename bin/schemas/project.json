@@ -78,13 +78,13 @@
     },
     {
       "files": [
-        "jest.config.fast.js",
         "jest.config.js"
       ],
       "scripts": [
         "test",
         "test-fast",
-        "test-release"
+        "test-release",
+        "test-single"
       ]
     },
     {

@@ -177,10 +177,13 @@
           "const": "cf ./lcov-report && jest && git restore lcov.info"
         },
         "test-fast": {
-          "const": "cf ./lcov-report && jest --config=jest.config.fast.js && git restore lcov.info"
+          "const": "cf ./lcov-report && jest --max-workers=4 && git restore lcov.info"
         },
         "test-release": {
           "const": "cf ./lcov-report && jest"
+        },
+        "test-single": {
+          "const": "jest --collect-coverage=off"
         },
         "tsc": {
           "const": "tsc --noEmit"
