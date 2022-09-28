@@ -12,19 +12,19 @@
           "const": "browserslist"
         },
         "build": {
-          "const": "cf ./dist && tsc --project tsconfig-build.json"
+          "const": "cf dist && tsc --project tsconfig-build.json"
         },
         "build-changelog": {
           "const": "auto-changelog"
         },
         "build-doc": {
           "enum": [
-            "cf ./docs && node ./build-doc.js && cpy assets/docs/static/* docs",
+            "cf docs && node build-doc.js && cpy assets/docs/static/* docs",
             "typedoc src && cpy assets/docs/static/* docs"
           ]
         },
         "build-es": {
-          "const": "cf ./es && tsc --project tsconfig-build-es.json"
+          "const": "cf es && tsc --project tsconfig-build-es.json"
         },
         "clear-cache": {
           "const": "cf cache node_modules/.cache"
@@ -174,16 +174,13 @@
           "const": "stylelint --max-warnings 0 src/**/*.{css,scss}"
         },
         "test": {
-          "const": "cf ./lcov-report && jest && git restore lcov.info"
+          "const": "cf coverage/lcov-report && jest"
         },
         "test-fast": {
-          "const": "cf ./lcov-report && jest --max-workers=4 && git restore lcov.info"
+          "const": "cf coverage/lcov-report && jest --max-workers=4"
         },
         "test-release": {
-          "const": "cf ./lcov-report && jest"
-        },
-        "test-single": {
-          "const": "jest --collect-coverage=off"
+          "const": "jest --coverage-directory=. --coverage-reporters=lcovonly"
         },
         "tsc": {
           "const": "tsc --noEmit"
@@ -192,7 +189,7 @@
           "const": "npm run ncu-upgrade && npm run npm:install"
         },
         "vscode:prepublish": {
-          "const": "cf ./out && tsc --project tsconfig-compile.json"
+          "const": "cf out && tsc --project tsconfig-compile.json"
         },
         "vue-tsc": {
           "const": "vue-tsc --noEmit"

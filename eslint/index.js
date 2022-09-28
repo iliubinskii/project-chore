@@ -3,9 +3,9 @@ module.exports = {
     "!.*",
     ".quasar/**",
     "cache/**",
+    "coverage/**",
     "dist/**",
     "es/**",
-    "lcov-report/**",
     "node_modules/**",
     "out/**"
   ],

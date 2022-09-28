@@ -82,10 +82,9 @@
     "stylelint-html": "stylelint --config .stylelintrc-html.js --fix --max-warnings 0 src/**/*.{html,php,vue}",
     "stylelint-html-no-fix": "stylelint --config .stylelintrc-html.js --max-warnings 0 src/**/*.{html,php,vue}",
     "stylelint-no-fix": "stylelint --max-warnings 0 src/**/*.{css,scss}",
-    "test": "cf ./lcov-report && jest && git restore lcov.info",
-    "test-fast": "cf ./lcov-report && jest --max-workers=4 && git restore lcov.info",
-    "test-release": "cf ./lcov-report && jest",
-    "test-single": "jest --collect-coverage=off",
+    "test": "cf coverage/lcov-report && jest",
+    "test-fast": "cf coverage/lcov-report && jest --max-workers=4",
+    "test-release": "jest --coverage-directory=. --coverage-reporters=lcovonly",
     "tsc": "tsc --noEmit",
     "upgrade": "npm run ncu-upgrade && npm run npm:install"
   },

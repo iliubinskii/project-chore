@@ -16,10 +16,10 @@
   },
   "exclude": [
     "cache",
+    "coverage",
     "dist",
     "docs",
     "es",
-    "lcov-report",
     "node_modules"
   ],
   "extends": "./tsconfig/strict",

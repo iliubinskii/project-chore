@@ -1,5 +1,5 @@
 .php-cs-fixer.cache
 cache
-lcov-report
+coverage
 node_modules
 vendor
