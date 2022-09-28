@@ -11,7 +11,7 @@
 - [Installation](#installation)
 - [Related packages](#related-packages)
 
-## [](#overview)Overview
+## <a id="overview"></a>Overview
 
 Configuration files for:
 
@@ -25,13 +25,13 @@ Configuration files for:
 - typedoc
 - typescript
 
-## [](#installation)Installation
+## <a id="installation"></a>Installation
 
 ```sh
 npm install --save-dev real-config
 ```
 
-## [](#related-packages)Related packages
+## <a id="related-packages"></a>Related packages
 
 - [eslint-plugin-misc](https://www.npmjs.com/package/eslint-plugin-misc) &mdash; ESLint plugin.
 - [quasar-extension](https://www.npmjs.com/package/quasar-extension) &mdash; Quasar extension.
