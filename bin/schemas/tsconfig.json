@@ -1,5 +1,13 @@
 {
   "properties": {
+    "extends": {
+      "enum": [
+        "./tsconfig/min",
+        "./tsconfig/strict",
+        "real-config/tsconfig/min",
+        "real-config/tsconfig/strict"
+      ]
+    },
     "compilerOptions": {
       "properties": {
         "baseUrl": {
@@ -39,14 +47,6 @@
         "baseUrl",
         "outDir",
         "paths"
-      ]
-    },
-    "extends": {
-      "enum": [
-        "./tsconfig/min",
-        "./tsconfig/strict",
-        "real-config/tsconfig/min",
-        "real-config/tsconfig/strict"
       ]
     },
     "include": {

@@ -8,8 +8,8 @@
     "description-format": [
       "error",
       {
-        "requireEndingPeriod": true,
-        "requireCapitalFirstLetter": true
+        "requireCapitalFirstLetter": true,
+        "requireEndingPeriod": true
       }
     ],
     "description-type": "error",
