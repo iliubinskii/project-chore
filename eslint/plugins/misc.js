@@ -52,7 +52,7 @@ module.exports = {
           },
           {
             _id: "statements.expression-statement",
-            emptyLine: "never",
+            emptyLine: "commented",
             selector: `${block} > ExpressionStatement`
           },
           {
