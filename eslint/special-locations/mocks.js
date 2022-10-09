@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
     "../options/allow-default-export",
-    "../options/allow-global-access",
     "../options/allow-nodejs-modules",
+    "../options/allow-parent-siblings-import",
     "../options/allow-require",
     "../options/allow-require-unsafe",
     "../options/skip-filename-check",

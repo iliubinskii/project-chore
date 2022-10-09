@@ -1,3 +1,5 @@
+/* eslint-disable misc/no-relative-parent-import -- Ok */
+
 const { getAllRules } = require("../eslint/plugins/api");
 
 const misc = require("../eslint/plugins/misc");

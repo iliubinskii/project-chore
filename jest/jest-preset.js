@@ -1,3 +1,6 @@
+/* eslint-disable github/unescaped-html-literal -- Ok */
+/* eslint-disable xss/no-mixed-html -- Ok */
+
 const fs = require("node:fs");
 
 module.exports = {
