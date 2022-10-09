@@ -22,10 +22,9 @@ module.exports = environment => {
       await super.setup();
       this.global.JEST_ENV = environment;
       this.global.JEST_PATH = this.testPath;
-      this.global.clearImmediate =
-        this.global.clearImmediate ?? _clearImmediate;
-      this.global.fetch = this.global.fetch ?? _fetch;
-      this.global.setImmediate = this.global.setImmediate ?? _setImmediate;
+      this.global.clearImmediate ??= _clearImmediate;
+      this.global.fetch ??= _fetch;
+      this.global.setImmediate ??= _setImmediate;
 
       function _clearImmediate(id) {
         global.clearTimeout(id);
