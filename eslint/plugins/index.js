@@ -22,6 +22,7 @@ module.exports = {
     "./sonarjs",
     "./sort-destructure-keys",
     "./sort-imports-requires",
+    "./spellcheck",
     "./typescript-sort-keys",
     "./unicorn",
     "./vue",
