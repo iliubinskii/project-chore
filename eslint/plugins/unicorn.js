@@ -15,6 +15,7 @@ module.exports = {
     "unicorn/no-useless-undefined": "off",
     "unicorn/prefer-at": "off",
     "unicorn/prefer-string-replace-all": "off",
+    "unicorn/prefer-ternary": "off",
     "unicorn/prevent-abbreviations": "off",
     "unicorn/switch-case-braces": ["warn", "avoid"]
   },
