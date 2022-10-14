@@ -8,12 +8,12 @@ use Real\Config\Unknown;
 class Package
 {
   /**
-   * @var array<string>
+   * @var string[]
    */
   public $dependencies;
 
   /**
-   * @var array<string>
+   * @var string[]
    */
   public $devDependencies;
 
@@ -23,12 +23,12 @@ class Package
   public $name;
 
   /**
-   * @var array<string>
+   * @var string[]
    */
   public $peerDependencies;
 
   /**
-   * @var array<string>
+   * @var string[]
    */
   public $scripts;
 

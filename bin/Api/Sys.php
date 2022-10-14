@@ -10,7 +10,7 @@ class Sys
   /**
    * Executes command.
    *
-   * @return array<string>
+   * @return string[]
    */
   public static function execute(string $command, string $description = null, bool $interactive = false): array
   {
@@ -60,9 +60,9 @@ class Sys
   /**
    * Scans directory.
    *
-   * @param array<string> $ignore
+   * @param string[] $ignore
    *
-   * @return array<string>
+   * @return string[]
    */
   public static function scanDir(string $dir, array $ignore = []): array
   {
@@ -72,9 +72,9 @@ class Sys
   /**
    * Scans directory.
    *
-   * @param array<string> $ignore
+   * @param string[] $ignore
    *
-   * @return array<string>
+   * @return string[]
    */
   public static function scanDirDeep(string $dir, array $ignore = []): array
   {

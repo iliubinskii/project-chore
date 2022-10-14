@@ -3,7 +3,7 @@
 class Recommended
 {
   /**
-   * @var array<mixed>
+   * @var mixed[]
    */
   public static $rules = [
     '@PhpCsFixer' => true,

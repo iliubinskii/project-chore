@@ -72,7 +72,7 @@ class Git
   /**
    * Retrieves tags.
    *
-   * @return array<string>
+   * @return string[]
    */
   public static function getTags(): array
   {
