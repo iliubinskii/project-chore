@@ -90,7 +90,7 @@
   },
   "dependencies": {
     "jsonschema": "^1.4.1",
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.1"
   },
   "peerDependencies": {
     "@commitlint/cli": ">=17",
@@ -137,7 +137,7 @@
     "eslint-plugin-sort-imports-requires": ">=1",
     "eslint-plugin-spellcheck": ">=0",
     "eslint-plugin-typescript-sort-keys": ">=2",
-    "eslint-plugin-unicorn": ">=44",
+    "eslint-plugin-unicorn": ">=45",
     "eslint-plugin-unused-imports": ">=2",
     "eslint-plugin-vue": ">=9",
     "eslint-plugin-vue-scoped-css": ">=2",
@@ -156,7 +156,7 @@
     "prettier": ">=2",
     "strip-ansi-cli": ">=3",
     "stylelint": ">=14",
-    "stylelint-config-standard-scss": ">=5",
+    "stylelint-config-standard-scss": ">=6",
     "stylelint-no-unsupported-browser-features": ">=6",
     "stylelint-order": ">=5",
     "ts-jest": ">=29",
