@@ -52,6 +52,7 @@ module.exports = {
     "jsdoc/require-yields": "off",
     "jsdoc/require-yields-check": ["warn", { contexts }],
     "jsdoc/sort-tags": ["warn", { contexts }],
+    "jsdoc/text-escaping": ["warn", { contexts, escapeMarkdown: true }],
     "jsdoc/valid-types": ["warn", { contexts }]
   }
 };
