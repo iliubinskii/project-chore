@@ -82,6 +82,7 @@
       "minimum-stability",
       "prefer-stable",
       "version",
+      "private",
       "license",
       "homepage",
       "extends"
