@@ -1,7 +1,11 @@
 {
   "name": "real/config",
   "description": "Config for commitlint, eslint, jest, npm-package-json-lint, php-cs-fixer, phpstan, stylelint, typedoc, and typescript.",
+  "keywords": [],
   "type": "library",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "private": false,
   "license": "ISC",
   "homepage": "https://github.com/ilyub/real-config",
   "archive": {
@@ -21,7 +25,7 @@
     }
   ],
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.12",
-    "phpstan/phpstan": "^1.8.10"
+    "friendsofphp/php-cs-fixer": "^3.13",
+    "phpstan/phpstan": "^1.9.2"
   }
 }
