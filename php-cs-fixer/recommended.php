@@ -12,6 +12,11 @@ class Recommended
       'position_after_control_structures' => 'next',
       'position_after_functions_and_oop_constructs' => 'next',
     ],
+    'global_namespace_import' => [
+      'import_classes' => true,
+      'import_constants' => true,
+      'import_functions' => true,
+    ],
     'ordered_class_elements' => [
       'order' => [
         'use_trait',
