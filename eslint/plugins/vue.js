@@ -33,6 +33,7 @@ module.exports = {
         "vue/component-options-name-casing": "off",
         "vue/custom-event-name-casing": ["warn", "camelCase"],
         "vue/match-component-file-name": "off",
+        "vue/multiline-ternary": "off",
         "vue/new-line-between-multi-line-property": "off",
         "vue/no-bare-strings-in-template": [
           "warn",
