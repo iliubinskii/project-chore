@@ -7,7 +7,8 @@ module.exports = {
     "dist/**",
     "es/**",
     "node_modules/**",
-    "out/**"
+    "out/**",
+    "vendor/**"
   ],
   extends: "./plugins",
   env: {
