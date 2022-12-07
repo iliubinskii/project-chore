@@ -56,7 +56,6 @@
       ],
       "scripts": [
         "inspect",
-        "serve",
         "vue-tsc"
       ]
     },

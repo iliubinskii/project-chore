@@ -156,7 +156,10 @@
           ]
         },
         "serve": {
-          "const": "quasar dev"
+          "enum": [
+            "quasar dev",
+            "ts-node src/index.ts"
+          ]
         },
         "sonar": {
           "const": "sonar-scanner"
