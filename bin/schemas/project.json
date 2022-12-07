@@ -105,6 +105,7 @@
   ],
   "optionalFiles": [
     "build-doc.js",
+    ".env",
     ".postcssrc.js",
     ".release.json",
     "babel.config.js",
