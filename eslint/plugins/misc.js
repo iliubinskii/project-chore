@@ -115,6 +115,7 @@ module.exports = {
             localName: "WrapperLike",
             source: "@vue/test-utils/dist/interfaces/wrapperLike"
           },
+          { _id: "base-64", source: "base-64", wildcard: true },
           {
             _id: "estree",
             autoImport: true,
