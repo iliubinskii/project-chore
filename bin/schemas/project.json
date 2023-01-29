@@ -122,6 +122,7 @@
   ],
   "optionalScripts": [
     "compile",
+    "serve",
     "version",
     "vscode:prepublish",
     "watch"
