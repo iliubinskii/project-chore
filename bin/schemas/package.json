@@ -158,7 +158,8 @@
         "serve": {
           "enum": [
             "quasar dev",
-            "ts-node src/index.ts"
+            "ts-node src/index.ts",
+            "tsc && ts-node --transpileOnly src/index.ts"
           ]
         },
         "sonar": {
