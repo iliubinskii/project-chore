@@ -104,20 +104,20 @@
     }
   ],
   "optionalFiles": [
-    "build-doc.js",
     ".env",
     ".postcssrc.js",
     ".release.json",
     "babel.config.js",
+    "build-doc.js",
     "composer.json",
+    "index.d.ts",
+    "jest.setup.ts",
+    "jest.setup-after-env.ts",
     "tsconfig-compile.json"
   ],
   "optionalFilesByExtensions": [
-    ".bat",
     ".cache",
     ".info",
-    ".ts",
-    ".txt",
     ".vsix"
   ],
   "optionalScripts": [

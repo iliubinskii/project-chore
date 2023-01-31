@@ -10,7 +10,7 @@ module.exports = {
     "node/no-sync": "off",
     "node/no-unpublished-import": [
       "warn",
-      { tryExtensions: [".js", ".json", ".ts"] }
+      { tryExtensions: [".js", ".json", ".ts", ".tsx"] }
     ],
     "node/no-unsupported-features": "off",
     "node/no-unsupported-features/es-syntax": "off"

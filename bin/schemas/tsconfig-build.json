@@ -22,7 +22,10 @@
     },
     "include": {
       "items": {
-        "const": "src/**/*.ts"
+        "enum": [
+          "src/**/*.ts",
+          "src/**/*.tsx"
+        ]
       }
     }
   },

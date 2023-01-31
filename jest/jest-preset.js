@@ -6,7 +6,7 @@ const fs = require("node:fs");
 module.exports = {
   cacheDirectory: "./cache/jest",
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.{js,ts,vue}", "!**/*.d.ts"],
+  collectCoverageFrom: ["src/**/*.{js,ts,tsx,vue}", "!**/*.d.ts"],
   coverageDirectory: "./coverage",
   coverageReporters: ["lcov"],
   coverageThreshold: {
@@ -20,7 +20,7 @@ module.exports = {
   errorOnDeprecated: true,
   haste: { throwOnModuleCollision: true },
   maxWorkers: 1,
-  moduleFileExtensions: ["js", "ts", "vue"],
+  moduleFileExtensions: ["js", "ts", "tsx", "vue"],
   moduleNameMapper: {
     [/^@$/u.source]: "<rootDir>/src",
     [/^@\/(.+)/u.source]: "<rootDir>/src/$1",
@@ -38,19 +38,17 @@ module.exports = {
     ? ["./jest.setup-after-env.ts"]
     : [],
   testEnvironment: "real-config/jest/environments/node",
-  testMatch: ["<rootDir>/tests/**/*.ts"],
+  testMatch: ["<rootDir>/tests/**/*.{ts,tsx}"],
   testSequencer: "real-config/jest/sequencer",
   testTimeout: 10_000,
   transform: {
     [/\.(?:css|gif|jpg|less|png|sass|scss|styl|svg|ttf|woff|woff2)$/u.source]:
       "jest-transform-stub",
-    [/\.(?:html|js|ts)$/u.source]: [
+    [/\.(?:html|js|ts|tsx)$/u.source]: [
       "ts-jest",
       { isolatedModules: true, tsconfig: "./tsconfig-min.json" }
     ],
     [/\.vue$/u.source]: "@vue/vue3-jest"
   },
-  transformIgnorePatterns: [
-    "node_modules/(?!misc/quasar-extension|is-obj|is-regexp|quasar|stringify-object)"
-  ]
+  transformIgnorePatterns: ["node_modules/quasar"]
 };
