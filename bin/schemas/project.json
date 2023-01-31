@@ -8,14 +8,47 @@
         ".eslintrc.synonyms.js",
         ".eslintrc.temp.js",
         ".prettierrc.js",
-        "tsconfig-min.json",
-        "tsconfig.json"
+        "tsconfig.json",
+        "tsconfig-min.json"
       ],
       "scripts": [
         "lint",
         "lint-no-fix",
         "lint-no-fix-profile",
         "tsc"
+      ]
+    },
+    {
+      "files": [
+        "tsconfig-build.json"
+      ],
+      "scripts": [
+        "build"
+      ]
+    },
+    {
+      "files": [
+        "tsconfig-build-es.json"
+      ],
+      "scripts": [
+        "build-es"
+      ]
+    },
+    {
+      "files": [
+        "tsconfig-compile.json"
+      ],
+      "scripts": [
+        "vscode:prepublish"
+      ]
+    },
+    {
+      "files": [
+        "tsconfig-typedoc.json",
+        "typedoc.json"
+      ],
+      "scripts": [
+        "build-doc"
       ]
     },
     {
@@ -50,6 +83,16 @@
     },
     {
       "files": [
+        "jest.config.js"
+      ],
+      "scripts": [
+        "test",
+        "test-fast",
+        "test-release"
+      ]
+    },
+    {
+      "files": [
         "quasar.conf.js",
         "quasar.extensions.json",
         "quasar.testing.json"
@@ -61,45 +104,10 @@
     },
     {
       "files": [
-        "tsconfig-build.json"
-      ],
-      "scripts": [
-        "build"
-      ]
-    },
-    {
-      "files": [
-        "tsconfig-build-es.json"
-      ],
-      "scripts": [
-        "build-es"
-      ]
-    },
-    {
-      "files": [
-        "jest.config.js"
-      ],
-      "scripts": [
-        "test",
-        "test-fast",
-        "test-release"
-      ]
-    },
-    {
-      "files": [
         "sonar-project.properties"
       ],
       "scripts": [
         "sonar"
-      ]
-    },
-    {
-      "files": [
-        "tsconfig-typedoc.json",
-        "typedoc.json"
-      ],
-      "scripts": [
-        "build-doc"
       ]
     }
   ],
@@ -109,11 +117,9 @@
     ".release.json",
     "babel.config.js",
     "build-doc.js",
-    "composer.json",
     "index.d.ts",
     "jest.setup.ts",
-    "jest.setup-after-env.ts",
-    "tsconfig-compile.json"
+    "jest.setup-after-env.ts"
   ],
   "optionalFilesByExtensions": [
     ".cache",
@@ -124,7 +130,6 @@
     "compile",
     "serve",
     "version",
-    "vscode:prepublish",
     "watch"
   ],
   "requiredFiles": [
