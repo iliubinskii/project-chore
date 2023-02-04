@@ -2,5 +2,10 @@ const { getAllRules } = require("./api");
 
 module.exports = {
   plugins: ["react"],
-  rules: getAllRules("eslint-plugin-react")
+  settings: { react: { version: "detect" } },
+  rules: {
+    ...getAllRules("eslint-plugin-react"),
+    "react/jsx-sort-default-props": "off",
+    "react/jsx-space-before-closing": "off"
+  }
 };

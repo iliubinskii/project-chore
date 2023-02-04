@@ -92,6 +92,7 @@ module.exports = {
     "@typescript-eslint/prefer-function-type": "off",
     "@typescript-eslint/prefer-optional-chain": "off",
     "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    "@typescript-eslint/quotes": ["warn", "double", { avoidEscape: true }],
     "@typescript-eslint/restrict-template-expressions": [
       "warn",
       { allowNumber: true }

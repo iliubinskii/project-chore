@@ -1,3 +1,5 @@
+const prettier = require("eslint-config-prettier");
+
 module.exports = {
   getAllRules: (source, filter = () => true) => {
     const prefix = (() => {
@@ -14,7 +16,7 @@ module.exports = {
       Object.keys(rules)
         .map(rule => `${prefix}/${rule}`)
         .filter(filter)
-        .map(rule => [rule, "warn"])
+        .map(rule => [rule, rule in prettier.rules ? "off" : "warn"])
     );
   }
 };

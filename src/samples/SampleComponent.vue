@@ -6,7 +6,7 @@ export default defineComponent({
   name: "sample-component",
   inheritAttrs: false,
   setup: (_prop, { expose }) => {
-    expose({});
+    expose();
 
     return { x: 1, y: 2 };
   }

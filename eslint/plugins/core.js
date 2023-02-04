@@ -1,12 +1,19 @@
+const prettier = require("eslint-config-prettier");
+
 module.exports = {
   extends: "eslint:all",
   rules: {
+    ...Object.fromEntries(
+      Object.keys(prettier.rules)
+        .filter(name => !name.includes("/"))
+        .map(name => [name, "off"])
+    ),
     "array-callback-return": "off",
     "camelcase": "off",
     "capitalized-comments": "off",
     "class-methods-use-this": "off",
     "complexity": ["warn", 50],
-    "curly": ["error", "multi"],
+    "curly": ["warn", "multi"],
     "func-names": ["warn", "never"],
     "func-style": ["warn", "declaration", { allowArrowFunctions: true }],
     "id-length": [
@@ -42,6 +49,7 @@ module.exports = {
     "prefer-destructuring": "off",
     "prefer-named-capture-group": "off",
     "prefer-object-has-own": "off",
+    "quote-props": ["warn", "consistent-as-needed"],
     "sort-imports": ["warn", { ignoreDeclarationSort: true }],
     "sort-keys": "off",
     "spaced-comment": [

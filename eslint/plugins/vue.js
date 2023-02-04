@@ -32,6 +32,14 @@ module.exports = {
         "vue/component-definition-name-casing": ["warn", "kebab-case"],
         "vue/component-options-name-casing": "off",
         "vue/custom-event-name-casing": ["warn", "camelCase"],
+        "vue/html-self-closing": [
+          "warn",
+          {
+            html: { component: "always", normal: "never", void: "always" },
+            math: "always",
+            svg: "always"
+          }
+        ],
         "vue/match-component-file-name": "off",
         "vue/multiline-ternary": "off",
         "vue/new-line-between-multi-line-property": "off",
@@ -100,6 +108,7 @@ module.exports = {
           "warn",
           [{ blankLine: "never", next: "*", prev: "*" }]
         ],
+        "vue/quote-props": ["warn", "consistent-as-needed"],
         "vue/return-in-computed-property": "off",
         "vue/sort-keys": "off",
         "vue/v-on-function-call": ["warn", "never"]
