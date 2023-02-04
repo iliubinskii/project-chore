@@ -77,7 +77,6 @@
     "phpstan": "php vendor/bin/phpstan analyse -c phpstan.neon",
     "phpstan-quiet": "php vendor/bin/phpstan analyse -c phpstan.neon --quiet",
     "prepare": "node bin/prepare.js",
-    "sonar": "sonar-scanner",
     "stylelint": "stylelint --allow-empty-input --fix --max-warnings=0 src/**/*.{css,scss}",
     "stylelint-html": "stylelint --allow-empty-input --config=.stylelintrc-html.js --fix --max-warnings=0 src/**/*.{html,php,vue}",
     "stylelint-html-no-fix": "stylelint --allow-empty-input --config=.stylelintrc-html.js --max-warnings=0 src/**/*.{html,php,vue}",
