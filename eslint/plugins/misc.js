@@ -169,6 +169,18 @@ module.exports = {
             wildcard: true
           },
           {
+            _id: "react",
+            autoImport: true,
+            localName: "React",
+            source: "react"
+          },
+          {
+            _id: "react-dom/client",
+            autoImport: true,
+            localName: "ReactDOM",
+            source: "react-dom/client"
+          },
+          {
             _id: "real-facades/test-utils",
             altLocalNames: ["facadesTestUtils"],
             source: "real-facades/src/test-utils",
@@ -242,6 +254,7 @@ module.exports = {
           "flag-icon-css/flags/*/*.svg",
           "jest-extended/all",
           "quasar/wrappers",
+          "react-dom/client",
           "real-config/api",
           "real-facades/dist/test-utils",
           "real-fns/dist/test-utils",

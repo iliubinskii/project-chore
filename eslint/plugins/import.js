@@ -33,7 +33,16 @@ module.exports = {
     "import/no-self-import": "off",
     "import/no-unassigned-import": [
       "warn",
-      { allow: ["**/*.css", "**/*.scss", "jest-extended", "reflect-metadata"] }
+      {
+        allow: [
+          "**/*.css",
+          "**/*.sass",
+          "**/*.scss",
+          "@testing-library/jest-dom",
+          "jest-extended",
+          "reflect-metadata"
+        ]
+      }
     ],
     "import/order": "off",
     "import/prefer-default-export": "off",
