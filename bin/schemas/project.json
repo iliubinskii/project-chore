@@ -141,6 +141,7 @@
     "commitlint-next.scopes.js",
     "package-lock.json",
     "package.json",
+    "sonar-project.properties",
     "vscode.code-workspace"
   ],
   "requiredScripts": [
