@@ -317,6 +317,8 @@ module.exports = {
   },
   overrides: [
     {
+      // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-misc update
+      // fixme
       files: ["index.js", "index.ts", "index.tsx"],
       rules: {
         "misc/consistent-filename": "off",
