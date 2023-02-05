@@ -30,7 +30,7 @@ module.exports = {
     [/^uuid$/u.source]: "<rootDir>/node_modules/uuid/dist/index.js"
   },
   modulePathIgnorePatterns: [
-    "/(?:\\.git|\\.quasar|\\.scannerwork|\\.vscode|cache|coverage|dist|docs|es|node_modules)/"
+    "/(?:\\.git|\\.quasar|\\.vscode|cache|coverage|dist|docs|es|node_modules)/"
   ],
   resolver: "real-config/jest/resolver",
   setupFiles: fs.existsSync("./jest.setup.ts") ? ["./jest.setup.ts"] : [],
