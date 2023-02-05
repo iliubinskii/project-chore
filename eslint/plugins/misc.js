@@ -247,6 +247,7 @@ module.exports = {
       {
         allow: [
           "./src/test-utils",
+          "@fontsource/roboto/*",
           "@typescript-eslint/utils/dist/ts-eslint",
           "@vue/test-utils/dist/interfaces/wrapperLike",
           "@vue/test-utils/dist/types",
