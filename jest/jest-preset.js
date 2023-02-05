@@ -44,11 +44,12 @@ module.exports = {
   transform: {
     [/\.(?:css|gif|jpg|less|png|sass|scss|styl|svg|ttf|woff|woff2)$/u.source]:
       "jest-transform-stub",
-    [/\.(?:html|js|ts|tsx)$/u.source]: [
+    [/\.(?:js|jsx)$/u.source]: "babel-jest",
+    [/\.(?:ts|tsx)$/u.source]: [
       "ts-jest",
       { isolatedModules: true, tsconfig: "./tsconfig-min.json" }
     ],
     [/\.vue$/u.source]: "@vue/vue3-jest"
   },
-  transformIgnorePatterns: ["node_modules/quasar"]
+  transformIgnorePatterns: [/\/node_modules\/(?!quasar\/)/u.source]
 };
