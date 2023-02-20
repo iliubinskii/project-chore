@@ -1,9 +1,10 @@
 # Real Config
 
-[![Stars](https://img.shields.io/github/stars/ilyub/real-config)](https://github.com/ilyub/real-config)
 [![Downloads](https://img.shields.io/npm/dm/real-config)](https://www.npmjs.com/package/real-config)
 [![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/real-config)](https://snyk.io/advisor/npm-package/real-config)
 [![Dependencies](https://img.shields.io/librariesio/release/npm/real-config)](https://libraries.io/npm/real-config)
+[![Stars](https://img.shields.io/github/stars/ilyub/real-config)](https://github.com/ilyub/real-config)
+[![Sponsors](https://img.shields.io/github/sponsors/ilyub)](https://github.com/sponsors/ilyub)
 
 ## Table of contents
 
