@@ -1,6 +1,12 @@
 {
   "bindings": [
     {
+      "scripts": [
+        "lint",
+        "lint-no-fix",
+        "lint-no-fix-profile",
+        "tsc"
+      ],
       "files": [
         ".eslintrc.js",
         ".eslintrc.overrides.js",
@@ -10,54 +16,42 @@
         ".prettierrc.js",
         "tsconfig.json",
         "tsconfig-min.json"
-      ],
-      "scripts": [
-        "lint",
-        "lint-no-fix",
-        "lint-no-fix-profile",
-        "tsc"
       ]
     },
     {
-      "files": [
-        "tsconfig-build.json"
-      ],
       "scripts": [
         "build-commonjs"
+      ],
+      "files": [
+        "tsconfig-build.json"
       ]
     },
     {
-      "files": [
-        "tsconfig-build-es.json"
-      ],
       "scripts": [
         "build-es"
+      ],
+      "files": [
+        "tsconfig-build-es.json"
       ]
     },
     {
-      "files": [
-        "tsconfig-prepublish.json"
-      ],
       "scripts": [
         "vscode:prepublish"
+      ],
+      "files": [
+        "tsconfig-prepublish.json"
       ]
     },
     {
+      "scripts": [
+        "build-doc"
+      ],
       "files": [
         "tsconfig-typedoc.json",
         "typedoc.json"
-      ],
-      "scripts": [
-        "build-doc"
       ]
     },
     {
-      "files": [
-        ".php-cs-fixer.php",
-        "composer.json",
-        "composer.lock",
-        "phpstan.neon"
-      ],
       "scripts": [
         "composer:bump",
         "composer:dump-autoload",
@@ -67,39 +61,45 @@
         "php-cs-fixer",
         "phpstan",
         "phpstan-quiet"
+      ],
+      "files": [
+        ".php-cs-fixer.php",
+        "composer.json",
+        "composer.lock",
+        "phpstan.neon"
       ]
     },
     {
-      "files": [
-        ".stylelintrc-html.js",
-        ".stylelintrc.js"
-      ],
       "scripts": [
         "stylelint",
         "stylelint-html",
         "stylelint-html-no-fix",
         "stylelint-no-fix"
+      ],
+      "files": [
+        ".stylelintrc-html.js",
+        ".stylelintrc.js"
       ]
     },
     {
-      "files": [
-        "jest.config.js"
-      ],
       "scripts": [
         "test",
         "test-fast",
         "test-release"
+      ],
+      "files": [
+        "jest.config.js"
       ]
     },
     {
+      "scripts": [
+        "inspect",
+        "vue-tsc"
+      ],
       "files": [
         "quasar.conf.js",
         "quasar.extensions.json",
         "quasar.testing.json"
-      ],
-      "scripts": [
-        "inspect",
-        "vue-tsc"
       ]
     }
   ],
@@ -155,19 +155,19 @@
     "delete-tags",
     "full-check",
     "git:unix",
+    "git:unset-hooks",
     "git:windows",
     "husky:commit-msg",
     "husky:pre-commit",
-    "husky:unset-hooks",
     "major-release",
     "markdownlint",
     "ncu",
     "ncu-upgrade",
     "next-release",
-    "npm:install",
-    "npm:install-clean",
-    "npm:regenerate-lock-file",
-    "npm:update",
+    "install-clean",
+    "install-incremental",
+    "regenerate-lock-file",
+    "update",
     "package-json-lint",
     "prepare",
     "upgrade"

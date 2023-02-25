@@ -87,6 +87,9 @@
         "git:unix": {
           "const": "git config --replace-all core.ignorecase false"
         },
+        "git:unset-hooks": {
+          "const": "git config --unset core.hooksPath"
+        },
         "git:windows": {
           "const": "git config --replace-all core.ignorecase true"
         },
@@ -99,11 +102,14 @@
             "php node_modules/real-config/bin/pre-commit.php"
           ]
         },
-        "husky:unset-hooks": {
-          "const": "git config --unset core.hooksPath"
-        },
         "inspect": {
           "const": "quasar inspect | strip-ansi 1>webpack.info"
+        },
+        "install-clean": {
+          "const": "npm install-clean --no-audit --strict-peer-deps"
+        },
+        "install-incremental": {
+          "const": "npm install --no-audit --strict-peer-deps"
         },
         "lint": {
           "const": "eslint --fix --max-warnings=0 --no-error-on-unmatched-pattern **/*.{js,jsx,ts,tsx,vue}"
@@ -135,18 +141,6 @@
             "php node_modules/real-config/bin/next-release.php"
           ]
         },
-        "npm:install": {
-          "const": "npm install --no-audit --strict-peer-deps"
-        },
-        "npm:install-clean": {
-          "const": "npm install-clean --no-audit --strict-peer-deps"
-        },
-        "npm:regenerate-lock-file": {
-          "const": "npm install --no-audit --package-lock-only --strict-peer-deps"
-        },
-        "npm:update": {
-          "const": "npm update --no-audit --strict-peer-deps"
-        },
         "package-json-lint": {
           "const": "npmPkgJsonLint ./package.json"
         },
@@ -164,6 +158,9 @@
             "node bin/prepare.js",
             "node node_modules/real-config/bin/prepare.js"
           ]
+        },
+        "regenerate-lock-file": {
+          "const": "npm install --no-audit --package-lock-only --strict-peer-deps"
         },
         "sonar": {
           "const": "sonar-scanner"
@@ -209,6 +206,9 @@
         },
         "tsc": {
           "const": "tsc --noEmit"
+        },
+        "update": {
+          "const": "npm update --no-audit --strict-peer-deps"
         },
         "upgrade": {
           "const": "npm run ncu-upgrade && npm run npm:install"
