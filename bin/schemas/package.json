@@ -11,6 +11,13 @@
         "browserslist": {
           "const": "browserslist"
         },
+        "build": {
+          "enum": [
+            "quasar build",
+            "react-scripts build",
+            "vsce package"
+          ]
+        },
         "build-changelog": {
           "const": "auto-changelog"
         },
@@ -34,13 +41,6 @@
         },
         "commitlint-next": {
           "const": "commitlint --config=commitlint-next.config.js --edit"
-        },
-        "build": {
-          "enum": [
-            "quasar build",
-            "react-scripts build",
-            "vsce package"
-          ]
         },
         "composer:bump": {
           "const": "composer bump"
@@ -67,6 +67,15 @@
           "enum": [
             "php bin/delete-tags.php",
             "php node_modules/real-config/bin/delete-tags.php"
+          ]
+        },
+        "dev": {
+          "enum": [
+            "start http://localhost:3000 && next dev",
+            "quasar dev",
+            "react-scripts start",
+            "ts-node src/index.ts",
+            "tsc && ts-node --transpileOnly src/index.ts"
           ]
         },
         "full-check": {
@@ -156,16 +165,17 @@
             "node node_modules/real-config/bin/prepare.js"
           ]
         },
-        "serve": {
+        "sonar": {
+          "const": "sonar-scanner"
+        },
+        "start": {
           "enum": [
-            "quasar dev",
+            "next start",
+            "quasar serve ./out",
             "react-scripts start",
             "ts-node src/index.ts",
             "tsc && ts-node --transpileOnly src/index.ts"
           ]
-        },
-        "sonar": {
-          "const": "sonar-scanner"
         },
         "stylelint": {
           "const": "stylelint --allow-empty-input --fix --max-warnings=0 src/**/*.{css,scss}"
