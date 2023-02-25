@@ -1,5 +1,5 @@
+.cache
+.coverage
 .php-cs-fixer.cache
-cache
-coverage
 node_modules
 vendor

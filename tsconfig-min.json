@@ -2,7 +2,7 @@
   "extends": "./tsconfig/min",
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "cache/typescript",
+    "outDir": ".cache/typescript",
     "paths": {
       "@": [
         "src"
@@ -16,8 +16,8 @@
     ]
   },
   "exclude": [
-    "cache",
-    "coverage",
+    ".cache",
+    ".coverage",
     "dist",
     "docs",
     "es",

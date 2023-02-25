@@ -5,4 +5,4 @@ parameters:
     - api
     - bin
     - php-cs-fixer
-  tmpDir: cache/phpstan
+  tmpDir: .cache/phpstan

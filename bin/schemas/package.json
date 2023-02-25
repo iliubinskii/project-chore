@@ -27,7 +27,7 @@
           "const": "cf es && tsc --project tsconfig-build-es.json"
         },
         "clear-cache": {
-          "const": "cf cache node_modules/.cache"
+          "const": "cf .cache node_modules/.cache"
         },
         "commitlint": {
           "const": "commitlint --from="
@@ -181,14 +181,14 @@
         },
         "test": {
           "enum": [
-            "cf coverage/lcov-report && jest",
-            "cf coverage/lcov-report && react-scripts test --coverage --watchAll=false"
+            "cf .coverage/lcov-report && jest",
+            "cf .coverage/lcov-report && react-scripts test --coverage --watchAll=false"
           ]
         },
         "test-fast": {
           "enum": [
-            "cf coverage/lcov-report && jest --max-workers=4",
-            "cf coverage/lcov-report && react-scripts test --coverage --watchAll=false"
+            "cf .coverage/lcov-report && jest --max-workers=4",
+            "cf .coverage/lcov-report && react-scripts test --coverage --watchAll=false"
           ]
         },
         "test-release": {

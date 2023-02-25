@@ -14,7 +14,7 @@
           "const": "."
         },
         "outDir": {
-          "const": "cache/typescript"
+          "const": ".cache/typescript"
         },
         "paths": {
           "properties": {
