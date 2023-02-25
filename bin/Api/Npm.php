@@ -24,20 +24,12 @@ class Npm
   }
 
   /**
-   * Runs "build" script.
-   */
-  public function build(): void
-  {
-    static::run('build', 'Building CommonJS version');
-  }
-
-  /**
    * Builds all.
    */
   public function buildAll(): void
   {
     $this->buildChangeLog();
-    $this->build();
+    $this->buildCommonjs();
     $this->buildEs();
     $this->buildDoc();
     $this->phpCsFixer();
@@ -49,6 +41,14 @@ class Npm
   public function buildChangeLog(): void
   {
     static::run('build-changelog', 'Building change log');
+  }
+
+  /**
+   * Runs "build-commonjs" script.
+   */
+  public function buildCommonjs(): void
+  {
+    static::run('build-commonjs', 'Building CommonJS version');
   }
 
   /**

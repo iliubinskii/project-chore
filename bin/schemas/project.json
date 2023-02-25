@@ -23,7 +23,7 @@
         "tsconfig-build.json"
       ],
       "scripts": [
-        "build"
+        "build-commonjs"
       ]
     },
     {

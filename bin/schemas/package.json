@@ -11,11 +11,11 @@
         "browserslist": {
           "const": "browserslist"
         },
-        "build": {
-          "const": "cf dist && tsc --project tsconfig-build.json"
-        },
         "build-changelog": {
           "const": "auto-changelog"
+        },
+        "build-commonjs": {
+          "const": "cf dist && tsc --project tsconfig-build.json"
         },
         "build-doc": {
           "enum": [
