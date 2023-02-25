@@ -36,7 +36,7 @@
     },
     {
       "files": [
-        "tsconfig-compile.json"
+        "tsconfig-prepublish.json"
       ],
       "scripts": [
         "vscode:prepublish"
@@ -119,7 +119,7 @@
     ".vsix"
   ],
   "optionalScripts": [
-    "compile",
+    "build",
     "serve",
     "sonar",
     "version",
@@ -177,8 +177,8 @@
     "tsconfig": "tsconfig",
     "tsconfig-build": "tsconfig-build",
     "tsconfig-build-es": "tsconfig-build-es",
-    "tsconfig-compile": "tsconfig-compile",
     "tsconfig-min": "tsconfig",
+    "tsconfig-prepublish": "tsconfig-prepublish",
     "tsconfig-typedoc": "tsconfig-typedoc"
   }
 }

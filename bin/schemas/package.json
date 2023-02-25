@@ -35,7 +35,7 @@
         "commitlint-next": {
           "const": "commitlint --config=commitlint-next.config.js --edit"
         },
-        "compile": {
+        "build": {
           "enum": [
             "quasar build",
             "react-scripts build",
@@ -204,7 +204,7 @@
           "const": "npm run ncu-upgrade && npm run npm:install"
         },
         "vscode:prepublish": {
-          "const": "cf out && tsc --project tsconfig-compile.json"
+          "const": "cf out && tsc --project tsconfig-prepublish.json"
         },
         "vue-tsc": {
           "const": "vue-tsc --noEmit"
