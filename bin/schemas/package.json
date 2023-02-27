@@ -105,11 +105,17 @@
         "inspect": {
           "const": "quasar inspect | strip-ansi 1>webpack.info"
         },
-        "install-clean": {
+        "install-dev": {
+          "const": "npm install --no-audit --strict-peer-deps"
+        },
+        "install-dev-clean": {
           "const": "npm install-clean --no-audit --strict-peer-deps"
         },
-        "install-incremental": {
-          "const": "npm install --no-audit --strict-peer-deps"
+        "install-prod": {
+          "const": "npm install --ignore-scripts --no-audit --omit=dev --strict-peer-deps"
+        },
+        "install-prod-clean": {
+          "const": "npm install-clean --ignore-scripts --no-audit --omit=dev --strict-peer-deps"
         },
         "lint": {
           "const": "eslint --fix --max-warnings=0 --no-error-on-unmatched-pattern **/*.{js,jsx,ts,tsx,vue}"
