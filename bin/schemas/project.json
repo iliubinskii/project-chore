@@ -120,7 +120,8 @@
   ],
   "optionalScripts": [
     "build",
-    "serve",
+    "dev",
+    "start",
     "sonar",
     "version",
     "watch"
