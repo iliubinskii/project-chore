@@ -217,7 +217,7 @@
           "const": "npm update --no-audit --strict-peer-deps"
         },
         "upgrade": {
-          "const": "npm run ncu-upgrade && npm run npm:install"
+          "const": "npm run ncu-upgrade && npm run install-dev"
         },
         "vscode:prepublish": {
           "const": "cf out && tsc --project tsconfig-prepublish.json"

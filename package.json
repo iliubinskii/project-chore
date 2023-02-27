@@ -87,7 +87,7 @@
     "test-release": "jest --coverage-directory=. --coverage-reporters=lcovonly",
     "tsc": "tsc --noEmit",
     "update": "npm update --no-audit --strict-peer-deps",
-    "upgrade": "npm run ncu-upgrade && npm run npm:install"
+    "upgrade": "npm run ncu-upgrade && npm run install-dev"
   },
   "dependencies": {
     "jsonschema": "^1.4.1",
