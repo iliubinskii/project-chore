@@ -25,7 +25,9 @@ const actualScripts = Object.keys(
   JSON.parse(fs.readFileSync("./package.json")).scripts
 );
 
-for (const { files, scripts } of bindings)
+for (const binding of bindings) {
+  const { files, scripts } = { files: [], scripts: [], ...binding };
+
   if (
     files.some(file => actualFiles.includes(file)) ||
     scripts.some(script => actualScripts.includes(script))
@@ -33,6 +35,7 @@ for (const { files, scripts } of bindings)
     requiredFiles.push(...files);
     requiredScripts.push(...scripts);
   }
+}
 
 const errors = [];
 
