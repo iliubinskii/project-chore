@@ -17,7 +17,7 @@
   },
   "exclude": [
     ".cache",
-    ".coverage",
+    "coverage",
     "dist",
     "docs",
     "es",

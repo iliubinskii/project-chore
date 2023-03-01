@@ -7,7 +7,7 @@ module.exports = {
   cacheDirectory: "./.cache/jest",
   collectCoverage: true,
   collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx,vue}", "!**/*.d.ts"],
-  coverageDirectory: "./.coverage",
+  coverageDirectory: "./coverage",
   coverageReporters: ["lcov"],
   coverageThreshold: {
     global: {
@@ -30,7 +30,7 @@ module.exports = {
     [/^uuid$/u.source]: "<rootDir>/node_modules/uuid/dist/index.js"
   },
   modulePathIgnorePatterns: [
-    "/(?:\\.cache|\\.coverage|\\.git|\\.quasar|\\.vscode|dist|docs|es|node_modules)/"
+    "/(?:\\.cache|\\.git|\\.quasar|\\.vscode|coverage|dist|docs|es|node_modules)/"
   ],
   resolver: "real-config/jest/resolver",
   setupFiles: fs.existsSync("./jest.setup.ts") ? ["./jest.setup.ts"] : [],

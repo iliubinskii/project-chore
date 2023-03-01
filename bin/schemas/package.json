@@ -195,14 +195,14 @@
         },
         "test": {
           "enum": [
-            "cf .coverage/lcov-report && jest",
-            "cf .coverage/lcov-report && react-scripts test --coverage --watchAll=false"
+            "cf coverage/lcov-report && jest",
+            "cf coverage/lcov-report && react-scripts test --coverage --watchAll=false"
           ]
         },
         "test-fast": {
           "enum": [
-            "cf .coverage/lcov-report && jest --max-workers=4",
-            "cf .coverage/lcov-report && react-scripts test --coverage --watchAll=false"
+            "cf coverage/lcov-report && jest --max-workers=4",
+            "cf coverage/lcov-report && react-scripts test --coverage --watchAll=false"
           ]
         },
         "test-release": {

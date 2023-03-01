@@ -2,8 +2,8 @@ module.exports = {
   ignorePatterns: [
     "!.*",
     ".cache/**",
-    ".coverage/**",
     ".quasar/**",
+    "coverage/**",
     "dist/**",
     "es/**",
     "node_modules/**",
