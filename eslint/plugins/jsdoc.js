@@ -17,6 +17,7 @@ const definedTags = ["jest-environment"];
 
 module.exports = {
   plugins: ["jsdoc"],
+  settings: { jsdoc: { mode: "typescript" } },
   rules: {
     ...getAllRules("eslint-plugin-jsdoc"),
     "jsdoc/check-access": ["warn", { contexts }],
