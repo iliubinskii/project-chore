@@ -64,11 +64,16 @@
       "package-lock.json": true
     },
     "sort-json.settings.contextMenu": {
-      "sortJsonSubMenu": false,
-      "ascendingSort": true
+      "ascendingSort": true,
+      "sortJsonSubMenu": false
     },
     "sort-json.settings.isCaseSensitive": true,
     "sort-json.settings.orderOverrideKeys": {
+      "": [
+        "$schema",
+        "$id",
+        "type"
+      ],
       "composer.json": [
         "name",
         "description",
@@ -92,10 +97,23 @@
         "theme_color",
         "icons"
       ],
-      "": [
-        "$schema",
-        "$id",
-        "type"
+      "tsconfig-build-es.json": [
+        "extends"
+      ],
+      "tsconfig-build.json": [
+        "extends"
+      ],
+      "tsconfig-min.json": [
+        "extends"
+      ],
+      "tsconfig-prepublish.json": [
+        "extends"
+      ],
+      "tsconfig-typedoc.json": [
+        "extends"
+      ],
+      "tsconfig.json": [
+        "extends"
       ]
     },
     "sort-json.settings.sortMode": "Objects Only",
