@@ -32,6 +32,7 @@ module.exports = {
       { allowExpressions: true }
     ],
     "@typescript-eslint/init-declarations": "off",
+    "@typescript-eslint/lines-around-comment": "off",
     "@typescript-eslint/member-ordering": "off",
     "@typescript-eslint/method-signature-style": ["warn", "property"],
     "@typescript-eslint/naming-convention": [
