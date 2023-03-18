@@ -34,6 +34,7 @@ module.exports = {
     "max-statements": ["warn", 100],
     "multiline-comment-style": "off",
     "new-cap": "off",
+    "no-duplicate-imports": "off",
     "no-inline-comments": ["warn", { ignorePattern: "NOSONAR" }],
     "no-lone-blocks": "off",
     "no-magic-numbers": "off",

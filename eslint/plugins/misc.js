@@ -170,9 +170,9 @@ module.exports = {
           },
           {
             _id: "react",
-            autoImport: true,
             localName: "React",
-            source: "react"
+            source: "react",
+            wildcard: true
           },
           {
             _id: "react-dom/client",
@@ -248,6 +248,8 @@ module.exports = {
         allow: [
           "./src/test-utils",
           "@fontsource/roboto/*",
+          "@mui/material/locale",
+          "@mui/x-date-pickers/AdapterDateFns",
           "@typescript-eslint/utils/dist/ts-eslint",
           "@vue/test-utils/dist/interfaces/wrapperLike",
           "@vue/test-utils/dist/types",
