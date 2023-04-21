@@ -126,7 +126,7 @@
     "typescript.suggestionActions.enabled": false,
     "typescript.tsdk": "node_modules\\typescript\\lib",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "volar.codeLens.references": false,
+    "vue.features.codeActions.savingTimeLimit": 10000,
     "workbench.colorCustomizations": {
       "editor.foldBackground": "#0000"
     },
