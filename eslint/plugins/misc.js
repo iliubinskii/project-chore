@@ -97,6 +97,16 @@ module.exports = {
             wildcard: true
           },
           {
+            _id: "@fullcalendar/daygrid",
+            localName: "dayGridPlugin",
+            source: "@fullcalendar/daygrid"
+          },
+          {
+            _id: "@fullcalendar/react",
+            localName: "FullCalendar",
+            source: "@fullcalendar/react"
+          },
+          {
             _id: "@sinonjs/fake-timers",
             autoImport: true,
             source: "@sinonjs/fake-timers",
@@ -253,6 +263,8 @@ module.exports = {
           "@typescript-eslint/utils/dist/ts-eslint",
           "@vue/test-utils/dist/interfaces/wrapperLike",
           "@vue/test-utils/dist/types",
+          "country-flag-icons/react/1x1",
+          "country-flag-icons/react/3x2",
           "date-fns/locale/*",
           "flag-icon-css/flags/*/*.svg",
           "jest-extended/all",
