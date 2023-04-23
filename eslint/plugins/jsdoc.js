@@ -26,12 +26,11 @@ module.exports = {
     "jsdoc/check-syntax": ["warn", { contexts }],
     "jsdoc/check-tag-names": ["warn", { definedTags }],
     "jsdoc/implements-on-classes": ["warn", { contexts }],
+    "jsdoc/informative-docs": "off",
     "jsdoc/match-description": ["warn", { contexts }],
     "jsdoc/match-name": "off",
-    "jsdoc/multiline-blocks": ["warn", { contexts }],
     "jsdoc/no-defaults": ["warn", { contexts }],
     "jsdoc/no-missing-syntax": "off",
-    "jsdoc/no-multi-asterisks": ["warn", { contexts }],
     "jsdoc/no-restricted-syntax": "off",
     "jsdoc/no-types": ["warn", { contexts }],
     "jsdoc/require-description": ["warn", { contexts }],
@@ -52,8 +51,6 @@ module.exports = {
     "jsdoc/require-throws": "off",
     "jsdoc/require-yields": "off",
     "jsdoc/require-yields-check": ["warn", { contexts }],
-    "jsdoc/sort-tags": ["warn", { contexts }],
-    "jsdoc/text-escaping": ["warn", { contexts, escapeMarkdown: true }],
-    "jsdoc/valid-types": ["warn", { contexts }]
+    "jsdoc/text-escaping": ["warn", { escapeMarkdown: true }]
   }
 };
