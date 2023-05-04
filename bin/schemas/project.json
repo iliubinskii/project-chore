@@ -60,8 +60,7 @@
         "stylelint",
         "stylelint-html",
         "stylelint-html-no-fix",
-        "stylelint-no-fix",
-        "typed-scss-modules"
+        "stylelint-no-fix"
       ]
     },
     {
@@ -130,6 +129,7 @@
     "dev",
     "start",
     "sonar",
+    "typed-scss-modules",
     "version",
     "watch"
   ],
