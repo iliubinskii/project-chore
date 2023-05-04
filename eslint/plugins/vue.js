@@ -108,6 +108,7 @@ module.exports = {
           "warn",
           [{ blankLine: "never", next: "*", prev: "*" }]
         ],
+        "vue/padding-lines-in-component-definition": "off",
         "vue/quote-props": ["warn", "consistent-as-needed"],
         "vue/return-in-computed-property": "off",
         "vue/sort-keys": "off",
