@@ -17,6 +17,7 @@ module.exports = {
     "./plugins/es",
     "./plugins/escompat",
     "./plugins/eslint-comments",
+    "./plugins/etc",
     "./plugins/github",
     "./plugins/import",
     "./plugins/jsdoc",
