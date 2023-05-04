@@ -33,6 +33,7 @@ class Npm
     $this->buildEs();
     $this->buildDoc();
     $this->phpCsFixer();
+    $this->typedScssModules();
   }
 
   /**
@@ -196,7 +197,7 @@ class Npm
   }
 
   /**
-   * Runs php-cs-fixer.
+   * Runs "php-cs-fixer" script.
    */
   public function phpCsFixer(): void
   {
@@ -204,7 +205,7 @@ class Npm
   }
 
   /**
-   * Runs phpstan.
+   * Runs "phpstan" script.
    */
   public function phpstan(): void
   {
@@ -277,6 +278,14 @@ class Npm
   public function tsc(): void
   {
     static::run('tsc', 'Linting with tsc');
+  }
+
+  /**
+   * Runs "typed-scss-modules" script.
+   */
+  public function typedScssModules(): void
+  {
+    static::run('typed-scss-modules', 'Generating type definitions for stylesheets');
   }
 
   /**

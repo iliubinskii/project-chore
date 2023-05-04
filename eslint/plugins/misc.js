@@ -61,6 +61,12 @@ module.exports = {
             selector: `${block} > ImportDeclaration`
           },
           {
+            _id: "statements.scss-module",
+            emptyLine: "never",
+            filesToLint: ["*.module.scss.d.ts"],
+            selector: `${block} > :matches(:statement, TSDeclareFunction, TSExportAssignment)`
+          },
+          {
             _id: "statements.test",
             emptyLine: "always",
             next: [
@@ -91,6 +97,14 @@ module.exports = {
       "warn",
       {
         sources: [
+          {
+            _id: "**/*.module.scss",
+            localName: "style",
+            // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-update
+            // fixme
+            source: "**/*.module.scss",
+            sourcePattern: "**/*.module.scss"
+          },
           {
             _id: "./src/test-utils",
             source: `${pkg.name}/src/test-utils`,
