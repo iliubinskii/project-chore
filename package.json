@@ -170,7 +170,7 @@
     "typed-scss-modules": ">=7",
     "typedoc": ">=0",
     "typedoc-plugin-markdown": ">=3",
-    "typescript": "^5",
+    "typescript": ">=5",
     "vue-eslint-parser": ">=9",
     "vue-tsc": ">=1"
   },
