@@ -13,6 +13,7 @@ module.exports = {
   ],
   extends: [
     "./plugins/core",
+    "./plugins/css-modules",
     "./plugins/deprecation",
     "./plugins/es",
     "./plugins/escompat",

@@ -61,12 +61,6 @@ module.exports = {
             selector: `${block} > ImportDeclaration`
           },
           {
-            _id: "statements.scss-module",
-            emptyLine: "never",
-            filesToLint: ["*.module.scss.d.ts"],
-            selector: `${block} > :matches(:statement, TSDeclareFunction, TSExportAssignment)`
-          },
-          {
             _id: "statements.test",
             emptyLine: "always",
             next: [
@@ -141,6 +135,11 @@ module.exports = {
           },
           { _id: "base-64", source: "base-64", wildcard: true },
           {
+            _id: "chartjs-plugin-zoom",
+            localName: "Zoom",
+            source: "chartjs-plugin-zoom"
+          },
+          {
             _id: "estree",
             autoImport: true,
             source: "estree",
@@ -178,6 +177,7 @@ module.exports = {
             localName: "MiniSearch",
             source: "minisearch"
           },
+          { _id: "mui-image", localName: "MuiImage", source: "mui-image" },
           {
             _id: "path",
             altLocalNames: ["nodePath"],
@@ -284,6 +284,7 @@ module.exports = {
           "jest-extended/all",
           "quasar/wrappers",
           "react-dom/client",
+          "react-transition-group/CSSTransition",
           "real-config/api",
           "real-facades/dist/test-utils",
           "real-fns/dist/test-utils",

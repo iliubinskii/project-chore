@@ -215,7 +215,7 @@
           "const": "tsc --noEmit"
         },
         "typed-scss-modules": {
-          "const": "typed-scss-modules src"
+          "const": "typed-scss-modules src/**/*.module.scss --exportType default --nameFormat none"
         },
         "update": {
           "const": "npm update --no-audit --strict-peer-deps"
