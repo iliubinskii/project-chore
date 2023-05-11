@@ -200,6 +200,7 @@ module.exports = {
             "toolbelt",
             "tooltip",
             "tooltips",
+            "transitionend",
             "transpile",
             "tsconfig",
             "tsutils",
