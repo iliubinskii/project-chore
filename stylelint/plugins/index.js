@@ -4,6 +4,7 @@ module.exports = {
     "./core",
     "./no-unsupported-browser-features",
     "./order",
-    "./scss"
+    "./scss",
+    "./value-no-unknown-custom-properties"
   ]
 };

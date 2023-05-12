@@ -163,6 +163,7 @@
     "postcss-scss": ">=4",
     "prettier": ">=2",
     "strip-ansi-cli": ">=3",
+    "stylelint-value-no-unknown-custom-properties": ">=4",
     "stylelint": "^14",
     "stylelint-config-standard-scss": "^6",
     "stylelint-no-unsupported-browser-features": ">=6",
