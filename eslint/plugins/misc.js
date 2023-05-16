@@ -226,6 +226,12 @@ module.exports = {
             wildcard: true
           },
           {
+            _id: "realm-web",
+            localName: "Realm",
+            source: "realm-web",
+            wildcard: true
+          },
+          {
             _id: "tsutils",
             autoImport: true,
             source: "tsutils",

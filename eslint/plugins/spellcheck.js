@@ -118,6 +118,7 @@ module.exports = {
             "minimatch",
             "minisearch",
             "monday",
+            "mongodb",
             "mui",
             "multicolumn",
             "multilang",
