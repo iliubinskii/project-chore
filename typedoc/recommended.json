@@ -3,8 +3,14 @@
   "disableSources": true,
   "entryDocument": "index.md",
   "entryPointStrategy": "expand",
+  "exclude": [
+    "**/*.test.ts*",
+    "**/*.test.tsx*"
+  ],
   "excludeExternals": true,
-  "externalPattern": "**/node_modules/**",
+  "externalPattern": [
+    "**/node_modules/**"
+  ],
   "githubPages": false,
   "treatWarningsAsErrors": true,
   "validation": {
