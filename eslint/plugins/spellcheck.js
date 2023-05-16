@@ -159,6 +159,7 @@ module.exports = {
             "replacer",
             "repliable",
             "rereduce",
+            "rerender",
             "resizable",
             "resize",
             "resizer",
