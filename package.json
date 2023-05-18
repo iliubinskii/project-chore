@@ -104,6 +104,7 @@
     "@types/eslint": ">=8",
     "@types/jest": ">=29",
     "@types/node": ">=20",
+    "@types/webpack-env": ">=1",
     "@typescript-eslint/eslint-plugin": ">=5",
     "@typescript-eslint/parser": ">=5",
     "@vue/vue3-jest": ">=29",
