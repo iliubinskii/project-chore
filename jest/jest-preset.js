@@ -38,7 +38,11 @@ module.exports = {
     ? ["./jest.setup-after-env.ts"]
     : [],
   testEnvironment: "real-config/jest/environments/node",
-  testMatch: ["<rootDir>/tests/**/*.{ts,tsx}"],
+  testMatch: [
+    "<rootDir>/src/**/*.test.{ts,tsx}",
+    "<rootDir>/src/**/__tests__/**/*.{ts,tsx}",
+    "<rootDir>/tests/**/*.{ts,tsx}"
+  ],
   testSequencer: "real-config/jest/sequencer",
   testTimeout: 10_000,
   transform: {
