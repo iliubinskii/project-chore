@@ -50,7 +50,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: "!*.js",
+      files: ["!*.js", "!*.jsx"],
       rules: {
         "import/default": "off",
         "import/named": "off",

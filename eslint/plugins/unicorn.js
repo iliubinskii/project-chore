@@ -19,5 +19,7 @@ module.exports = {
     "unicorn/prevent-abbreviations": "off",
     "unicorn/switch-case-braces": ["warn", "avoid"]
   },
-  overrides: [{ files: "*.js", rules: { "unicorn/prefer-module": "off" } }]
+  overrides: [
+    { files: ["*.js", "*.jsx"], rules: { "unicorn/prefer-module": "off" } }
+  ]
 };

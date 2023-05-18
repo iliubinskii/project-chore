@@ -64,7 +64,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: "!*.js",
+      files: ["!*.js", "!*.jsx"],
       rules: {
         "consistent-return": "off",
         "default-case": "off",

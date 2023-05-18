@@ -286,6 +286,7 @@ module.exports = {
           "country-flag-icons/react/1x1",
           "country-flag-icons/react/3x2",
           "date-fns/locale/*",
+          "expo-router/build/types",
           "flag-icon-css/flags/*/*.svg",
           "jest-extended/all",
           "quasar/wrappers",

@@ -17,7 +17,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: "!*.js",
+      files: ["!*.js", "!*.jsx"],
       rules: {
         "node/file-extension-in-import": "off",
         "node/no-missing-import": "off"
