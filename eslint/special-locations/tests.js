@@ -22,6 +22,7 @@ module.exports = {
     "misc/no-sibling-import": "off",
     "misc/real-fns/guards/require-object-type-param": "off",
     "misc/require-jsdoc": "off",
+    "node/no-unpublished-import": "off",
     "react/jsx-no-literals": "off",
     "react/no-multi-comp": "off",
     "react-native/no-raw-text": "off",

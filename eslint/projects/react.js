@@ -7,7 +7,10 @@ module.exports = {
   overrides: [
     {
       files: "./src/setupTests.ts",
-      rules: { "misc/consistent-filename": "off" }
+      rules: {
+        "misc/consistent-filename": "off",
+        "node/no-unpublished-import": "off"
+      }
     }
   ]
 };

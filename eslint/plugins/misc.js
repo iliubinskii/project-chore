@@ -205,6 +205,11 @@ module.exports = {
             source: "react-dom/client"
           },
           {
+            _id: "react-native-swipe-gestures",
+            localName: "GestureRecognizer",
+            source: "react-native-swipe-gestures"
+          },
+          {
             _id: "real-facades/test-utils",
             altLocalNames: ["facadesTestUtils"],
             source: "real-facades/src/test-utils",

@@ -51,7 +51,7 @@ module.exports = {
       },
       {
         custom: { match: true, regex: "^.{1,50}$" },
-        format: ["camelCase", "PascalCase", "UPPER_CASE"],
+        format: ["camelCase", "PascalCase", "snake_case", "UPPER_CASE"],
         leadingUnderscore: "allow",
         selector: ["enumMember", "parameter", "variable"]
       },
