@@ -40,7 +40,7 @@ module.exports = {
   testEnvironment: "real-config/jest/environments/node",
   testMatch: [
     "<rootDir>/src/**/*.test.{ts,tsx}",
-    "<rootDir>/src/**/__tests__/**/*.{ts,tsx}",
+    "<rootDir>/src/**/__tests__/*.{ts,tsx}",
     "<rootDir>/tests/**/*.{ts,tsx}"
   ],
   testSequencer: "real-config/jest/sequencer",
