@@ -75,6 +75,12 @@
     },
     {
       "files": [
+        "app.json",
+        "eas.json"
+      ]
+    },
+    {
+      "files": [
         "next.config.js",
         "next-env.d.ts"
       ]

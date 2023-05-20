@@ -13,6 +13,9 @@
         },
         "build": {
           "enum": [
+            "eas build -p all",
+            "eas build -p android",
+            "eas build -p ios",
             "next build",
             "quasar build",
             "react-scripts build",
@@ -72,6 +75,7 @@
         },
         "dev": {
           "enum": [
+            "expo start",
             "start http://localhost:3000 && next dev",
             "quasar dev",
             "react-scripts start",
@@ -174,6 +178,7 @@
         },
         "start": {
           "enum": [
+            "expo start",
             "next start",
             "quasar serve ./out",
             "react-scripts start",
