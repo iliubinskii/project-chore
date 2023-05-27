@@ -34,14 +34,17 @@ module.exports = {
     "import/no-unassigned-import": [
       "warn",
       {
-        allow: [
-          "**/*.css",
-          "**/*.sass",
-          "**/*.scss",
-          "@testing-library/jest-dom",
-          "jest-extended",
-          "reflect-metadata"
-        ]
+        allow:
+          // @sorted
+          [
+            "**/*.css",
+            "**/*.sass",
+            "**/*.scss",
+            "@testing-library/jest-dom",
+            "jest-extended",
+            "react-native-gesture-handler",
+            "reflect-metadata"
+          ]
       }
     ],
     "import/order": "off",

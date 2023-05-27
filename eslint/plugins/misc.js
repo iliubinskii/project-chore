@@ -205,6 +205,16 @@ module.exports = {
             source: "react-dom/client"
           },
           {
+            _id: "react-native-reanimated",
+            localName: "Animated",
+            source: "react-native-reanimated"
+          },
+          {
+            _id: "react-native-svg",
+            localName: "Svg",
+            source: "react-native-svg"
+          },
+          {
             _id: "react-native-swipe-gestures",
             localName: "GestureRecognizer",
             source: "react-native-swipe-gestures"
@@ -228,6 +238,12 @@ module.exports = {
             altLocalNames: ["providersTestUtils"],
             source: "real-service-providers/src/test-utils",
             sourcePattern: "real-service-providers/{dist,es}/test-utils",
+            wildcard: true
+          },
+          {
+            _id: "realm",
+            localName: "Realm",
+            source: "realm",
             wildcard: true
           },
           {
@@ -282,9 +298,11 @@ module.exports = {
       {
         allow: [
           "./src/test-utils",
+          "@expo/vector-icons/build/createIconSet",
           "@fontsource/roboto/*",
           "@mui/material/locale",
           "@mui/x-date-pickers/AdapterDateFns",
+          "@react-navigation/bottom-tabs/lib/typescript/src/types",
           "@typescript-eslint/utils/dist/ts-eslint",
           "@vue/test-utils/dist/interfaces/wrapperLike",
           "@vue/test-utils/dist/types",
@@ -296,6 +314,7 @@ module.exports = {
           "jest-extended/all",
           "quasar/wrappers",
           "react-dom/client",
+          "react-native-vector-icons/*",
           "react-transition-group/CSSTransition",
           "real-config/api",
           "real-facades/dist/test-utils",
