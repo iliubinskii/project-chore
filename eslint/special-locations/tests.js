@@ -25,7 +25,6 @@ module.exports = {
     "node/no-unpublished-import": "off",
     "react/jsx-no-literals": "off",
     "react/no-multi-comp": "off",
-    "react-native/no-raw-text": "off",
     "unicorn/no-null": "off"
   }
 };

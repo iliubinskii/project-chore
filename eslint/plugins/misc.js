@@ -334,6 +334,12 @@ module.exports = {
         ignoreTypeValueShadow: true
       }
     ],
+    // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-misc update
+    // fixme
+    "misc/real-fns/program-flow/prefer-clearTimeout": "off",
+    // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-misc update
+    // fixme
+    "misc/real-fns/program-flow/prefer-setTimeout": "off",
     "misc/sort-class-members": [
       "warn",
       {
