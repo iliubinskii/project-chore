@@ -48,7 +48,7 @@
         "lint",
         "lint-no-fix",
         "lint-no-fix-profile",
-        "tsc"
+        "typescript-lint"
       ]
     },
     {
@@ -57,10 +57,10 @@
         ".stylelintrc.js"
       ],
       "scripts": [
-        "stylelint",
+        "stylelint-css",
+        "stylelint-css-no-fix",
         "stylelint-html",
-        "stylelint-html-no-fix",
-        "stylelint-no-fix"
+        "stylelint-html-no-fix"
       ]
     },
     {
@@ -76,7 +76,8 @@
     {
       "files": [
         "app.json",
-        "eas.json"
+        "eas.json",
+        "metro.config.js"
       ]
     },
     {
@@ -132,7 +133,12 @@
   ],
   "optionalScripts": [
     "build",
+    "build-dev",
+    "build-preview",
+    "build-prod",
     "dev",
+    "prebuild-android",
+    "prebuild-ios",
     "start",
     "sonar",
     "typed-scss-modules",
@@ -160,10 +166,10 @@
   ],
   "requiredScripts": [
     "add-tags",
-    "browserslist",
+    "browsers-list",
     "build-changelog",
     "clear-cache",
-    "commitlint",
+    "commitlint-all",
     "commitlint-next",
     "config-lint",
     "delete-tags",
@@ -174,19 +180,18 @@
     "husky:commit-msg",
     "husky:pre-commit",
     "major-release",
-    "markdownlint",
-    "ncu",
+    "markdown-lint",
+    "ncu-check",
     "ncu-upgrade",
     "next-release",
     "install-dev",
     "install-dev-clean",
     "install-prod",
     "install-prod-clean",
-    "regenerate-lock-file",
-    "update",
     "package-json-lint",
     "prepare",
-    "upgrade"
+    "regenerate-lock-file",
+    "update"
   ],
   "schemas": {
     "package": "package",

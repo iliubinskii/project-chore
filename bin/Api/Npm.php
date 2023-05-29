@@ -71,9 +71,9 @@ class Npm
   /**
    * Runs "commitlint" script.
    */
-  public function commitlint(): void
+  public function commitlintAll(): void
   {
-    static::run('commitlint', 'Linting with commitlint');
+    static::run('commitlint-all', 'Linting with commitlint');
   }
 
   /**
@@ -89,7 +89,7 @@ class Npm
    */
   public function configLint(): void
   {
-    static::run('config-lint', 'Linting with config-lint');
+    static::run('config-lint', 'Linting project configuration');
   }
 
   /**
@@ -103,15 +103,15 @@ class Npm
     $this->noFileDependencies();
     $this->audit($config->audit);
     $this->ncu();
-    $this->commitlint();
+    $this->commitlintAll();
     $this->configLint();
-    $this->markdownlint();
+    $this->markdownLint();
     $this->packageJsonLint();
-    $this->tsc();
+    $this->typescriptLint();
     $this->vueTsc();
     $this->lint();
     $this->phpstan();
-    $this->stylelint();
+    $this->stylelintCss();
     $this->stylelintHtml();
   }
 
@@ -134,9 +134,9 @@ class Npm
   /**
    * Runs "markdownlint" script.
    */
-  public function markdownlint(): void
+  public function markdownLint(): void
   {
-    static::run('markdownlint', 'Linting with markdownlint');
+    static::run('markdown-lint', 'Linting with markdownlint');
   }
 
   /**
@@ -251,9 +251,9 @@ class Npm
   /**
    * Runs "stylelint" script.
    */
-  public function stylelint(): void
+  public function stylelintCss(): void
   {
-    static::run('stylelint-no-fix', 'Linting with stylelint');
+    static::run('stylelint-css-no-fix', 'Linting with stylelint (css)');
   }
 
   /**
@@ -273,19 +273,19 @@ class Npm
   }
 
   /**
-   * Runs "tsc" script.
-   */
-  public function tsc(): void
-  {
-    static::run('tsc', 'Linting with tsc');
-  }
-
-  /**
    * Runs "typed-scss-modules" script.
    */
   public function typedScssModules(): void
   {
     static::run('typed-scss-modules', 'Generating type definitions for stylesheets');
+  }
+
+  /**
+   * Runs "typescript-lint" script.
+   */
+  public function typescriptLint(): void
+  {
+    static::run('typescript-lint', 'Linting with tsc');
   }
 
   /**

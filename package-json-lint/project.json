@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "no-absolute-version-dependencies": "off",
+    "no-absolute-version-devDependencies": "off",
+    "no-caret-version-dependencies": "error",
+    "no-caret-version-devDependencies": "error",
+    "prefer-absolute-version-dependencies": "error",
+    "prefer-absolute-version-devDependencies": "error",
+    "prefer-caret-version-dependencies": "off",
+    "prefer-caret-version-devDependencies": "off"
+  }
+}
