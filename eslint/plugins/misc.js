@@ -240,18 +240,8 @@ module.exports = {
             sourcePattern: "real-service-providers/{dist,es}/test-utils",
             wildcard: true
           },
-          {
-            _id: "realm",
-            localName: "Realm",
-            source: "realm",
-            wildcard: true
-          },
-          {
-            _id: "realm-web",
-            localName: "Realm",
-            source: "realm-web",
-            wildcard: true
-          },
+          { _id: "realm", localName: "Realm", source: "realm" },
+          { _id: "realm-web", localName: "Realm", source: "realm-web" },
           {
             _id: "tsutils",
             autoImport: true,
@@ -309,6 +299,7 @@ module.exports = {
           "country-flag-icons/react/1x1",
           "country-flag-icons/react/3x2",
           "date-fns/locale/*",
+          "expo/metro-config",
           "expo-router/build/types",
           "flag-icon-css/flags/*/*.svg",
           "jest-extended/all",
