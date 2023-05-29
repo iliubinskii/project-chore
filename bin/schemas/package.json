@@ -107,19 +107,19 @@
             "php node_modules/real-config/bin/full-check.php"
           ]
         },
-        "git:unix": {
+        "git-unix": {
           "const": "git config --replace-all core.ignorecase false"
         },
-        "git:unset-hooks": {
+        "git-unset-hooks": {
           "const": "git config --unset core.hooksPath"
         },
-        "git:windows": {
+        "git-windows": {
           "const": "git config --replace-all core.ignorecase true"
         },
-        "husky:commit-msg": {
+        "husky-commit-msg": {
           "const": "npm run commitlint-next"
         },
-        "husky:pre-commit": {
+        "husky-pre-commit": {
           "enum": [
             "php bin/pre-commit.php",
             "php node_modules/real-config/bin/pre-commit.php"
@@ -128,16 +128,16 @@
         "inspect": {
           "const": "quasar inspect | strip-ansi 1>webpack.info"
         },
-        "install-dev": {
+        "install-deps": {
           "const": "npm install --no-audit --strict-peer-deps"
         },
-        "install-dev-clean": {
+        "install-deps-clean": {
           "const": "npm install-clean --no-audit --strict-peer-deps"
         },
-        "install-prod": {
+        "install-prod-deps": {
           "const": "npm install --ignore-scripts --no-audit --omit=dev --strict-peer-deps"
         },
-        "install-prod-clean": {
+        "install-prod-deps-clean": {
           "const": "npm install-clean --ignore-scripts --no-audit --omit=dev --strict-peer-deps"
         },
         "lint": {
@@ -162,7 +162,7 @@
           "const": "ncu --dep=dev,peer,prod"
         },
         "ncu-upgrade": {
-          "const": "ncu --dep=dev,peer,prod --upgrade && npm run install-dev"
+          "const": "ncu --dep=dev,peer,prod --upgrade && npm run install-deps"
         },
         "next-release": {
           "enum": [
