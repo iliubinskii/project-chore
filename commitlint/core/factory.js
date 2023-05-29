@@ -35,6 +35,7 @@ module.exports = sources => {
   const defaultScopes =
     // @sorted
     [
+      "assets",
       "auto-eslint",
       "auto-json",
       "auto-linebreaks",
