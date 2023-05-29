@@ -89,6 +89,7 @@
     "update": "npm update --no-audit --strict-peer-deps"
   },
   "dependencies": {
+    "is-ci": "^3.0.1",
     "jsonschema": "^1.4.1",
     "tslib": "^2.5.2"
   },
