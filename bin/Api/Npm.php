@@ -102,7 +102,7 @@ class Npm
     $this->noDeprecated($version);
     $this->noFileDependencies();
     $this->audit($config->audit);
-    $this->ncu();
+    $this->ncuCheck();
     $this->commitlintAll();
     $this->configLint();
     $this->markdownLint();
@@ -118,9 +118,9 @@ class Npm
   /**
    * Installs npm dependencies.
    */
-  public function install(): void
+  public function installDeps(): void
   {
-    static::run('npm:install', 'Installing npm dependencies');
+    static::run('install-deps', 'Installing npm dependencies');
   }
 
   /**
@@ -142,9 +142,9 @@ class Npm
   /**
    * Runs "ncu" script.
    */
-  public function ncu(): void
+  public function ncuCheck(): void
   {
-    static::run('ncu', 'Checking for outdated dependencies');
+    static::run('ncu-check', 'Checking for outdated dependencies');
   }
 
   /**
@@ -219,7 +219,7 @@ class Npm
   {
     Sys::flush('Release '.$version.' version');
 
-    $this->install();
+    $this->installDeps();
 
     $this->fullCheck($version);
     $this->testRelease();
