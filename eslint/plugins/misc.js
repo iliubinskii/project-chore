@@ -301,6 +301,8 @@ module.exports = {
           "date-fns/locale/*",
           "expo/metro-config",
           "expo-router/build/types",
+          "firebase/app",
+          "firebase/auth",
           "flag-icon-css/flags/*/*.svg",
           "jest-extended/all",
           "quasar/wrappers",
