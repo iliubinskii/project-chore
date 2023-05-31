@@ -92,6 +92,11 @@ module.exports = {
       {
         sources: [
           {
+            _id: `${pkg.name}/src/test-utils`,
+            source: `${pkg.name}/src/test-utils`,
+            wildcard: true
+          },
+          {
             _id: "**/*.module.scss",
             localName: "style",
             // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-update
@@ -100,17 +105,14 @@ module.exports = {
             sourcePattern: "**/*.module.scss"
           },
           {
-            _id: "./src/test-utils",
-            source: `${pkg.name}/src/test-utils`,
-            wildcard: true
-          },
-          {
             _id: "@fullcalendar/daygrid",
+            autoImport: true,
             localName: "dayGridPlugin",
             source: "@fullcalendar/daygrid"
           },
           {
             _id: "@fullcalendar/react",
+            autoImport: true,
             localName: "FullCalendar",
             source: "@fullcalendar/react"
           },
@@ -133,9 +135,22 @@ module.exports = {
             localName: "WrapperLike",
             source: "@vue/test-utils/dist/interfaces/wrapperLike"
           },
-          { _id: "base-64", source: "base-64", wildcard: true },
+          {
+            _id: "base-64",
+            autoImport: true,
+            source: "base-64",
+            wildcard: true
+          },
+          {
+            _id: "base64-arraybuffer",
+            autoImport: true,
+            localName: "base64",
+            source: "base64-arraybuffer",
+            wildcard: true
+          },
           {
             _id: "chartjs-plugin-zoom",
+            autoImport: true,
             localName: "Zoom",
             source: "chartjs-plugin-zoom"
           },
@@ -153,8 +168,15 @@ module.exports = {
             source: "node:fs"
           },
           {
+            _id: "gravatar",
+            autoImport: true,
+            source: "gravatar",
+            wildcard: true
+          },
+          {
             _id: "jest-extended/all",
             altLocalNames: ["jestExtendedMatchers"],
+            autoImport: true,
             localName: "matchers",
             source: "jest-extended/all"
           },
@@ -177,7 +199,12 @@ module.exports = {
             localName: "MiniSearch",
             source: "minisearch"
           },
-          { _id: "mui-image", localName: "MuiImage", source: "mui-image" },
+          {
+            _id: "mui-image",
+            autoImport: true,
+            localName: "MuiImage",
+            source: "mui-image"
+          },
           {
             _id: "path",
             altLocalNames: ["nodePath"],
@@ -186,14 +213,8 @@ module.exports = {
             source: "node:path"
           },
           {
-            _id: "quasar-extension/test-utils",
-            altLocalNames: ["quasarExtensionTestUtils"],
-            source: "quasar-extension/src/test-utils",
-            sourcePattern: "quasar-extension/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
             _id: "react",
+            autoImport: true,
             localName: "React",
             source: "react",
             wildcard: true
@@ -206,16 +227,19 @@ module.exports = {
           },
           {
             _id: "react-native-reanimated",
+            autoImport: true,
             localName: "Animated",
             source: "react-native-reanimated"
           },
           {
             _id: "react-native-svg",
+            autoImport: true,
             localName: "Svg",
             source: "react-native-svg"
           },
           {
             _id: "react-native-swipe-gestures",
+            autoImport: true,
             localName: "GestureRecognizer",
             source: "react-native-swipe-gestures"
           },
@@ -240,8 +264,12 @@ module.exports = {
             sourcePattern: "real-service-providers/{dist,es}/test-utils",
             wildcard: true
           },
-          { _id: "realm", localName: "Realm", source: "realm" },
-          { _id: "realm-web", localName: "Realm", source: "realm-web" },
+          {
+            _id: "realm",
+            autoImport: true,
+            localName: "Realm",
+            source: "realm"
+          },
           {
             _id: "tsutils",
             autoImport: true,
