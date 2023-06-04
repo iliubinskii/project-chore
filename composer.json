@@ -7,7 +7,7 @@
   "prefer-stable": true,
   "private": false,
   "license": "ISC",
-  "homepage": "https://github.com/ilyub/real-config",
+  "homepage": "https://github.com/iliubinskii/real-config",
   "archive": {
     "exclude": [
       "!/composer.json",

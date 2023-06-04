@@ -14,17 +14,17 @@
     "typedoc",
     "typescript"
   ],
-  "homepage": "https://github.com/ilyub/real-config",
+  "homepage": "https://github.com/iliubinskii/real-config",
   "bugs": {
-    "url": "https://github.com/ilyub/real-config/issues"
+    "url": "https://github.com/iliubinskii/real-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ilyub/real-config.git"
+    "url": "git://github.com/iliubinskii/real-config.git"
   },
   "license": "ISC",
-  "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/ilyub)",
-  "publisher": "ilyub",
+  "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/iliubinskii)",
+  "publisher": "iliubinskii",
   "main": "api/index.js",
   "files": [
     "/index.d.ts",
