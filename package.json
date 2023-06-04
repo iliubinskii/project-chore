@@ -91,7 +91,7 @@
   "dependencies": {
     "is-ci": "^3.0.1",
     "jsonschema": "^1.4.1",
-    "tslib": "^2.5.2"
+    "tslib": "^2.5.3"
   },
   "devDependencies": {
     "react": "^18.2.0"
