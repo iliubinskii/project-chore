@@ -75,8 +75,10 @@
     },
     {
       "files": [
+        "GoogleService-Info.plist",
         "app.json",
         "eas.json",
+        "google-services.json",
         "metro.config.js"
       ]
     },
