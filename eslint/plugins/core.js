@@ -30,7 +30,7 @@ module.exports = {
     "max-depth": ["warn", 5],
     "max-lines": ["warn", 1500],
     "max-lines-per-function": ["warn", 500],
-    "max-params": ["warn", 5],
+    "max-params": ["warn", 6],
     "max-statements": ["warn", 100],
     "multiline-comment-style": "off",
     "new-cap": "off",

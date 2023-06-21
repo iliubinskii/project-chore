@@ -1,1 +1,5 @@
-module.exports = { extends: "plugin:misc/type-essentials" };
+module.exports = {
+  overrides: [
+    { files: ["!*.js", "!*.jsx"], extends: "plugin:misc/type-essentials" }
+  ]
+};

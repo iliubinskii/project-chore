@@ -1,5 +1,6 @@
 module.exports = {
   overrides: [
+    { files: "./*", extends: "./chore" },
     {
       files: [".eslintrc.*.js", ".eslintrc.js", "eslintrc.*.js", "eslintrc.js"],
       extends: "./eslintrc"

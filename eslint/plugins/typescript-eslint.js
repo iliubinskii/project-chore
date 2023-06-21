@@ -47,7 +47,7 @@ module.exports = {
         custom: { match: true, regex: "^.{1,50}$" },
         format: ["camelCase", "PascalCase"],
         leadingUnderscore: "allow",
-        selector: ["classProperty", "function", "typeLike"]
+        selector: ["classProperty", "function", "typeLike", "typeMethod"]
       },
       {
         custom: { match: true, regex: "^.{1,50}$" },

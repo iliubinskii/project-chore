@@ -1,1 +1,5 @@
-module.exports = { extends: "plugin:misc/real-classes" };
+module.exports = {
+  overrides: [
+    { files: ["!*.js", "!*.jsx"], extends: "plugin:misc/real-classes" }
+  ]
+};

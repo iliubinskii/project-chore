@@ -99,8 +99,6 @@ module.exports = {
           {
             _id: "**/*.module.scss",
             localName: "style",
-            // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-update
-            // fixme
             source: "**/*.module.scss",
             sourcePattern: "**/*.module.scss"
           },
@@ -115,6 +113,12 @@ module.exports = {
             autoImport: true,
             localName: "FullCalendar",
             source: "@fullcalendar/react"
+          },
+          {
+            _id: "@react-native-firebase/firestore",
+            autoImport: true,
+            localName: "firestore",
+            source: "@react-native-firebase/firestore"
           },
           {
             _id: "@sinonjs/fake-timers",
@@ -226,10 +230,22 @@ module.exports = {
             source: "react-dom/client"
           },
           {
+            _id: "react-native-country-flag",
+            autoImport: true,
+            localName: "CountryFlag",
+            source: "react-native-country-flag"
+          },
+          {
             _id: "react-native-reanimated",
             autoImport: true,
             localName: "Animated",
             source: "react-native-reanimated"
+          },
+          {
+            _id: "react-native-sound",
+            autoImport: true,
+            localName: "Sound",
+            source: "react-native-sound"
           },
           {
             _id: "react-native-svg",
