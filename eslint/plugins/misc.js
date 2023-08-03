@@ -165,6 +165,20 @@ module.exports = {
             wildcard: true
           },
           {
+            _id: "expo-splash-screen",
+            autoImport: true,
+            localName: "SplashScreen",
+            source: "expo-splash-screen",
+            wildcard: true
+          },
+          {
+            _id: "expo-updates",
+            autoImport: true,
+            localName: "Updates",
+            source: "expo-updates",
+            wildcard: true
+          },
+          {
             _id: "fs",
             altLocalNames: ["nodeFs"],
             autoImport: true,
@@ -240,6 +254,11 @@ module.exports = {
             autoImport: true,
             localName: "Animated",
             source: "react-native-reanimated"
+          },
+          {
+            _id: "react-native-restart",
+            localName: "Restart",
+            source: "react-native-restart"
           },
           {
             _id: "react-native-sound",

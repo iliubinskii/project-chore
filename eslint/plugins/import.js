@@ -43,6 +43,7 @@ module.exports = {
             "@testing-library/jest-dom",
             "jest-extended",
             "react-native-gesture-handler",
+            "react-native-get-random-values",
             "reflect-metadata"
           ]
       }
