@@ -8,6 +8,9 @@
             "php node_modules/real-config/bin/add-tags.php"
           ]
         },
+        "android": {
+          "const": "expo run:android"
+        },
         "browsers-list": {
           "const": "browserslist"
         },
@@ -94,12 +97,16 @@
         "dev": {
           "enum": [
             "expo start",
+            "set \"APP_VARIANT=development\" && expo start",
             "start http://localhost:3000 && next dev",
             "quasar dev",
             "react-scripts start",
             "ts-node src/index.ts",
             "tsc && ts-node --transpileOnly src/index.ts"
           ]
+        },
+        "expo-doctor-check": {
+          "const": "expo-doctor"
         },
         "full-check": {
           "enum": [
@@ -139,6 +146,9 @@
         },
         "install-prod-deps-clean": {
           "const": "npm install-clean --ignore-scripts --no-audit --omit=dev --strict-peer-deps"
+        },
+        "ios": {
+          "const": "expo run:ios"
         },
         "lint": {
           "const": "eslint --fix --max-warnings=0 --no-error-on-unmatched-pattern **/*.{js,jsx,ts,tsx,vue}"

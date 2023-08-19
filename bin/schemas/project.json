@@ -76,7 +76,7 @@
     {
       "files": [
         "GoogleService-Info.plist",
-        "app.json",
+        "app.config.js",
         "eas.json",
         "google-services.json",
         "metro.config.js"
@@ -134,11 +134,14 @@
     ".vsix"
   ],
   "optionalScripts": [
+    "android",
     "build",
     "build-dev",
     "build-preview",
     "build-prod",
     "dev",
+    "expo-doctor-check",
+    "ios",
     "prebuild-android",
     "prebuild-ios",
     "start",

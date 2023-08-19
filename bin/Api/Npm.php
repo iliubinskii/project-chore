@@ -93,6 +93,14 @@ class Npm
   }
 
   /**
+   * Runs "expo-doctor-check" script.
+   */
+  public function expoDoctorCheck(): void
+  {
+    static::run('expo-doctor-check', 'Checking with expo doctor');
+  }
+
+  /**
    * Full check.
    */
   public function fullCheck(string $version): void
@@ -102,17 +110,18 @@ class Npm
     $this->noDeprecated($version);
     $this->noFileDependencies();
     $this->audit($config->audit);
-    $this->ncuCheck();
     $this->commitlintAll();
     $this->configLint();
-    $this->markdownLint();
-    $this->packageJsonLint();
-    $this->tslint();
-    $this->vueTsc();
+    $this->expoDoctorCheck();
     $this->lint();
+    $this->markdownLint();
+    $this->ncuCheck();
+    $this->packageJsonLint();
     $this->phpstan();
     $this->stylelintCss();
     $this->stylelintHtml();
+    $this->tslint();
+    $this->vueTsc();
   }
 
   /**
