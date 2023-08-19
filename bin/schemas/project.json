@@ -48,7 +48,7 @@
         "lint",
         "lint-no-fix",
         "lint-no-fix-profile",
-        "typescript-lint"
+        "tslint"
       ]
     },
     {

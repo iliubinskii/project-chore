@@ -107,7 +107,7 @@ class Npm
     $this->configLint();
     $this->markdownLint();
     $this->packageJsonLint();
-    $this->typescriptLint();
+    $this->tslint();
     $this->vueTsc();
     $this->lint();
     $this->phpstan();
@@ -273,19 +273,19 @@ class Npm
   }
 
   /**
+   * Runs "tslint" script.
+   */
+  public function tslint(): void
+  {
+    static::run('tslint', 'Linting with tsc');
+  }
+
+  /**
    * Runs "typed-scss-modules" script.
    */
   public function typedScssModules(): void
   {
     static::run('typed-scss-modules', 'Generating type definitions for stylesheets');
-  }
-
-  /**
-   * Runs "typescript-lint" script.
-   */
-  public function typescriptLint(): void
-  {
-    static::run('typescript-lint', 'Linting with tsc');
   }
 
   /**
