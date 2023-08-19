@@ -1,6 +1,6 @@
 {
   "name": "real-config",
-  "version": "1.39.0",
+  "version": "1.40.0",
   "private": false,
   "description": "Config for commitlint, eslint, jest, npm-package-json-lint, php-cs-fixer, phpstan, stylelint, typedoc, and typescript.",
   "keywords": [
@@ -125,7 +125,7 @@
     "eslint-plugin-import": ">=2",
     "eslint-plugin-jest": ">=27",
     "eslint-plugin-jest-extended": ">=2",
-    "eslint-plugin-jsdoc": "^46",
+    "eslint-plugin-jsdoc": ">=46",
     "eslint-plugin-misc": "^1.11.0",
     "eslint-plugin-no-type-assertion": ">=1",
     "eslint-plugin-no-use-extend-native": ">=0",
