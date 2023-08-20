@@ -115,10 +115,27 @@ module.exports = {
             source: "@fullcalendar/react"
           },
           {
+            _id: "@react-native-async-storage/async-storage",
+            autoImport: true,
+            localName: "AsyncStorage",
+            source: "@react-native-async-storage/async-storage"
+          },
+          {
+            _id: "@react-native-community/slider",
+            localName: "Slider",
+            source: "@react-native-community/slider"
+          },
+          {
             _id: "@react-native-firebase/firestore",
             autoImport: true,
             localName: "firestore",
             source: "@react-native-firebase/firestore"
+          },
+          {
+            _id: "@react-native-masked-view/masked-view",
+            autoImport: true,
+            localName: "MaskedView",
+            source: "@react-native-masked-view/masked-view"
           },
           {
             _id: "@sinonjs/fake-timers",
@@ -250,6 +267,18 @@ module.exports = {
             source: "react-native-country-flag"
           },
           {
+            _id: "react-native-linear-gradient",
+            autoImport: true,
+            localName: "LinearGradient",
+            source: "react-native-linear-gradient"
+          },
+          {
+            _id: "react-native-qrcode-svg",
+            autoImport: true,
+            localName: "QrCode",
+            source: "react-native-qrcode-svg"
+          },
+          {
             _id: "react-native-reanimated",
             autoImport: true,
             localName: "Animated",
@@ -274,7 +303,6 @@ module.exports = {
           },
           {
             _id: "react-native-swipe-gestures",
-            autoImport: true,
             localName: "GestureRecognizer",
             source: "react-native-swipe-gestures"
           },
