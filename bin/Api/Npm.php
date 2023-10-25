@@ -93,6 +93,14 @@ class Npm
   }
 
   /**
+   * Runs "expo-check" script.
+   */
+  public function expoCheck(): void
+  {
+    static::run('expo-check', 'Checking with expo');
+  }
+
+  /**
    * Runs "expo-doctor-check" script.
    */
   public function expoDoctorCheck(): void
@@ -112,6 +120,7 @@ class Npm
     $this->audit($config->audit);
     $this->commitlintAll();
     $this->configLint();
+    $this->expoCheck();
     $this->expoDoctorCheck();
     $this->lint();
     $this->markdownLint();

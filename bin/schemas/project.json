@@ -140,6 +140,7 @@
     "build-preview",
     "build-prod",
     "dev",
+    "expo-check",
     "expo-doctor-check",
     "ios",
     "prebuild-android",

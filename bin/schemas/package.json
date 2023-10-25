@@ -105,6 +105,9 @@
             "tsc && ts-node --transpileOnly src/index.ts"
           ]
         },
+        "expo-check": {
+          "const": "npx expo install --check"
+        },
         "expo-doctor-check": {
           "const": "expo-doctor"
         },
