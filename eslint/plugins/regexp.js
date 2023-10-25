@@ -5,6 +5,7 @@ module.exports = {
   rules: {
     ...getAllRules("eslint-plugin-regexp"),
     "regexp/prefer-lookaround": "off",
-    "regexp/prefer-named-capture-group": "off"
+    "regexp/prefer-named-capture-group": "off",
+    "regexp/require-unicode-sets-regexp": "off"
   }
 };

@@ -19,6 +19,9 @@ module.exports = {
         }
       }
     ],
+    // eslint-disable-next-line no-warning-comments -- False positive, re-enable when fixed
+    // fixme
+    "@typescript-eslint/class-methods-use-this": "off",
     "@typescript-eslint/consistent-indexed-object-style": [
       "warn",
       "index-signature"

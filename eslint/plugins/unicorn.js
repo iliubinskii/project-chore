@@ -4,6 +4,7 @@ module.exports = {
   plugins: ["unicorn"],
   rules: {
     ...getAllRules("eslint-plugin-unicorn"),
+    "unicorn/better-regex": "off",
     "unicorn/catch-error-name": ["warn", { name: "e" }],
     "unicorn/consistent-function-scoping": "off",
     "unicorn/explicit-length-check": "off",
