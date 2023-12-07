@@ -59,6 +59,7 @@
           ".eslintrc.rule-overrides.js",
           ".eslintrc.synonyms.js",
           ".eslintrc.temp.js",
+          ".next/types/**/*.ts",
           ".postcssrc.js",
           ".prettierrc.js",
           ".stylelintrc-html.js",
