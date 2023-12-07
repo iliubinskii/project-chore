@@ -97,10 +97,11 @@
         "dev": {
           "enum": [
             "expo start",
-            "set \"APP_VARIANT=development\" && expo start",
-            "start http://localhost:3000 && next dev",
+            "next dev",
             "quasar dev",
             "react-scripts start",
+            "set \"APP_VARIANT=development\" && expo start",
+            "start http://localhost:3000 && next dev",
             "ts-node src/index.ts",
             "tsc && ts-node --transpileOnly src/index.ts"
           ]
