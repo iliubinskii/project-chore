@@ -126,7 +126,9 @@
     "build-doc.js",
     "index.d.ts",
     "jest.setup.ts",
-    "jest.setup-after-env.ts"
+    "jest.setup-after-env.ts",
+    "next.config.js",
+    "postcss.config.js"
   ],
   "optionalFilesByExtensions": [
     ".cache",
