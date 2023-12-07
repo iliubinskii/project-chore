@@ -128,7 +128,8 @@
     "jest.setup.ts",
     "jest.setup-after-env.ts",
     "next.config.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    "tailwind.config.ts"
   ],
   "optionalFilesByExtensions": [
     ".cache",
