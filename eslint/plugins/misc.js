@@ -396,6 +396,8 @@ module.exports = {
           "firebase/auth",
           "flag-icon-css/flags/*/*.svg",
           "jest-extended/all",
+          "next/font/google",
+          "next/image",
           "quasar/wrappers",
           "react-dom/client",
           "react-native-vector-icons/*",

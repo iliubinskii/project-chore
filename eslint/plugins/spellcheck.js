@@ -271,6 +271,7 @@ module.exports = {
             "sunday",
             "svg",
             "swipeable",
+            "tailwindcss",
             "tappable",
             "thursday",
             "toggler",
