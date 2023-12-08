@@ -240,6 +240,8 @@ module.exports = {
             localName: "MuiImage",
             source: "mui-image"
           },
+          { _id: "next/image", localName: "Image", source: "next/image" },
+          { _id: "next/script", localName: "Script", source: "next/script" },
           {
             _id: "path",
             altLocalNames: ["nodePath"],
@@ -385,6 +387,8 @@ module.exports = {
           "@mui/x-date-pickers/AdapterDateFns",
           "@react-navigation/bottom-tabs/lib/typescript/src/types",
           "@typescript-eslint/utils/dist/ts-eslint",
+          "@vercel/analytics/react",
+          "@vercel/speed-insights/next",
           "@vue/test-utils/dist/interfaces/wrapperLike",
           "@vue/test-utils/dist/types",
           "country-flag-icons/react/1x1",
@@ -398,6 +402,8 @@ module.exports = {
           "jest-extended/all",
           "next/font/google",
           "next/image",
+          "next/jest",
+          "next/script",
           "quasar/wrappers",
           "react-dom/client",
           "react-native-vector-icons/*",
