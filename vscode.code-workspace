@@ -22,8 +22,8 @@
     },
     "debug.javascript.codelens.npmScripts": "never",
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.sortPackageJson": true
+      "source.fixAll": "explicit",
+      "source.sortPackageJson": "explicit"
     },
     "editor.detectIndentation": false,
     "editor.foldingStrategy": "indentation",
