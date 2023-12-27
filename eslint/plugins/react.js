@@ -7,6 +7,7 @@ module.exports = {
     ...getAllRules("eslint-plugin-react"),
     "react/forbid-component-props": "off",
     "react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".tsx"] }],
+    "react/jsx-no-leaked-render": "off",
     "react/jsx-pascal-case": ["warn", { ignore: ["FAB"] }],
     "react/jsx-props-no-spreading": "off",
     "react/jsx-sort-default-props": "off",

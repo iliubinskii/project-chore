@@ -208,6 +208,7 @@ module.exports = {
             source: "gravatar",
             wildcard: true
           },
+          { _id: "hyphenated-ru", localName: "ru", source: "hyphenated-ru" },
           {
             _id: "jest-extended/all",
             altLocalNames: ["jestExtendedMatchers"],
