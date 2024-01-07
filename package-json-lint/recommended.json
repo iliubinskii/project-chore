@@ -101,8 +101,10 @@
         "license",
         "author",
         "publisher",
+        "exports",
         "main",
         "module",
+        "types",
         "files",
         "scripts",
         "dependencies",
@@ -135,7 +137,6 @@
         "preferGlobal",
         "style",
         "stylelint",
-        "types",
         "typings"
       ]
     ],
