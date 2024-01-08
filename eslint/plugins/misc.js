@@ -182,10 +182,31 @@ module.exports = {
             wildcard: true
           },
           {
+            _id: "expo-background-fetch",
+            autoImport: true,
+            localName: "BackgroundFetch",
+            source: "expo-background-fetch",
+            wildcard: true
+          },
+          {
+            _id: "expo-notifications",
+            autoImport: true,
+            localName: "Notifications",
+            source: "expo-notifications",
+            wildcard: true
+          },
+          {
             _id: "expo-splash-screen",
             autoImport: true,
             localName: "SplashScreen",
             source: "expo-splash-screen",
+            wildcard: true
+          },
+          {
+            _id: "expo-task-manager",
+            autoImport: true,
+            localName: "TaskManager",
+            source: "expo-task-manager",
             wildcard: true
           },
           {
@@ -394,7 +415,7 @@ module.exports = {
           "@vue/test-utils/dist/types",
           "country-flag-icons/react/1x1",
           "country-flag-icons/react/3x2",
-          "date-fns/locale/*",
+          "date-fns/locale",
           "expo/metro-config",
           "expo-router/build/types",
           "firebase/app",
