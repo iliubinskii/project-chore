@@ -4,8 +4,8 @@
       "enum": [
         "./tsconfig/min",
         "./tsconfig/strict",
-        "real-config/tsconfig/min",
-        "real-config/tsconfig/strict"
+        "project-chore/tsconfig/min",
+        "project-chore/tsconfig/strict"
       ]
     },
     "compilerOptions": {

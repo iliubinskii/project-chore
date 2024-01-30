@@ -32,18 +32,18 @@ module.exports = {
   modulePathIgnorePatterns: [
     "/(?:\\.cache|\\.git|\\.quasar|\\.vscode|coverage|dist|docs|es|node_modules)/"
   ],
-  resolver: "real-config/jest/resolver",
+  resolver: "project-chore/jest/resolver",
   setupFiles: fs.existsSync("./jest.setup.ts") ? ["./jest.setup.ts"] : [],
   setupFilesAfterEnv: fs.existsSync("./jest.setup-after-env.ts")
     ? ["./jest.setup-after-env.ts"]
     : [],
-  testEnvironment: "real-config/jest/environments/node",
+  testEnvironment: "project-chore/jest/environments/node",
   testMatch: [
     "<rootDir>/src/**/*.test.{ts,tsx}",
     "<rootDir>/src/**/__tests__/*.{ts,tsx}",
     "<rootDir>/tests/**/*.{ts,tsx}"
   ],
-  testSequencer: "real-config/jest/sequencer",
+  testSequencer: "project-chore/jest/sequencer",
   testTimeout: 10_000,
   transform: {
     [/\.(?:css|gif|jpg|less|png|sass|scss|styl|svg|ttf|woff|woff2)$/u.source]:

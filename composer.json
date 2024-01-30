@@ -7,7 +7,7 @@
   "prefer-stable": true,
   "private": false,
   "license": "ISC",
-  "homepage": "https://github.com/iliubinskii/real-config",
+  "homepage": "https://github.com/iliubinskii/project-chore",
   "archive": {
     "exclude": [
       "!/composer.json",

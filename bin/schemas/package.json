@@ -5,7 +5,7 @@
         "add-tags": {
           "enum": [
             "php bin/add-tags.php",
-            "php node_modules/real-config/bin/add-tags.php"
+            "php node_modules/project-chore/bin/add-tags.php"
           ]
         },
         "android": {
@@ -85,13 +85,13 @@
         "config-lint": {
           "enum": [
             "node bin/config-lint.js",
-            "node node_modules/real-config/bin/config-lint.js"
+            "node node_modules/project-chore/bin/config-lint.js"
           ]
         },
         "delete-tags": {
           "enum": [
             "php bin/delete-tags.php",
-            "php node_modules/real-config/bin/delete-tags.php"
+            "php node_modules/project-chore/bin/delete-tags.php"
           ]
         },
         "dev": {
@@ -115,7 +115,7 @@
         "full-check": {
           "enum": [
             "php bin/full-check.php",
-            "php node_modules/real-config/bin/full-check.php"
+            "php node_modules/project-chore/bin/full-check.php"
           ]
         },
         "git-unix": {
@@ -133,7 +133,7 @@
         "husky-pre-commit": {
           "enum": [
             "php bin/pre-commit.php",
-            "php node_modules/real-config/bin/pre-commit.php"
+            "php node_modules/project-chore/bin/pre-commit.php"
           ]
         },
         "inspect": {
@@ -166,7 +166,7 @@
         "major-release": {
           "enum": [
             "php bin/major-release.php",
-            "php node_modules/real-config/bin/major-release.php"
+            "php node_modules/project-chore/bin/major-release.php"
           ]
         },
         "markdown-lint": {
@@ -181,7 +181,7 @@
         "next-release": {
           "enum": [
             "php bin/next-release.php",
-            "php node_modules/real-config/bin/next-release.php"
+            "php node_modules/project-chore/bin/next-release.php"
           ]
         },
         "package-json-lint": {
@@ -205,7 +205,7 @@
         "prepare": {
           "enum": [
             "node bin/prepare.js",
-            "node node_modules/real-config/bin/prepare.js"
+            "node node_modules/project-chore/bin/prepare.js"
           ]
         },
         "regenerate-lock-file": {

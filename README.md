@@ -1,8 +1,8 @@
 # Config
 
-[![Stars](https://img.shields.io/github/stars/iliubinskii/real-config)](https://github.com/iliubinskii/real-config)
-[![Downloads](https://img.shields.io/npm/dm/real-config)](https://www.npmjs.com/package/real-config)
-[![Dependencies](https://img.shields.io/librariesio/release/npm/real-config)](https://libraries.io/npm/real-config)
+[![Stars](https://img.shields.io/github/stars/iliubinskii/project-chore)](https://github.com/iliubinskii/project-chore)
+[![Downloads](https://img.shields.io/npm/dm/project-chore)](https://www.npmjs.com/package/project-chore)
+[![Dependencies](https://img.shields.io/librariesio/release/npm/project-chore)](https://libraries.io/npm/project-chore)
 
 ## Table of contents
 
@@ -26,5 +26,5 @@ Configuration files for:
 ## <a id="installation"></a>Installation
 
 ```sh
-npm install --save-dev real-config
+npm install --save-dev project-chore
 ```

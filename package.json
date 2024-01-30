@@ -1,5 +1,5 @@
 {
-  "name": "real-config",
+  "name": "project-chore",
   "version": "1.46.0",
   "private": false,
   "description": "Config for commitlint, eslint, jest, npm-package-json-lint, php-cs-fixer, phpstan, stylelint, typedoc, and typescript.",
@@ -14,13 +14,13 @@
     "typedoc",
     "typescript"
   ],
-  "homepage": "https://github.com/iliubinskii/real-config",
+  "homepage": "https://github.com/iliubinskii/project-chore",
   "bugs": {
-    "url": "https://github.com/iliubinskii/real-config/issues"
+    "url": "https://github.com/iliubinskii/project-chore/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/iliubinskii/real-config.git"
+    "url": "git://github.com/iliubinskii/project-chore.git"
   },
   "license": "ISC",
   "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/iliubinskii)",
