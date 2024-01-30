@@ -6,7 +6,7 @@ const fs = require("node:fs");
 module.exports = {
   cacheDirectory: "./.cache/jest",
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx,vue}", "!**/*.d.ts"],
+  collectCoverageFrom: ["src/**/*.{js,jsx,ts,tsx}", "!**/*.d.ts"],
   coverageDirectory: "./coverage",
   coverageReporters: ["lcov"],
   coverageThreshold: {
@@ -20,17 +20,15 @@ module.exports = {
   errorOnDeprecated: true,
   haste: { throwOnModuleCollision: true },
   maxWorkers: 1,
-  moduleFileExtensions: ["js", "ts", "tsx", "vue"],
+  moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleNameMapper: {
     [/^@$/u.source]: "<rootDir>/src",
     [/^@\/(.+)/u.source]: "<rootDir>/src/$1",
     [/^lodash-es$/u.source]: "lodash",
-    [/^quasar$/u.source]:
-      "<rootDir>/node_modules/quasar/dist/quasar.esm.prod.js",
     [/^uuid$/u.source]: "<rootDir>/node_modules/uuid/dist/index.js"
   },
   modulePathIgnorePatterns: [
-    "/(?:\\.cache|\\.git|\\.quasar|\\.vscode|coverage|dist|docs|es|node_modules)/"
+    "/(?:\\.cache|\\.git|\\.vscode|coverage|dist|docs|es|node_modules)/"
   ],
   resolver: "project-chore/jest/resolver",
   setupFiles: fs.existsSync("./jest.setup.ts") ? ["./jest.setup.ts"] : [],
@@ -52,8 +50,7 @@ module.exports = {
     [/\.(?:ts|tsx)$/u.source]: [
       "ts-jest",
       { isolatedModules: true, tsconfig: "./tsconfig-min.json" }
-    ],
-    [/\.vue$/u.source]: "@vue/vue3-jest"
+    ]
   },
-  transformIgnorePatterns: [/\/node_modules\/(?!quasar\/)/u.source]
+  transformIgnorePatterns: [/\/node_modules\//u.source]
 };

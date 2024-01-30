@@ -87,35 +87,6 @@
         "next.config.js",
         "next-env.d.ts"
       ]
-    },
-    {
-      "files": [
-        "quasar.conf.js",
-        "quasar.extensions.json",
-        "quasar.testing.json"
-      ],
-      "scripts": [
-        "inspect",
-        "vue-tsc"
-      ]
-    },
-    {
-      "files": [
-        ".php-cs-fixer.php",
-        "composer.json",
-        "composer.lock",
-        "phpstan.neon"
-      ],
-      "scripts": [
-        "composer:bump",
-        "composer:dump-autoload",
-        "composer:outdated",
-        "composer:reinstall",
-        "composer:update",
-        "php-cs-fixer",
-        "phpstan",
-        "phpstan-quiet"
-      ]
     }
   ],
   "optionalFiles": [
@@ -149,7 +120,6 @@
     "prebuild-android",
     "prebuild-ios",
     "start",
-    "sonar",
     "typed-scss-modules",
     "version",
     "watch"
@@ -170,7 +140,6 @@
     "commitlint-next.scopes.js",
     "package-lock.json",
     "package.json",
-    "sonar-project.properties",
     "vscode.code-workspace"
   ],
   "requiredScripts": [

@@ -20,8 +20,8 @@ module.exports = {
     // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-misc to take account for .test.ts(x)
     // fixme
     "misc/no-sibling-import": "off",
-    "misc/real-fns/guards/require-object-type-param": "off",
     "misc/require-jsdoc": "off",
+    "misc/ts-misc/functions/guards/require-object-type-param": "off",
     "node/no-unpublished-import": "off",
     "react/jsx-no-literals": "off",
     "react/no-multi-comp": "off",

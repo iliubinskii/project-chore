@@ -32,7 +32,6 @@ class Npm
     $this->buildCommonjs();
     $this->buildEs();
     $this->buildDoc();
-    $this->phpCsFixer();
     $this->typedScssModules();
   }
 
@@ -126,11 +125,9 @@ class Npm
     $this->markdownLint();
     $this->ncuCheck();
     $this->packageJsonLint();
-    $this->phpstan();
     $this->stylelintCss();
     $this->stylelintHtml();
     $this->tslint();
-    $this->vueTsc();
   }
 
   /**
@@ -215,22 +212,6 @@ class Npm
   }
 
   /**
-   * Runs "php-cs-fixer" script.
-   */
-  public function phpCsFixer(): void
-  {
-    static::run('php-cs-fixer', 'Formatting with php-cs-fixer');
-  }
-
-  /**
-   * Runs "phpstan" script.
-   */
-  public function phpstan(): void
-  {
-    static::run('phpstan-quiet', 'Linting with phpstan');
-  }
-
-  /**
    * Release.
    */
   public function release(string $version): void
@@ -312,14 +293,6 @@ class Npm
   public function version(string $version): void
   {
     Sys::execute('npm version '.$version.' --no-git-tag-version');
-  }
-
-  /**
-   * Runs "vue-tsc" script.
-   */
-  public function vueTsc(): void
-  {
-    static::run('vue-tsc', 'Linting with vue-tsc');
   }
 
   /**

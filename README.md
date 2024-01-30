@@ -17,8 +17,6 @@ Configuration files for:
 - eslint
 - jest
 - npm-package-json-lint
-- php-cs-fixer
-- phpstan
 - stylelint
 - typedoc
 - typescript

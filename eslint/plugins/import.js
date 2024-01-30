@@ -53,24 +53,19 @@ module.exports = {
     "import/unambiguous": "off"
   },
   overrides: [
+    { files: ["*.js", "*.jsx"], rules: { "import/no-commonjs": "off" } },
     {
-      files: ["!*.js", "!*.jsx"],
+      files: ["*.ts", "*.tsx"],
       rules: {
         "import/default": "off",
         "import/named": "off",
         "import/namespace": "off",
         "import/no-named-as-default": "off",
         "import/no-unresolved": "off"
-      }
-    },
-    { files: "*.js", rules: { "import/no-commonjs": "off" } },
-    {
-      files: "*.vue",
-      rules: {
-        "import/no-default-export": "off",
-        "import/no-named-export": "warn"
-      }
-    },
-    { files: "*.d.ts", rules: { "import/no-default-export": "off" } }
+      },
+      overrides: [
+        { files: "*.d.ts", rules: { "import/no-default-export": "off" } }
+      ]
+    }
   ]
 };

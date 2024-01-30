@@ -144,19 +144,6 @@ module.exports = {
             wildcard: true
           },
           {
-            _id: "@vue/test-utils",
-            altLocalNames: ["vueTestUtils"],
-            autoImport: true,
-            source: "@vue/test-utils",
-            wildcard: true
-          },
-          {
-            _id: "@vue/test-utils",
-            autoImport: true,
-            localName: "WrapperLike",
-            source: "@vue/test-utils/dist/interfaces/wrapperLike"
-          },
-          {
             _id: "base-64",
             autoImport: true,
             source: "base-64",
@@ -331,31 +318,15 @@ module.exports = {
             source: "react-native-swipe-gestures"
           },
           {
-            _id: "real-facades/test-utils",
-            altLocalNames: ["facadesTestUtils"],
-            source: "real-facades/src/test-utils",
-            sourcePattern: "real-facades/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
-            _id: "real-fns/test-utils",
-            altLocalNames: ["fnsTestUtils"],
-            source: "real-fns/src/test-utils",
-            sourcePattern: "real-fns/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
-            _id: "real-service-providers/test-utils",
-            altLocalNames: ["providersTestUtils"],
-            source: "real-service-providers/src/test-utils",
-            sourcePattern: "real-service-providers/{dist,es}/test-utils",
-            wildcard: true
-          },
-          {
             _id: "realm",
             autoImport: true,
             localName: "Realm",
             source: "realm"
+          },
+          {
+            _id: "ts-misc/test-utils",
+            source: "ts-misc/src/test-utils",
+            wildcard: true
           },
           {
             _id: "tsutils",
@@ -375,18 +346,6 @@ module.exports = {
             autoImport: true,
             source: "vscode",
             wildcard: true
-          },
-          {
-            _id: "vue",
-            autoImport: true,
-            localName: "Vue",
-            source: "vue"
-          },
-          {
-            _id: "vue-router",
-            autoImport: true,
-            localName: "VueRouter",
-            source: "vue-router"
           },
           {
             _id: "vuedraggable",
@@ -411,8 +370,6 @@ module.exports = {
           "@typescript-eslint/utils/dist/ts-eslint",
           "@vercel/analytics/react",
           "@vercel/speed-insights/next",
-          "@vue/test-utils/dist/interfaces/wrapperLike",
-          "@vue/test-utils/dist/types",
           "country-flag-icons/react/1x1",
           "country-flag-icons/react/3x2",
           "date-fns/locale",
@@ -427,13 +384,10 @@ module.exports = {
           "next/jest",
           "next/script",
           "project-chore/api",
-          "quasar/wrappers",
           "react-dom/client",
           "react-native-vector-icons/*",
           "react-transition-group/CSSTransition",
-          "real-facades/dist/test-utils",
-          "real-fns/dist/test-utils",
-          "real-service-providers/dist/test-utils",
+          "ts-misc/dist/test-utils",
           "ts-toolbelt/**",
           "typeface-roboto-multilang/*.css"
         ]
@@ -457,12 +411,6 @@ module.exports = {
         ignoreTypeValueShadow: true
       }
     ],
-    // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-misc update
-    // fixme
-    "misc/real-fns/program-flow/prefer-clearTimeout": "off",
-    // eslint-disable-next-line no-warning-comments -- Wait for eslint-plugin-misc update
-    // fixme
-    "misc/real-fns/program-flow/prefer-setTimeout": "off",
     "misc/sort-class-members": [
       "warn",
       {

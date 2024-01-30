@@ -1,8 +1,0 @@
-includes:
-  - phpstan/recommended.neon
-parameters:
-  paths:
-    - api
-    - bin
-    - php-cs-fixer
-  tmpDir: .cache/phpstan

@@ -10,14 +10,14 @@ module.exports = {
     "node/no-sync": "off",
     "node/no-unpublished-import": [
       "warn",
-      { tryExtensions: [".js", ".json", ".ts", ".tsx"] }
+      { tryExtensions: [".js", ".json", ".jsx", ".ts", ".tsx"] }
     ],
     "node/no-unsupported-features": "off",
     "node/no-unsupported-features/es-syntax": "off"
   },
   overrides: [
     {
-      files: ["!*.js", "!*.jsx"],
+      files: ["*.ts", "*.tsx"],
       rules: {
         "node/file-extension-in-import": "off",
         "node/no-missing-import": "off"

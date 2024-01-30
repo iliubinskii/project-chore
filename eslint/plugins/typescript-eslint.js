@@ -111,7 +111,6 @@ module.exports = {
     "@typescript-eslint/switch-exhaustiveness-check": "off"
   },
   overrides: [
-    { files: "*.d.ts", rules: { "@typescript-eslint/no-unused-vars": "off" } },
     {
       files: ["*.js", "*.jsx"],
       rules: {
@@ -129,6 +128,15 @@ module.exports = {
         "@typescript-eslint/restrict-template-expressions": "off",
         "@typescript-eslint/strict-boolean-expressions": "off"
       }
+    },
+    {
+      files: ["*.ts", "*.tsx"],
+      overrides: [
+        {
+          files: "*.d.ts",
+          rules: { "@typescript-eslint/no-unused-vars": "off" }
+        }
+      ]
     }
   ]
 };

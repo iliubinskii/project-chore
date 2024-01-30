@@ -26,7 +26,6 @@ module.exports = {
         properties: "always"
       }
     ],
-    "line-comment-position": ["warn", { ignorePattern: "NOSONAR" }],
     "max-depth": ["warn", 5],
     "max-lines": ["warn", 1500],
     "max-lines-per-function": ["warn", 500],
@@ -35,7 +34,6 @@ module.exports = {
     "multiline-comment-style": "off",
     "new-cap": "off",
     "no-duplicate-imports": "off",
-    "no-inline-comments": ["warn", { ignorePattern: "NOSONAR" }],
     "no-lone-blocks": "off",
     "no-magic-numbers": "off",
     "no-param-reassign": "off",
@@ -64,7 +62,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["!*.js", "!*.jsx"],
+      files: ["*.ts", "*.tsx"],
       rules: {
         "consistent-return": "off",
         "default-case": "off",
