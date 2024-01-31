@@ -272,6 +272,12 @@ module.exports = {
             source: "react-dom/client"
           },
           {
+            _id: "react-native-code-push",
+            autoImport: true,
+            localName: "CodePush",
+            source: "react-native-code-push"
+          },
+          {
             _id: "react-native-country-flag",
             autoImport: true,
             localName: "CountryFlag",
@@ -337,8 +343,8 @@ module.exports = {
             wildcard: true
           },
           {
-            _id: "typescript-misc/test-utils",
-            source: "typescript-misc/src/test-utils",
+            _id: "typescript-misc/dist/test-utils",
+            source: "typescript-misc/dist/test-utils",
             wildcard: true
           },
           {
@@ -387,6 +393,7 @@ module.exports = {
           "react-dom/client",
           "react-native-vector-icons/*",
           "react-transition-group/CSSTransition",
+          "redux-persist/integration/react",
           "ts-toolbelt/**",
           "typeface-roboto-multilang/*.css",
           "typescript-misc/dist/test-utils"
