@@ -324,11 +324,6 @@ module.exports = {
             source: "realm"
           },
           {
-            _id: "typescript-misc/test-utils",
-            source: "typescript-misc/src/test-utils",
-            wildcard: true
-          },
-          {
             _id: "tsutils",
             autoImport: true,
             source: "tsutils",
@@ -339,6 +334,11 @@ module.exports = {
             autoImport: true,
             localName: "ts",
             source: "typescript",
+            wildcard: true
+          },
+          {
+            _id: "typescript-misc/test-utils",
+            source: "typescript-misc/src/test-utils",
             wildcard: true
           },
           {
@@ -387,9 +387,9 @@ module.exports = {
           "react-dom/client",
           "react-native-vector-icons/*",
           "react-transition-group/CSSTransition",
-          "typescript-misc/dist/test-utils",
           "ts-toolbelt/**",
-          "typeface-roboto-multilang/*.css"
+          "typeface-roboto-multilang/*.css",
+          "typescript-misc/dist/test-utils"
         ]
       }
     ],
