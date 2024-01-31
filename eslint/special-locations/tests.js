@@ -21,7 +21,7 @@ module.exports = {
     // fixme
     "misc/no-sibling-import": "off",
     "misc/require-jsdoc": "off",
-    "misc/ts-misc/functions/guards/require-object-type-param": "off",
+    "misc/typescript-misc/functions/guards/require-object-type-param": "off",
     "node/no-unpublished-import": "off",
     "react/jsx-no-literals": "off",
     "react/no-multi-comp": "off",

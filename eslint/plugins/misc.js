@@ -324,8 +324,8 @@ module.exports = {
             source: "realm"
           },
           {
-            _id: "ts-misc/test-utils",
-            source: "ts-misc/src/test-utils",
+            _id: "typescript-misc/test-utils",
+            source: "typescript-misc/src/test-utils",
             wildcard: true
           },
           {
@@ -387,7 +387,7 @@ module.exports = {
           "react-dom/client",
           "react-native-vector-icons/*",
           "react-transition-group/CSSTransition",
-          "ts-misc/dist/test-utils",
+          "typescript-misc/dist/test-utils",
           "ts-toolbelt/**",
           "typeface-roboto-multilang/*.css"
         ]
