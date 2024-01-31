@@ -6,7 +6,7 @@
     "compilerOptions": {
       "properties": {
         "module": {
-          "const": "ES2015"
+          "const": "ES2020"
         },
         "outDir": {
           "enum": [
