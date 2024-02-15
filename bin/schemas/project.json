@@ -75,6 +75,8 @@
     },
     {
       "files": [
+        "GoogleService-Info.dev.plist",
+        "GoogleService-Info.preview.plist",
         "GoogleService-Info.plist",
         "app.config.js",
         "eas.json",
