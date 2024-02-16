@@ -344,6 +344,7 @@ module.exports = {
             "worklets",
             "workspaces",
             "wrappable",
+            "xml",
             "xss",
             "xyz"
           ]

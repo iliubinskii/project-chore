@@ -290,6 +290,16 @@ module.exports = {
             source: "react-native-linear-gradient"
           },
           {
+            _id: "react-native-navigation-bar-color",
+            localName: "changeNavigationBarColor",
+            source: "react-native-navigation-bar-color"
+          },
+          {
+            _id: "react-native-navigation-bar-color",
+            localName: "changeNavigationBarColor",
+            source: "react-native-navigation-bar-color"
+          },
+          {
             _id: "react-native-qrcode-svg",
             autoImport: true,
             localName: "QrCode",
