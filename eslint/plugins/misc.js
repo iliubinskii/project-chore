@@ -176,10 +176,22 @@ module.exports = {
             wildcard: true
           },
           {
+            _id: "expo-navigation-bar",
+            localName: "NavigationBar",
+            source: "expo-navigation-bar",
+            wildcard: true
+          },
+          {
             _id: "expo-notifications",
             autoImport: true,
             localName: "Notifications",
             source: "expo-notifications",
+            wildcard: true
+          },
+          {
+            _id: "expo-print",
+            localName: "Print",
+            source: "expo-print",
             wildcard: true
           },
           {
@@ -270,6 +282,11 @@ module.exports = {
             autoImport: true,
             localName: "ReactDOM",
             source: "react-dom/client"
+          },
+          {
+            _id: "react-native-ble-manager",
+            localName: "BleManager",
+            source: "react-native-ble-manager"
           },
           {
             _id: "react-native-code-push",
