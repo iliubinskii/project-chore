@@ -31,7 +31,10 @@
           "enum": [
             "eas build --platform all --profile development",
             "eas build --platform android --profile development",
-            "eas build --platform ios --profile development"
+            "eas build --platform ios --profile development",
+            "set EAS_NO_VCS=1 && eas build --platform all --profile development",
+            "set EAS_NO_VCS=1 && eas build --platform android --profile development",
+            "set EAS_NO_VCS=1 && eas build --platform ios --profile development"
           ]
         },
         "build-doc": {
@@ -47,14 +50,20 @@
           "enum": [
             "eas build --platform all --profile preview",
             "eas build --platform android --profile preview",
-            "eas build --platform ios --profile preview"
+            "eas build --platform ios --profile preview",
+            "set EAS_NO_VCS=1 && eas build --platform all --profile preview",
+            "set EAS_NO_VCS=1 && eas build --platform android --profile preview",
+            "set EAS_NO_VCS=1 && eas build --platform ios --profile preview"
           ]
         },
         "build-prod": {
           "enum": [
             "eas build --platform all",
             "eas build --platform android",
-            "eas build --platform ios"
+            "eas build --platform ios",
+            "set EAS_NO_VCS=1 && eas build --platform all",
+            "set EAS_NO_VCS=1 && eas build --platform android",
+            "set EAS_NO_VCS=1 && eas build --platform ios"
           ]
         },
         "clear-cache": {
